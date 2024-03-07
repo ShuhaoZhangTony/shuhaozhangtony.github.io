@@ -6,3 +6,6 @@ shuhao.zhang[at]ntu.edu.sg
 
 #### Research Intersts
 Database, parallel computing, machine learning, data mining
+
+### Research Team
+[Our group](https://intellistream.github.io/) thrives at the intersection of data-intensive applications and systems. We navigate the complex landscape defined by the three Vs of data: Volume, Velocity, and Variety
