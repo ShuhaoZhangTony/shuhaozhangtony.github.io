@@ -1,4 +1,5 @@
 - [SIGMOD] Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. International Conference on Management of Data (SIGMOD) (2025)
+- [ICDM] MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM) (2024)
 - [SIGMOD] Xianzhi Zeng*, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation. International Conference on Management of Data (SIGMOD) (2024)
 - [ICPP] PREACT: Predictive Resource Allocation for Bursty Workloads in a Co-located Data Center. Ziyang Xiao, Dongxiang Zhang, Dingyu Yang, Shuhao Zhang, Jian Cao, Gang Chen. International Conference in Parallel Processing (ICPP) (2024)
 - [IWQoS] Low-Latency Video Conferencing via Optimized Packet Routing and Reordering. Yao Xiao, Amelie chi Zhou, Sitian Chen, Shuhao Zhang, Yi Wang, Rui Mao, Xuan Yang. IEEE International Symposium on Quality of Service (2024)
