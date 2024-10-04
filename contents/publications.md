@@ -1,4 +1,5 @@
 - [SIGMOD] Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. International Conference on Management of Data (SIGMOD) (2025)
+- [EMNLP] A Framework of Knowledge Graph-Enhanced Large Language Model Based on Question Decomposition and Atomic Retrieval. Yading Li, Dandan Song, Changzhi Zhou, Yuhang Tian, Hao Wang, Ziyi Yang, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, Findings) (2024)
 - [NIPS] LibAMM: Empirical Insights into Approximate Computing for Accelerating Matrix Multiplication. Xianzhi Zeng Wenchao Jiang Shuhao Zhang. Conference on Neural Information Processing Systems (NIPS) (2024)
 - [ICDM] MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM) (2024)
 - [SIGMOD] Xianzhi Zeng*, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation. International Conference on Management of Data (SIGMOD) (2024)
