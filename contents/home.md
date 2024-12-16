@@ -1,4 +1,4 @@
-Shuhao Zhang is a professor at the School of Computer Science and Technology Huazhong University of Science and Technology. Previously, he was an assistant professor at the College of Computing and Data Science NTU. He did a postdoc with Prof.Volker Markl from 2020 to 2021 at TU Berlin. He obtained his PhD and Bachelor’s degrees from NUS and NTU, respectively. His research emphasizes the design of parallel databases and LLM inference frameworks, with a special interest in their interactions with stream processing techniques. 
+Shuhao Zhang is a professor at the School of Computer Science and Technology Huazhong University of Science and Technology. Previously, he was an [assistant professor](https://dr.ntu.edu.sg/cris/rp/rp02324/) at the College of Computing and Data Science NTU. He did a postdoc with Prof.Volker Markl from 2020 to 2021 at TU Berlin. He obtained his PhD and Bachelor’s degrees from NUS and NTU, respectively. His research emphasizes the design of parallel databases and LLM inference frameworks, with a special interest in their interactions with stream processing techniques. 
 
 #### Email
 shuhao_zhang[at]hust.edu.cn
