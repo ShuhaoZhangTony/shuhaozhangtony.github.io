@@ -1,3 +1,4 @@
+- [CVPR] Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints. Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye, Shuhao Zhang, Jiancheng Lv. Conference on Computer Vision and Pattern Recognition (CVPR) 2025
 - [SIGMOD] Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. International Conference on Management of Data (SIGMOD) (2025)
 - [SIGMOD] MAST: Towards Efficient Analytical Query Processing on Point Cloud Data. Jiangneng Li, Haitao Yuan, Gao Cong, Han Mao Kiah, Shuhao Zhang. International Conference on Management of Data (SIGMOD) (2025)
 - [NC] MatSwarm: Trusted Swarm Transfer Learning Driven Materials Computation for Secure Big Data Sharing. Cheng Xu, Ran Wang, Shuhao Zhang, Fangwen Ye, Yusen Tang, Sisui Tang, Hangning Zhang, Wendi Du, and Xiaotong Zhang (Nature Communication) (2024)
