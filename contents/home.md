@@ -14,7 +14,7 @@ shuhao_zhang[at]hust.edu.cn
 Database, parallel computing, machine learning, data mining
 
 ### Research Team
-[我们的团队（IntelliStream Lab）](https://intellistream.github.io/) 专注于数据密集型应用与系统的前沿研究，尤其在流数据处理和高性能计算领域。我们致力于在数据的三大特征——体量（Volume）、速度（Velocity）和多样性（Variety）——的复杂挑战中探索创新解决方案，推动下一代数据系统的发展。我们的工作融合了理论与实践，旨在为应对不断变化的全球数据环境提供强大支持。
+[我们的团队（IntelliStream）](https://intellistream.github.io/) 专注于数据密集型应用与系统的前沿研究，尤其在流数据处理和高性能计算领域。我们致力于在数据的三大特征——体量（Volume）、速度（Velocity）和多样性（Variety）——的复杂挑战中探索创新解决方案，推动下一代数据系统的发展。我们的工作融合了理论与实践，旨在为应对不断变化的全球数据环境提供强大支持。
 
 #### Recent Academic Services (Selected)
 - ICDE 2024 TKDE Poster Track Chair
