@@ -1,3 +1,4 @@
+- [ICDCS] Spacker: Unified State Migration for Distributed Streaming. Yancan Mao, Shuhao Zhang, Richard Ma. The 45th IEEE International Conference on Distributed Computing Systems (2025)
 - [TKDE] Scalable Transactional Stream Processing on Multicore Processors. Jianjun Zhao, Yancan Mao, Shuhao Zhang, Zhonghao Yang, Haikun Liu. IEEE Transactions on Knowledge and Data Engineering (2025)
 - [ICDE] Scalable Machine Learning for Real-Time Fault Diagnosis in Industrial IoT Cooling Roller Systems. Dandan Zhao, Karthick Sharma, Yuxin Qi, Qixun Liu, Shuhao Zhang. IEEE 40rd International Conference on Data Engineering (2025)
 - [CVPR] Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints. Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye, Shuhao Zhang, Jiancheng Lv. Conference on Computer Vision and Pattern Recognition (CVPR) 2025
