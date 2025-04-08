@@ -1,3 +1,4 @@
+\# marks I am the corresponding author; \* marks I am the first author.
 1. [ICDCS] Spacker: Unified State Migration for Distributed Streaming. Yancan Mao, **Shuhao Zhang**, Richard Ma. The 45th IEEE International Conference on Distributed Computing Systems (2025)
 1. [TKDE] Scalable Transactional Stream Processing on Multicore Processors. Jianjun Zhao, Yancan Mao, **Shuhao Zhang**#, Zhonghao Yang, Haikun Liu. IEEE Transactions on Knowledge and Data Engineering (2025)
 1. [ICDE] Scalable Machine Learning for Real-Time Fault Diagnosis in Industrial IoT Cooling Roller Systems. Dandan Zhao, Karthick Sharma, Yuxin Qi, Qixun Liu, **Shuhao Zhang**#. IEEE 40rd International Conference on Data Engineering (2025)
