@@ -1,8 +1,4 @@
 \# marks I am the corresponding author; \* marks I am the first author.
-1. [ICDCS] Spacker: Unified State Migration for Distributed Streaming. Yancan Mao, **Shuhao Zhang**, Richard Ma. The 45th IEEE International Conference on Distributed Computing Systems (2025)
-1. [TKDE] Scalable Transactional Stream Processing on Multicore Processors. Jianjun Zhao, Yancan Mao, **Shuhao Zhang**#, Zhonghao Yang, Haikun Liu. IEEE Transactions on Knowledge and Data Engineering (2025)
-1. [ICDE] Scalable Machine Learning for Real-Time Fault Diagnosis in Industrial IoT Cooling Roller Systems. Dandan Zhao, Karthick Sharma, Yuxin Qi, Qixun Liu, **Shuhao Zhang**#. IEEE 40rd International Conference on Data Engineering (2025)
-1. [CVPR] Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints. Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye, **Shuhao Zhang**, Jiancheng Lv. Conference on Computer Vision and Pattern Recognition (CVPR) 2025
 1. [SIGMOD] Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality. Xilin Tang, Feng Zhang, **Shuhao Zhang**, Yani Liu, Bingsheng He, Xiaoyong Du. International Conference on Management of Data (SIGMOD) (2025)
 1. [SIGMOD] MAST: Towards Efficient Analytical Query Processing on Point Cloud Data. Jiangneng Li, Haitao Yuan, Gao Cong, Han Mao Kiah, **Shuhao Zhang**. International Conference on Management of Data (SIGMOD) (2025)
 1. [NC] MatSwarm: Trusted Swarm Transfer Learning Driven Materials Computation for Secure Big Data Sharing. Cheng Xu, Ran Wang, **Shuhao Zhang**, Fangwen Ye, Yusen Tang, Sisui Tang, Hangning Zhang, Wendi Du, and Xiaotong Zhang (Nature Communication) (2024)
