@@ -1,27 +1,28 @@
-张书豪，现任华中科技大学（HUST）计算机科学与技术学院[教授](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)。此前，他在新加坡南洋理工大学（NTU）担任[助理教授](https://dr.ntu.edu.sg/cris/rp/rp02324/)，专注于流数据处理系统、数据库系统和高性能计算领域的研究。在德国柏林技术大学（TUB）进行博士后研究期间，他与多个国际团队合作，深入推动了分布式数据管理和高效流计算的前沿技术。
+张书豪，现任华中科技大学计算机科学与技术学院 [教授](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)。他的研究横跨流数据处理、数据库系统、高性能并行与异构计算，并聚焦于支撑大模型推理与多智能体（Multi-Agent）、检索增强生成（RAG）等应用的新型系统框架 **SAGE**。在入职 HUST 之前，他曾于新加坡南洋理工大学（NTU）任 [助理教授](https://dr.ntu.edu.sg/cris/rp/rp02324/)，并在德国柏林工业大学（TUB）从事博士后研究，深入合作于分布式数据管理与高效流计算前沿。
 
-研究兴趣主要集中在流数据管理与处理、高并发事务调度、并行与异构计算优化、向量数据库与近似检索，以及大模型推理系统的架构优化与工程化落地。在相关领域发表了数十篇高水平学术论文，并拥有多项国际专利。近年来，其研究成果广泛应用于物联网、绿色计算、智能城市等多个产业领域，并获得了SIGMOD、VLDB、ICDE、NeurIPS、EMNLP等国际顶级会议和期刊的认可。同时，他积极参与国际学术服务，担任多个顶级学术会议的程序委员会委员与项目评审专家，指导的研究团队连续获得多个国家级研究项目资助，致力于推动下一代高效、智能的数据处理平台与大模型推理框架的发展。
+他的工作致力于 **向量检索与近似搜索、智能体记忆管理、流式语义状态维护以及多租户推理调度** 等关键问题，已在 SIGMOD、VLDB、ICDE、NeurIPS、EMNLP 等国际顶级会议/期刊发表数十篇论文，并拥有多项国际专利。相关成果落地于物联网、绿色计算、智能城市以及大模型云服务等场景，推动了数据驱动智能应用的实时性与可扩展性。张书豪积极服务学术社区，担任 SC、ICDE、CIKM 等会议程序委员会委员，多次获得国家级与企业合作项目资助，带领团队打造下一代高效、可靠且自主可控的大模型推理与数据处理平台。
 
-#### 主持项目
+---
 
-- 国家级优秀青年人才项目 (300 - 600 万）
-- 华为东湖青年学者项目 （~100 万）
-- （已结题）新加坡国立研究基金会 （~500 万）
-- （已结题）新加坡教育部Tier 2基金 （~250 万）
-- （已结题）其他校企业项目（总计~300万）
+### 主持项目
+- **国家级优秀青年人才项目** (300 – 600 万)
+- **华为东湖青年学者项目** (~100 万)
+- **（已结题）新加坡国立研究基金会** (~500 万)
+- **（已结题）新加坡教育部 Tier 2 基金** (~250 万)
+- **（已结题）其他校企项目**（总计 ~300 万）
 
-#### Email
+### Email
 shuhao_zhang[at]hust.edu.cn
 
-#### Research Intersts
-Database, parallel computing, machine learning, data mining
+### Research Interests
+流数据管理、并行与异构计算、向量数据库与近似检索、大模型推理系统、RAG & Multi-Agent 框架优化
 
 ### Research Team
-[我们的团队（IntelliStream）](https://intellistream.github.io/) 专注于数据密集型应用与系统的前沿研究，特别是在流数据处理、大模型推理系统优化与高性能计算领域。目前团队致力于构建下一代大模型推理编程与运行时框架，以解决智能推理场景下数据规模、实时性与异构性带来的复杂挑战。我们的研究融合理论创新与系统实践，致力于为数据驱动的智能应用提供高效、可靠且自主可控的核心支撑。
+[**IntelliStream**](https://intellistream.github.io/) 聚焦数据密集型应用与系统研究，当前核心目标是构建面向多智能体和 RAG 场景的推理编排与运行时框架 **SAGE**，以应对数据规模、实时性及异构资源带来的复杂挑战。团队融合理论创新与系统工程实践，为智能应用提供高效、可靠的底层支撑。
 
-#### Recent Academic Services (Selected)
-- ICDE 2024 TKDE Poster Track Chair
-- SC 2025 Regular PC Member
-- CIKM 2024 Regular PC Member
-- DASFAA 2024 Regular PC Member
-- SDM 2024 Regular PC Member
+### Recent Academic Services (Selected)
+- **ICDE 2024** TKDE Poster Track Chair  
+- **SC 2025** Program Committee Member  
+- **CIKM 2024** Program Committee Member  
+- **DASFAA 2024** Program Committee Member  
+- **SDM 2024** Program Committee Member
