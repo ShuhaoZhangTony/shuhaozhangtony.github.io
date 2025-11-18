@@ -1,3 +1,5 @@
+- Nov 2025 One paper accepted to AAAI 2026
+- Oct 2025 One paper accepted to ICDE 2026
 - July 2025 One paper accepted to NDBC 2025
 - July 2025 One paper accepted to NDBC 2025
 - July 2025 One paper accepted to VLDB 2025
