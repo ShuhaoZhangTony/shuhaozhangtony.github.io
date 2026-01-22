@@ -1,6 +1,6 @@
 # 张书豪
 
-> 华中科技大学计算机学院教授｜大模型推理基础设施（sagellm 私有 / isagellm PyPI）与数据流系统（SAGE）
+> 华中科技大学计算机学院教授｜大模型推理基础设施（sagellm）与大模型推理服务系统（SAGE）
 
 张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。研究聚焦面向大模型时代的系统基础设施：在流数据处理、数据库系统与高性能并行/异构计算的交叉处，构建可扩展、可控、可观测的推理与数据编排框架，支撑检索增强生成（RAG）与多智能体（Multi-Agent）等数据密集型应用。
 
@@ -8,8 +8,7 @@
 
 **快速入口**
 
-- sagellm：内部推理基础设施项目（私有仓库，面向合作与课题组同学开放）
-- isagellm（PyPI，pyc 加密保护）：https://pypi.org/project/isagellm/
+- sagellm：内部推理基础设施项目（暂时为私有仓库，面向合作与课题组同学开放）
 - SAGE：https://github.com/intellistream/SAGE
 - IntelliStream：https://intellistream.github.io/
 - SAGE 文档：https://intellistream.github.io/SAGE-Pub/
@@ -20,16 +19,16 @@
 
 我更关注“把 AI 应用做成可复用的系统能力”，而不仅是单点模型效果。
 
-### 1) sagellm / isagellm：大模型推理基础设施
+### 1) sagellm：大模型推理基础设施
 
-围绕推理服务的可落地性与可运营性，我们推进 **sagellm / isagellm** 等组件化工程与系统研究，重点包括：
+围绕推理服务的可落地性与可运营性，我们推进 **sagellm** 等组件化工程与系统研究，重点包括：
 
 - **多租户推理调度与资源编排**：吞吐/延迟（尤其 p99）/成本之间的系统级权衡
 - **请求路由与批处理聚合**：面向真实在线负载的工程策略与评测方法
 - **可观测性与稳定性**：指标、日志、追踪、回放/对比实验，面向故障诊断与持续优化
 - **面向 RAG/Agent 的服务化接口**：让“记忆-检索-压缩-推理”链路可组合、可替换、可评估
 
-说明：**sagellm 为内部项目（私有仓库）**，用于承载核心工程实现与实验基准；**isagellm 已发布到 PyPI，但采用加密 pyc 保护**（用于分发与落地部署）。
+说明：**sagellm 为内部项目（私有仓库）**，用于承载核心工程实现与实验基准。
 
 ### 2) SAGE：面向 RAG 与 Multi-Agent 的数据流原生编排框架
 
