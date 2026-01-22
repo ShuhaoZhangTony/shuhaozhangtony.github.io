@@ -1,3 +1,5 @@
+- Jan 2026 two papers accepted to WWW 2026
+- Nov 2025 our LLM inference system is online: https://studio.sage.org.ai/
 - Nov 2025 One paper accepted to SIGMOD 2026
 - Nov 2025 One paper accepted to TKDE 2026
 - Nov 2025 One paper accepted to AAAI 2026
