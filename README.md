@@ -73,6 +73,12 @@ To pull the latest content from the private materials repository:
 git submodule update --remote private
 ```
 
+Or use the included Makefile target:
+
+```bash
+make submodule-private
+```
+
 
 
 ## License
