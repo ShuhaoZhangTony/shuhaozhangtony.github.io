@@ -51,6 +51,28 @@ git push
 
 Fire up a browser and go to `https://<username>.github.io`
 
+## Private Materials Submodule
+
+This repository uses a private submodule at `private/` for personal materials such as proposals, presentations, drafts, and internal documents.
+
+Clone the website repository together with the private materials:
+
+```bash
+git clone --recurse-submodules git@github.com:<username>/<username>.github.io.git
+```
+
+If the repository has already been cloned, initialize and update the submodule with:
+
+```bash
+git submodule update --init --recursive
+```
+
+To pull the latest content from the private materials repository:
+
+```bash
+git submodule update --remote private
+```
+
 
 
 ## License
