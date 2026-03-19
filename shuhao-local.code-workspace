@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "public-site",
+      "path": "."
+    },
+    {
+      "name": "private-materials",
+      "path": "../private-materials"
+    }
+  ],
+  "settings": {
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.shellIntegration.enabled": true,
+    "files.exclude": {
+      "**/.DS_Store": true
+    }
+  }
+}
