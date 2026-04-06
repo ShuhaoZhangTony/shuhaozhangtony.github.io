@@ -2,7 +2,7 @@
 
 > 华中科技大学计算机学院教授｜面向大模型推理引擎与推理系统招收硕士/博士/实习生
 
-张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。研究方向聚焦 **大模型推理引擎与推理服务系统**，重点关注高性能、低成本、可观测、可扩展的系统底座。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任[助理教授](https://dr.ntu.edu.sg/cris/rp/rp02324/)，并在德国柏林工业大学（TUB）从事博士后研究。
+张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。研究方向聚焦 **大模型推理引擎与推理服务系统**，重点关注高性能、低成本、可观测、可扩展的系统底座。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任[助理教授](https://openreview.net/profile?id=%7EShuhao_Zhang4)，并在德国柏林工业大学（TUB）从事博士后研究。
 
 ---
 
