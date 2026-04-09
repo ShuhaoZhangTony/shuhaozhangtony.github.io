@@ -1,3 +1,9 @@
+# Coverage Notes
+
+- The raw `research_papers` directory currently contains 60 markdown items.
+- This summary tracks 54 venue-level publication records.
+- Thesis materials, draft manuscripts, and duplicate source versions in the raw directory are not counted separately here.
+
 # 0. 最新工作补充（2025–2026）
 
 ### 0.1 FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation
@@ -47,6 +53,14 @@
 **Authors:** Jianjun Zhao, Yancan Mao, Zhonghao Yang, Haikun Liu, Shuhao Zhang  
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** This journal version further develops MorphStream into a more general transactional stream processing engine for multicores. In addition to adaptive scheduling, it supports non-deterministic state access through a stateful task precedence graph and incorporates a generalized framework for window-based operations via multi-versioned state management. These extensions broaden the applicability of transactional stream processing to dynamic and irregular workloads while preserving strong semantics. Experimental results show up to 3.4× higher throughput and 69.1% lower latency than state-of-the-art alternatives.
+
+### 0.7 Select Edges Wisely: Monotonic Path Aware Graph Layout Optimization for Disk-Based ANN Search
+
+**Venue:** SIGMOD - International Conference on Management of Data  
+**Year:** 2026  
+**Authors:** Ziyang Yue, Bolong Zheng, Ling Xu, Kanru Xu, Shuhao Zhang, Yajuan Du, Yunjun Gao, Xiaofang Zhou, Christian S. Jensen  
+**Corresponding Author:** No | **First Author:** No  
+**Abstract:** Approximate nearest neighbor (ANN) search is a critical primitive in modern retrieval systems, but disk-based graph indexes often suffer from poor locality and inefficient layout optimization. This work proposes MARGO, a monotonic path-aware graph layout optimization method for disk-based ANN search. It formalizes graph layout quality through an objective that emphasizes edges important to monotonic paths, introduces a greedy optimization strategy to preserve more effective search paths, and further improves efficiency with a two-stage decoupling design. The resulting method improves locality and search efficiency for disk-resident ANN indexes under memory-constrained settings.
 
 # 1. 高效感知与近似计算机制
 
@@ -179,6 +193,14 @@
 **Authors:** N/A  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** Large language models (LLMs) have demonstrated exceptional performance  across various domains. However, LLMs are prone to hallucinate facts and generate non-factual responses, which can undermine their reliability  in real-world applications. Current hallucinate detection methods suffer from external resource demands, substantial time overhead, difficulty  overcoming LLMs' intrinsic limitation, and insufficient modeling. In  this paper, we propose MHAD, a novel internal-representation-based  hallucination detection method. MHAD utilizes linear probing to select  neurons and layers within LLMs. The selected neurons and layers are  demonstrated with significant awareness of hallucinations at the initial and final generation steps. By concatenating the outputs from these  selected neurons of selected layers at the initial and final generation  steps, a hallucination awareness vector is formed, enabling precise  hallucination detection via a multi-layer perceptron (MLP).  Additionally, we introduce SOQHD, a novel benchmark for evaluating  hallucination detection in Open-Domain QA (ODQA). Extensive experiments  show that MHAD outperforms existing hallucination detection methods  across multiple LLMs, demonstrating superior effectiveness. 
+
+### 2.8 A Framework of Knowledge Graph-Enhanced Large Language Model Based on Global Planning
+
+**Venue:** TKDE - IEEE Transactions on Knowledge and Data Engineering  
+**Year:** 2025  
+**Authors:** Yading Li, Dandan Song, Yuhang Tian, Hao Wang, Changzhi Zhou, Shuhao Zhang  
+**Corresponding Author:** No | **First Author:** No  
+**Abstract:** Knowledge graphs can provide structured support for large language model reasoning, but existing KG-enhanced LLM methods either rely on the original question alone or alternate retrieval and reasoning without sufficient planning. This work proposes KELGoP, a framework of KG-enhanced LLM reasoning based on global planning. It introduces fine-grained question categorization and category-driven decomposition for complex questions, supports controllable atomic retrieval over KG subgraphs, and adapts reasoning strategies according to question-answering performance. Experiments on KGQA workloads show that the framework improves controllability, robustness, and answer quality over existing baselines.
 
 # 3. 高性能流处理系统架构与调度优化
 
@@ -463,3 +485,13 @@
 **Authors:** Cheng Xu, Ran Wang, Shuhao Zhang, Fangwen Ye, Yusen Tang, Sisui Tang, Hangning Zhang, Wendi Du, Xiaotong Zhang  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** The rapid advancement of Industry 4.0 necessitates close collaboration among material research institutions to accelerate the development of novel materials. However, multi-institutional cooperation faces significant challenges in protecting sensitive data, leading to data silos. Additionally, the heterogeneous and non-independent and identically distributed (non-i.i.d.) nature of material data hinders model accuracy and generalization in collaborative computing. In this paper, we introduce the MatSwarm framework, built on swarm learning, which integrates federated learning with blockchain technology. MatSwarm features two key innovations: a swarm transfer learning method with a regularization term to enhance the alignment of local model parameters, and the use of Trusted Execution Environments (TEE) with Intel SGX for heightened security. These advancements significantly enhance accuracy, generalization, and ensure data confidentiality throughout the model training and aggregation processes. Implemented within the National Material Data Management and Services (NMDMS) platform, MatSwarm has successfully aggregated over 14 million material data entries from more than thirty research institutions across China. The framework has demonstrated superior accuracy and generalization compared to models trained independently by individual institutions.
+
+---
+
+### 4.12 Understanding Co-running Behaviors on Integrated CPU/GPU Architectures
+
+**Venue:** TPDS - IEEE Transactions on Parallel and Distributed Systems (TPDS)  
+**Year:** 2016  
+**Authors:** Feng Zhang, Jidong Zhai, Bingsheng He, Shuhao Zhang, Wenguang Chen  
+**Corresponding Author:** No | **First Author:** No  
+**Abstract:** Integrated CPU/GPU architectures make co-running a promising execution mode, but not all programs benefit from jointly using both processors. This work studies co-running behaviors on AMD and Intel integrated architectures across Rodinia, Parboil, and Polybench workloads. The analysis shows that architectural differences between CPUs and GPUs together with limited shared memory bandwidth are the two main constraints on co-running efficiency. Based on these observations, the work further develops a decision-tree-based predictor for co-run friendliness and a profiling-based model for workload partitioning, enabling more effective use of integrated architectures.
