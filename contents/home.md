@@ -2,15 +2,15 @@
 
 > 华中科技大学计算机学院教授｜面向大模型推理引擎、推理服务系统与记忆智能体中间件招收硕士/博士/实习生
 
-张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。我的研究主线是 **复杂硬件与动态负载下的高效状态管理**：围绕共享状态的访问与调度、执行优化、演化与复用，研究如何把并行分布式系统做成稳定、高效、可控、可持续演进的系统。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任[助理教授](https://openreview.net/profile?id=%7EShuhao_Zhang4)，并在德国柏林工业大学（TUB）从事博士后研究。
+张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。我的研究聚焦 **复杂硬件与动态负载下的高效状态管理**，重点关注并行分布式系统，尤其是大模型推理服务中的访问调度、执行优化与状态复用问题。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任[助理教授](https://openreview.net/profile?id=%7EShuhao_Zhang4)，并在德国柏林工业大学（TUB）从事博士后研究。
 
-当前工作的主要落点是 **大模型推理引擎、推理服务系统与记忆智能体中间件**。我关注的不只是某个局部算子或单点加速，而是围绕推理服务中的共享状态，系统性解决三类问题：共享状态访问如何被统一观测、建模、调度与管理；状态感知执行如何与复杂硬件和服务指标协同优化；上下文、KV cache 与检索记忆如何写入、演化、复用并长期支撑稳定推理。
+当前工作的主要落点是 **大模型推理引擎、推理服务系统与记忆智能体中间件**。目前重点围绕三类问题展开：共享状态的观测、建模与调度；状态感知执行与复杂硬件、服务指标的协同优化；以及上下文、KV cache 与检索记忆的写入、演化与复用。
 
 ---
 
 ## 核心科学问题
 
-如何在复杂硬件与动态负载下，对共享状态的 **访问、执行与演化** 进行统一管理，从而支撑并行分布式系统，尤其是大模型推理服务的稳定、高效、可控运行。
+如何在复杂硬件与动态负载下统一管理共享状态的 **访问、执行与演化**，从而支撑并行分布式系统，尤其是大模型推理服务的稳定、高效、可控运行。
 
 ---
 
@@ -18,9 +18,9 @@
 
 我的工作目前主要分为三个相互衔接的板块：
 
-- **共享状态访问与运行时调度**：研究共享状态访问的观测、建模、调度与运行时管理
-- **状态感知执行优化**：研究状态相关执行如何与 CPU/GPU/异构硬件、延迟、吞吐和成本约束协同设计
-- **共享状态演化与复用**：研究状态对象如何持续写入、在线演化、跨轮复用，并支撑稳定推理与检索
+- **共享状态访问与运行时调度**：观测、建模并优化共享状态访问与运行时调度
+- **状态感知执行优化**：面向 CPU/GPU/异构硬件的执行协同与性能优化
+- **共享状态演化与复用**：围绕上下文、KV 与检索记忆的持续写入、演化与跨轮复用
 
 ---
 
@@ -38,11 +38,11 @@
 
 ## 当前系统建设
 
-围绕上述问题，课题组当前的系统工作大致可以归纳为三组相互衔接的系统线：
+课题组当前的系统工作主要包括三组相互衔接的系统线：
 
 - **[SAGE](https://github.com/intellistream/SAGE)**：面向国产异构算力的大模型推理服务系统，重点覆盖在线 serving、调度编排、可观测性与端到端性能优化
-- **[Neuromem](https://github.com/intellistream/neuromem)**：面向大模型记忆智能体的中间件系列，重点覆盖流式记忆组织、向量检索、长期记忆写入与跨轮复用
-- **[vLLM-HUST](https://github.com/intellistream/vllm-hust)**（含 [Benchmark](https://github.com/intellistream/vllm-hust-benchmark)、[Dev Hub](https://github.com/intellistream/vllm-hust-dev-hub) 等系列仓库）：面向华科自研推理引擎演进的底座与插件生态，重点覆盖共享 workload、KV 状态管理、插件化优化与评测工具链
+- **Neuromem**（当前开源的是 [Neuromem-Benchmark](https://github.com/intellistream/neruomem-bench)）：面向大模型记忆智能体的中间件系列，重点覆盖流式记忆组织、向量检索、长期记忆写入与跨轮复用
+- **[vLLM-HUST](https://github.com/intellistream/vllm-hust)**（含 [Benchmark](https://github.com/intellistream/vllm-hust-benchmark)、[Dev Hub](https://github.com/intellistream/vllm-hust-dev-hub) 等系列仓库）：面向国产算力的华科自研推理引擎底座与插件生态，重点覆盖共享 workload、KV 状态管理、插件化优化与评测工具链
 
 ---
 
@@ -62,7 +62,7 @@
 
 ## Publications
 
-完整论文列表见 [Publications](publications)。近期工作发表于 WWW, SIGMOD, ICDE, TKDE, CVPR, NeurIPS, EMNLP 等会议与期刊。
+完整论文列表见 [Publications](publications)。近期工作发表于 ACL, WWW, SIGMOD, ICDE, TKDE, CVPR, NeurIPS, EMNLP 等会议与期刊。
 
 ---
 

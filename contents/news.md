@@ -1,3 +1,4 @@
+- Apr 2026 two collaborative papers accepted to ACL 2026, including one Main Conference paper and one Findings paper
 - Mar 2026 recruiting students interested in LLM inference engines and serving systems; feel free to reach out by email with your CV and project/code links
 - Jan 2026 two papers accepted to WWW 2026
 - Nov 2025 our LLM inference system is online: https://studio.sage.org.ai/

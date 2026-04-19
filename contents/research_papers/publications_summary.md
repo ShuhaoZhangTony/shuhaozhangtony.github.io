@@ -1,7 +1,7 @@
 # Coverage Notes
 
 - The raw `research_papers` directory currently contains 60 markdown items.
-- This summary tracks 54 venue-level publication records.
+- This summary tracks 56 venue-level publication records.
 - Thesis materials, draft manuscripts, and duplicate source versions in the raw directory are not counted separately here.
 
 # 0. 最新工作补充（2025–2026）
@@ -61,6 +61,24 @@
 **Authors:** Ziyang Yue, Bolong Zheng, Ling Xu, Kanru Xu, Shuhao Zhang, Yajuan Du, Yunjun Gao, Xiaofang Zhou, Christian S. Jensen  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** Approximate nearest neighbor (ANN) search is a critical primitive in modern retrieval systems, but disk-based graph indexes often suffer from poor locality and inefficient layout optimization. This work proposes MARGO, a monotonic path-aware graph layout optimization method for disk-based ANN search. It formalizes graph layout quality through an objective that emphasizes edges important to monotonic paths, introduces a greedy optimization strategy to preserve more effective search paths, and further improves efficiency with a two-stage decoupling design. The resulting method improves locality and search efficiency for disk-resident ANN indexes under memory-constrained settings.
+
+### 0.8 Multi-Hop Knowledge Editing via Critic-Guided Multi-Agent Reasoning
+
+**Venue:** ACL Findings - Findings of the Association for Computational Linguistics  
+**Year:** 2026  
+**Authors:** Xudong Li, Yuhang Tian, Dandan Song, Zhijing Wu, Shuhao Zhang, Jun Yang, Yongyu Huo, Changzhi Zhou, Xinyu Zhang, Chenhao Li, Huipeng Ma, Luan Zhang, Yan Xu, Qian Liu  
+**Corresponding Author:** No | **First Author:** No  
+**Status:** Accepted collaborative paper; the public abstract/PDF has not yet been added to this repository.  
+**Summary:** This collaborative paper studies multi-hop knowledge editing with a critic-guided multi-agent reasoning framework.
+
+### 0.9 FusionFlow: Enabling Deep Structural Exploration for Automated Agentic Workflow Generation
+
+**Venue:** ACL - Annual Meeting of the Association for Computational Linguistics (Main Conference)  
+**Year:** 2026  
+**Authors:** Xiang Wang, Zongtao Yang, Zhuojian Hong, Shuhao Zhang, Wei Wei  
+**Corresponding Author:** No | **First Author:** No  
+**Status:** Accepted collaborative paper; the public abstract/PDF has not yet been added to this repository.  
+**Summary:** This collaborative paper focuses on automated agentic workflow generation through deep structural exploration.
 
 # 1. 高效感知与近似计算机制
 
