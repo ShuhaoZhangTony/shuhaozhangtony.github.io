@@ -2,6 +2,36 @@
 
 如果下列论文暂时没有直接链接，说明对应 PDF 尚未上传到当前仓库。
 
+## 首页导读
+
+近期工作可以从一个统一视角理解：围绕复杂系统中的共享状态管理展开，并逐步收束到大模型推理基础设施。对非本方向读者来说，可以直接把它理解成三类更具体的问题：请求如何排队、怎样 `batching`、`prefill / decode` 如何组织，以及这些机制怎样影响吞吐和 P99；`KV cache`、算子执行、并行通信和硬件适配怎样决定端到端收益；以及长上下文、RAG 和记忆增强推理中的信息怎样被写入、保留、检索并在后续轮次复用。
+
+## 代表性论文
+
+首页这里先放一组按研究主线整理的代表作入口，便于快速扫读；这些工作共同构成了我当前走向大模型推理基础设施研究的能力底座。完整列表保留在后面。
+
+### 一、共享状态访问、调度与运行时管理
+这一类工作主要想解决的是：共享状态访问中的冲突、热点和排队为什么会扩散成系统级性能退化，以及这些问题怎样从“看不见、调不动”推进到“可观测、可建模、可管理”。我们的方案是沿着一条方法链逐步推进：先做路径级冲突观测与共享执行路径优化，再把状态热点、局部性和 NUMA/拓扑代价统一建模，最后沉淀为兼顾稳态执行与恢复控制的运行时调度框架。效果上，这条线把原本依赖经验判断的共享状态访问问题推进成了可计算、可优化、可验证的系统方法，并在代表性工作中实现了显著性能提升与更稳定的运行时控制。
+
+- [TKDE 2025] **Scalable Transactional Stream Processing on Multicore Processors**. Jianjun Zhao, Yancan Mao, Zhonghao Yang, Haikun Liu, Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering (TKDE), 37(7): 4254-4269, 2025. [Corresponding Author] [CCF-A]
+- [SIGMOD 2023] **MorphStream: Adaptive Scheduling for Scalable Transactional Stream Processing on Multicores**. Yancan Mao, Jianjun Zhao, Shuhao Zhang, Haikun Liu, Volker Markl. Proc. ACM Manag. Data (SIGMOD), 1(1), Article 59, 1-26, 2023. [Corresponding Author] [CCF-A]
+- [VLDBJ 2024] **A Survey on Transactional Stream Processing**. Shuhao Zhang, Juan Soto, Volker Markl. The VLDB Journal, 33(2): 451-479, 2024. [First Author] [CCF-A]
+
+### 二、状态感知执行优化与软硬件协同设计
+这一类工作主要想解决的是：状态相关执行一旦落到复杂硬件上，吞吐、时延、能耗、精度和质量边界会同时耦合，为什么很多局部提速很难稳定兑现为端到端收益。我们的方案是把状态组织、数据通路与执行映射放进同一个协同优化框架里，并进一步把效率边界、质量边界和硬件代价联合建模，而不是只优化单个算子或单个指标。效果上，这条线逐步建立了硬件拓扑协同与多维边界建模的方法体系；在代表性工作中，既验证了质量补偿与误差控制能够支撑稳定收益，也验证了在非对称多核等场景下可以同时显著提升吞吐并降低能耗。
+
+- [NeurIPS 2024] **LibAMM: Empirical Insights into Approximate Computing for Accelerating Matrix Multiplication**. Xianzhi Zeng, Wenchao Jiang, and Shuhao Zhang. Conference on Neural Information Processing Systems (NeurIPS). [Corresponding Author] [CCF-A]
+- [SIGMOD 2024] **PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation**. Xianzhi Zeng, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. Proc. ACM Manag. Data (SIGMOD), 2(1): 1-24, 2024. [Corresponding Author] [CCF-A]
+- [TKDE 2024] **CStream: Parallel Data Stream Compression on Multicore Edge Devices**. Xianzhi Zeng, Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering, 36(11): 5889-5904, 2024. [Corresponding Author] [CCF-A]
+
+### 三、共享状态演化、复用与稳定推理
+这一类工作主要想解决的是：在动态场景下，共享状态怎样同时做到持续写入、稳定保留、跨轮复用，并最终支撑长期稳定推理。我们的方案是从在线更新与写入感知出发，逐步推进到写入代价与保留代价协同优化，再进一步把记忆对象组织成可更新、可检索、可复用的中间层，形成“写得进、留得住、用得稳”的跨轮复用链路。效果上，这条线把原本分散的在线更新、历史保留和稳定推理问题收束成了同一条方法链，为长上下文、RAG 和记忆增强推理提供了更低扰动写入、更稳定跨轮复用和更一致的推理支撑。
+
+- [WWW 2026] **FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation**. Senlei Zhang, Tongjun Shi, Dandan Song, Luan Zhang, Shuhao Zhang, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]
+- [WWW 2026] **StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning**. Changwu Li, Tongjun Shi, Shuhao Zhang, Binbin Chen, Bingsheng He, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]
+- [ICDM 2024] **MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm**. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM). [Corresponding Author]
+- [EMNLP 2023] **SentiStream: A Co-Training Framework for Adaptive Online Sentiment Analysis in Evolving Data Streams**. Yuhao Wu, Karthick Sharma, Chun Wei Seah, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, main track). [Corresponding Author]
+
 ## 完整论文列表
 
 下列列表按研究主题分组，主要覆盖共享状态访问与调度、状态感知执行优化、共享状态演化与复用，以及相关应用与系统研究。
