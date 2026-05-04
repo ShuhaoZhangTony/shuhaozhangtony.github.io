@@ -27,6 +27,8 @@
 ### 三、共享状态演化、复用与稳定推理
 这一类工作主要想解决的是：在动态场景下，共享状态怎样同时做到持续写入、稳定保留、跨轮复用，并最终支撑长期稳定推理。我们的方案是从在线更新与写入感知出发，逐步推进到写入代价与保留代价协同优化，再进一步把记忆对象组织成可更新、可检索、可复用的中间层，形成“写得进、留得住、用得稳”的跨轮复用链路。效果上，这条线把原本分散的在线更新、历史保留和稳定推理问题收束成了同一条方法链，为长上下文、RAG 和记忆增强推理提供了更低扰动写入、更稳定跨轮复用和更一致的推理支撑。
 
+- [ICML 2026] **Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs**. Ruicheng Zhang, Xinyi Li, Tianyi Xu, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [CCF-A]
+- [ICML 2026] **SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning**. Jun Liu, Peilin Liu, Ruicheng Zhang, Senlei Zhang, Yanbo Chen, Ziao Wang, Jinyun Yang, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [CCF-A]
 - [WWW 2026] **FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation**. Senlei Zhang, Tongjun Shi, Dandan Song, Luan Zhang, Shuhao Zhang, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]
 - [WWW 2026] **StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning**. Changwu Li, Tongjun Shi, Shuhao Zhang, Binbin Chen, Bingsheng He, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]
 - [ICDM 2024] **MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm**. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM). [Corresponding Author]
@@ -68,6 +70,8 @@
 
 ### 三、共享状态演化、复用与稳定推理
 
+- [ICML] **Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs**. Ruicheng Zhang, Xinyi Li, Tianyi Xu, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [CCF-A]
+- [ICML] **SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning**. Jun Liu, Peilin Liu, Ruicheng Zhang, Senlei Zhang, Yanbo Chen, Ziao Wang, Jinyun Yang, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [CCF-A]
 - [EMNLP] **SentiStream: A Co-Training Framework for Adaptive Online Sentiment Analysis in Evolving Data Streams**. Yuhao Wu, Karthick Sharma, Chun Wei Seah, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, main track). [Corresponding Author]
 - [ICDM] **MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm**. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM). [Corresponding Author]
 - [SIGMOD] **Data Stream Clustering: An In-depth Empirical Study**. Xin Wang, Zhengru Wang, Zhenyu Wu, Shuhao Zhang, Xuanhua Shi, Li Lu. International Conference on Management of Data (SIGMOD). [Corresponding Author] [CCF-A]

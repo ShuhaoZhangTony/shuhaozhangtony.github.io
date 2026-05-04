@@ -20,6 +20,28 @@
     "terminal.integrated.shellIntegration.enabled": true,
     "files.exclude": {
       "**/.DS_Store": true
+    },
+    "files.watcherExclude": {
+      "**/.DS_Store": true,
+      "**/.preview/**": true,
+      "**/.pytest_cache/**": true,
+      "**/bin/**": true,
+      "**/gh_local/**": true,
+      "**/third_party/**": true,
+      "**/*.aux": true,
+      "**/*.bbl": true,
+      "**/*.bcf": true,
+      "**/*.blg": true,
+      "**/*.fdb_latexmk": true,
+      "**/*.fls": true,
+      "**/*.log": true,
+      "**/*.nav": true,
+      "**/*.out": true,
+      "**/*.run.xml": true,
+      "**/*.snm": true,
+      "**/*.synctex.gz": true,
+      "**/*.toc": true,
+      "**/*.xdv": true
     }
   }
 }
