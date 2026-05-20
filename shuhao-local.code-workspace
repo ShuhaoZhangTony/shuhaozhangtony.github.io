@@ -9,15 +9,19 @@
       "path": "../private-materials"
     },
     {
+      "name": "parallel-distributed-state-management-survey",
       "path": "../parallel-distributed-state-management-survey"
     },
     {
+      "name": "huawei-stw-memory-rag-talk",
       "path": "../huawei-stw-memory-rag-talk"
     },
     {
+      "name": "graduate-paper-writing-course",
       "path": "../graduate-paper-writing-course"
     },
     {
+      "name": "cccf-domestic-inference-engine-survey",
       "path": "../cccf-domestic-inference-engine-survey"
     }
   ],
