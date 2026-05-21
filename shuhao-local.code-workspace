@@ -23,6 +23,9 @@
     {
       "name": "cccf-domestic-inference-engine-survey",
       "path": "../cccf-domestic-inference-engine-survey"
+    },
+    {
+      "path": "../intro-to-llm-inference-engines"
     }
   ],
   "settings": {
