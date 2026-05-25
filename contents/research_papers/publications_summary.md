@@ -1,12 +1,30 @@
 # Coverage Notes
 
-- The raw `research_papers` directory currently contains 60 markdown items.
-- This summary tracks 56 venue-level publication records.
+- The raw `research_papers` directory currently contains 62 markdown items.
+- This summary tracks 58 venue-level publication records.
 - Thesis materials, draft manuscripts, and duplicate source versions in the raw directory are not counted separately here.
 
 # 0. 最新工作补充（2025–2026）
 
-### 0.1 FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation
+### 0.1 SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning
+
+**Venue:** ICML - International Conference on Machine Learning  
+**Year:** 2026  
+**Authors:** Jun Liu, Peilin Liu, Ruicheng Zhang, Senlei Zhang, Yanbo Chen, Ziao Wang, Jinyun Yang, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin  
+**Corresponding Author:** Yes | **First Author:** No  
+**Status:** Author PDF has been added to this repository; the structured abstract has not yet been extracted into this summary.  
+**Summary:** This ICML 2026 paper presents SAGE, a dataflow-native framework for modular, controllable, and transparent LLM-augmented reasoning.
+
+### 0.2 Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs
+
+**Venue:** ICML - International Conference on Machine Learning  
+**Year:** 2026  
+**Authors:** Ruicheng Zhang, Xinyi Li, Tianyi Xu, Shuhao Zhang, Xiaofei Liao, Hai Jin  
+**Corresponding Author:** Yes | **First Author:** No  
+**Status:** Author PDF has been added to this repository; the structured abstract has not yet been extracted into this summary.  
+**Summary:** This ICML 2026 paper studies granular decomposition of the streaming lifecycle in external memory for LLMs.
+
+### 0.3 FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation
 
 **Venue:** WWW - The Web Conference  
 **Year:** 2026  
@@ -14,7 +32,7 @@
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** Retrieval-Augmented Generation (RAG) enhances large language models by leveraging external knowledge, but retrieval quality degrades when corpora evolve continuously and distribution shift accumulates. FlowRAG addresses this challenge by enabling lightweight continual retriever adaptation in evolving corpora. The framework augments the encoder with layer-wise prompt embeddings, introduces cross-layer fusion to capture hierarchical semantic representations, and employs a generator-guided loss to align retrieval decisions with generation likelihoods. Experiments across four domains show that by updating only about 0.64% of the model parameters, FlowRAG consistently improves retrieval accuracy, generation quality, and robustness to forgetting under non-stationary settings.
 
-### 0.2 StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning
+### 0.4 StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning
 
 **Venue:** WWW - The Web Conference  
 **Year:** 2026  
@@ -22,7 +40,7 @@
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** Stream learning is a natural paradigm for adaptive AI services over evolving user data streams, but it remains challenged by redundant training samples and catastrophic forgetting. StreamFP introduces fingerprints, a set of compact learnable parameter vectors that summarize model state and guide both coreset selection and buffer update. By scoring similarity between incoming data and model fingerprints, StreamFP prioritizes informative new samples while retaining representative historical ones. A lightweight fingerprint attunement plugin further improves accuracy with negligible overhead. The resulting framework improves adaptability and efficiency for stream learning workloads under continuously changing data distributions.
 
-### 0.3 GRACE: Alleviating Reconstruction Cost in Dynamic Graph Processing Systems
+### 0.5 GRACE: Alleviating Reconstruction Cost in Dynamic Graph Processing Systems
 
 **Venue:** ICDE - IEEE 42nd International Conference on Data Engineering  
 **Year:** 2026  
@@ -30,7 +48,7 @@
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** Efficient dynamic graph processing is increasingly important for real-time applications, yet existing PMA-based CSR systems suffer from costly reconstruction and frequent rebalancing under intensive updates. GRACE is a lightweight extension that exploits graph structural properties to reduce reconstruction overhead while preserving layout contiguity. It combines a property-guided reservation strategy with cousin-aware rebalancing to reduce copying, traversal, and redundant relocation during updates. Implemented as a modular plugin atop representative dynamic graph systems, GRACE substantially accelerates reconstruction and graph updating while maintaining comparable computing performance.
 
-### 0.4 CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams
+### 0.6 CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams
 
 **Venue:** SIGMOD - International Conference on Management of Data  
 **Year:** 2026  
@@ -38,7 +56,7 @@
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** Continuous approximate nearest neighbor search over streaming vector data is increasingly important in open-world settings where distributions drift, noise accumulates, and concurrent access is common. Existing benchmarks focus on static or simplified streaming scenarios and therefore fail to capture the dynamic behavior of real-world workloads. CANDOR-Bench addresses this gap by building a benchmarking framework for in-memory ANNS under dynamic open-world streams, enabling systematic evaluation of ingestion latency, retrieval quality, and update efficiency under high-churn, continuously evolving workloads. The framework provides a reusable basis for studying dynamic vector retrieval systems beyond static ANN settings.
 
-### 0.5 Data-Aware Adaptive Compression for Stream Processing
+### 0.7 Data-Aware Adaptive Compression for Stream Processing
 
 **Venue:** TKDE - IEEE Transactions on Knowledge and Data Engineering  
 **Year:** 2025  
@@ -46,7 +64,7 @@
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** This work extends the compressed stream processing line by designing a compression-based stream engine that performs adaptive fine-grained query processing directly on compressed data. The system integrates nine compression methods and a cost model for automatic compression-scheme selection, enabling significantly higher throughput and lower latency than uncompressed stream processing baselines. Compared with prior stream solutions on uncompressed inputs, the framework improves average performance by 3.84×, reduces delay by 68.0%, and saves 68.7% space. Edge trials further show substantial throughput-price and throughput-power gains over cloud-oriented designs.
 
-### 0.6 Scalable Transactional Stream Processing on Multicore Processors
+### 0.8 Scalable Transactional Stream Processing on Multicore Processors
 
 **Venue:** TKDE - IEEE Transactions on Knowledge and Data Engineering  
 **Year:** 2025  
@@ -54,7 +72,7 @@
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** This journal version further develops MorphStream into a more general transactional stream processing engine for multicores. In addition to adaptive scheduling, it supports non-deterministic state access through a stateful task precedence graph and incorporates a generalized framework for window-based operations via multi-versioned state management. These extensions broaden the applicability of transactional stream processing to dynamic and irregular workloads while preserving strong semantics. Experimental results show up to 3.4× higher throughput and 69.1% lower latency than state-of-the-art alternatives.
 
-### 0.7 Select Edges Wisely: Monotonic Path Aware Graph Layout Optimization for Disk-Based ANN Search
+### 0.9 Select Edges Wisely: Monotonic Path Aware Graph Layout Optimization for Disk-Based ANN Search
 
 **Venue:** SIGMOD - International Conference on Management of Data  
 **Year:** 2026  
@@ -62,7 +80,7 @@
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** Approximate nearest neighbor (ANN) search is a critical primitive in modern retrieval systems, but disk-based graph indexes often suffer from poor locality and inefficient layout optimization. This work proposes MARGO, a monotonic path-aware graph layout optimization method for disk-based ANN search. It formalizes graph layout quality through an objective that emphasizes edges important to monotonic paths, introduces a greedy optimization strategy to preserve more effective search paths, and further improves efficiency with a two-stage decoupling design. The resulting method improves locality and search efficiency for disk-resident ANN indexes under memory-constrained settings.
 
-### 0.8 Multi-Hop Knowledge Editing via Critic-Guided Multi-Agent Reasoning
+### 0.10 Multi-Hop Knowledge Editing via Critic-Guided Multi-Agent Reasoning
 
 **Venue:** ACL Findings - Findings of the Association for Computational Linguistics  
 **Year:** 2026  
@@ -71,7 +89,7 @@
 **Status:** Accepted collaborative paper; the public abstract/PDF has not yet been added to this repository.  
 **Summary:** This collaborative paper studies multi-hop knowledge editing with a critic-guided multi-agent reasoning framework.
 
-### 0.9 FusionFlow: Enabling Deep Structural Exploration for Automated Agentic Workflow Generation
+### 0.11 FusionFlow: Enabling Deep Structural Exploration for Automated Agentic Workflow Generation
 
 **Venue:** ACL - Annual Meeting of the Association for Computational Linguistics (Main Conference)  
 **Year:** 2026  
@@ -84,7 +102,7 @@
 
 ### 1.1 CompressStreamDB: Fine-Grained Adaptive Stream Processing without Decompression
 
-**Venue:** ICDE - IEEE 39rd International Conference on Data Engineering  
+**Venue:** ICDE - IEEE 39th International Conference on Data Engineering  
 **Year:** 2023  
 **Authors:** Yu Zhang, Feng Zhang, Hourun Li, Shuhao Zhang, Xiaoyong Du  
 **Corresponding Author:** No | **First Author:** No  
@@ -100,10 +118,10 @@
 
 ### 1.3 Parallelizing Stream Compression for IoT Applications on Asymmetric Multicores
 
-**Venue:** ICDE - IEEE 39rd International Conference on Data Engineering  
+**Venue:** ICDE - IEEE 39th International Conference on Data Engineering  
 **Year:** 2023  
 **Authors:** Xianzhi Zeng, Shuhao Zhang  
-**Corresponding Author:** No | **First Author:** No  
+**Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** Data stream compression attracts much attention recently due to the rise of IoT applications. Thanks to the balanced computational power and  energy consumption, asymmetric multicores are widely used in IoT  devices. This paper introduces CStream, a novel framework for  parallelizing stream compression on asymmetric multicores to minimize  energy consumption without violating the user-specified compressing  latency constraint. Existing works cannot effectively utilize asymmetric multicores for stream compression, primarily due to the non-trivial  asymmetric computation and asymmetric communication effects. To this  end, CStream is developed with the following two novel designs: 1)  fine-grained decomposition, which decomposes a stream compression  procedure into multiple fine-grained tasks to better expose the  task-core affinities under the asymmetric computation effects; and 2)  asymmetry-aware task scheduling, which schedules the decomposed tasks  based on a novel cost model to exploit the exposed task-core affinities  while considering asymmetric communication effects. To validate our  proposal, we evaluate CStream with five competing mechanisms of  parallelizing stream compression algorithms on a recent asymmetric  multicore processor. We evaluate CStream with five competing mechanisms  of parallelizing stream compression algorithms to validate our proposal  on a recent asymmetric multicore processor. Our extensive experiments  based on a benchmark of three algorithms and four datasets show that  CStream outperforms alternative approaches by up to 53% lower energy  consumption without compressing latency constraint violation.
 
 ### 1.4 CStream: Parallel Data Stream Compression on Multicore Edge Devices
@@ -190,7 +208,7 @@
 
 ### 2.5 Scalable Machine Learning for Real-Time Fault Diagnosis in Industrial IoT Cooling Roller Systems
 
-**Venue:** ICDE - IEEE 40rd International Conference on Data Engineering  
+**Venue:** ICDE - IEEE 41st International Conference on Data Engineering  
 **Year:** 2025  
 **Authors:** Dandan Zhao, Karthick Sharma, Yuxin Qi, Qixun Liu, Shuhao Zhang  
 **Corresponding Author:** Yes | **First Author:** No  
@@ -208,7 +226,7 @@
 
 **Venue:** IJCAI - International Joint Conference on Artificial Intelligence  
 **Year:** 2025  
-**Authors:** N/A  
+**Authors:** Luan Zhang, Dandan Song, Zhijing Wu, Yuhang Tian, Changzhi Zhou, Jing Xu, Ziyi Yang, Shuhao Zhang  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** Large language models (LLMs) have demonstrated exceptional performance  across various domains. However, LLMs are prone to hallucinate facts and generate non-factual responses, which can undermine their reliability  in real-world applications. Current hallucinate detection methods suffer from external resource demands, substantial time overhead, difficulty  overcoming LLMs' intrinsic limitation, and insufficient modeling. In  this paper, we propose MHAD, a novel internal-representation-based  hallucination detection method. MHAD utilizes linear probing to select  neurons and layers within LLMs. The selected neurons and layers are  demonstrated with significant awareness of hallucinations at the initial and final generation steps. By concatenating the outputs from these  selected neurons of selected layers at the initial and final generation  steps, a hallucination awareness vector is formed, enabling precise  hallucination detection via a multi-layer perceptron (MLP).  Additionally, we introduce SOQHD, a novel benchmark for evaluating  hallucination detection in Open-Domain QA (ODQA). Extensive experiments  show that MHAD outperforms existing hallucination detection methods  across multiple LLMs, demonstrating superior effectiveness. 
 
@@ -312,7 +330,7 @@
 
 ### 3.10 Scalable Online Interval Join on Modern Multicore Processors in OpenMLDB
 
-**Venue:** ICDE - IEEE 39rd International Conference on Data Engineering  
+**Venue:** ICDE - IEEE 39th International Conference on Data Engineering  
 **Year:** 2023  
 **Authors:** Hao Zhang, Xianzhi Zeng, Shuhao Zhang, Xinyi Liu, Mian Lu, Zhao Zheng  
 **Corresponding Author:** No | **First Author:** No  
@@ -340,7 +358,7 @@
 
 ### 3.13 MorphStream: Scalable Processing of Transactions over Streams
 
-**Venue:** ICDE - IEEE 39rd International Conference on Data Engineering (ICDE Demo)  
+**Venue:** ICDE - IEEE 40th International Conference on Data Engineering (ICDE Demo)  
 **Year:** 2024  
 **Authors:** Siqi Xiang, Zhonghao Yang, Shuhao Zhang, Jianjun Zhao, Yancan Mao  
 **Corresponding Author:** Yes | **First Author:** No  
@@ -350,7 +368,7 @@
 
 ### 3.14 Fast Parallel Recovery for Transactional Stream Processing on Multicores
 
-**Venue:** ICDE - IEEE 39rd International Conference on Data Engineering  
+**Venue:** ICDE - IEEE 40th International Conference on Data Engineering  
 **Year:** 2024  
 **Authors:** Jianjun Zhao, Haikun Liu, Shuhao Zhang, Zhuohui Duan, Xiaofei Liao, Hai Jin, Yu Zhang  
 **Corresponding Author:** No | **First Author:** No  

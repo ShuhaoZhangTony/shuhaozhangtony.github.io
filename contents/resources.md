@@ -12,4 +12,3 @@
 ## 公开综述材料
 
 - 并行与分布式系统中的高效状态管理综述：[PDF](/contents/research_papers/2026/2026_parallel_distributed_state_management_survey.pdf)
-- 国产算力推理引擎综述：[PDF](/contents/research_papers/2026/2026_cccf_domestic_inference_engine_survey.pdf)
