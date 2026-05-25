@@ -48,16 +48,21 @@ window.addEventListener('DOMContentLoaded', event => {
     // Marked
     marked.use({ mangle: false, headerIds: false })
     section_names.forEach((name, idx) => {
+        const sectionElement = document.getElementById(name + '-md');
+
         fetch(content_dir + name + '.md')
             .then(response => response.text())
             .then(markdown => {
                 const html = marked.parse(markdown);
-                document.getElementById(name + '-md').innerHTML = html;
+                sectionElement.innerHTML = html;
             }).then(() => {
                 // MathJax
                 MathJax.typeset();
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(error);
+                sectionElement.textContent = '内容加载失败，请刷新重试。';
+            });
     })
 
 }); 
