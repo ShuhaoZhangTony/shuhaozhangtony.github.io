@@ -46,6 +46,22 @@
 
 ---
 
+## 公开课程材料
+
+《大模型推理基础设施》课程材料见总览页。
+
+- 课程材料总览：[页面](contents/teaching/intro-to-llm-inference-engines.md)
+- 2026 公开版共 34 份 PDF：讲义与导论 handout 15 份，tutorial 13 份，实验单与课程项目说明 6 份。
+
+## 公开综述材料
+
+两份综述成品 PDF 如下：
+
+- 并行与分布式系统中的高效状态管理综述：[PDF](contents/research_papers/2026/2026_parallel_distributed_state_management_survey.pdf)
+- 国产算力推理引擎综述：[PDF](contents/research_papers/2026/2026_cccf_domestic_inference_engine_survey.pdf)
+
+---
+
 ## 招生与合作
 
 课题组长期招收对 **系统研究与工程实现** 感兴趣的硕士、博士和长期实习生，方向聚焦 **大模型推理引擎、推理服务系统与记忆智能体中间件**。
