@@ -44,7 +44,7 @@
 
 ## Publications
 
-完整论文列表见 [Publications](publications)。近期工作主要围绕共享状态访问与调度、状态感知执行优化，以及共享状态演化与复用三条研究线展开，发表于 ACL、WWW、SIGMOD、ICDE、TKDE、CVPR、NeurIPS、EMNLP 等会议与期刊。
+完整论文列表见 [Publications](#publications)。近期工作主要围绕共享状态访问与调度、状态感知执行优化，以及共享状态演化与复用三条研究线展开，发表于 ACL、WWW、SIGMOD、ICDE、TKDE、CVPR、NeurIPS、EMNLP 等会议与期刊。
 
 ---
 
