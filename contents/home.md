@@ -46,12 +46,9 @@
 
 ---
 
-## 公开课程材料
+## 公开教学材料
 
-《大模型推理基础设施》课程材料见总览页。
-
-- 课程材料总览：[页面](/intro-to-llm-inference-engines.html)
-- 2026 公开版共 34 份 PDF：讲义与导论 handout 15 份，tutorial 13 份，实验单与课程项目说明 6 份。
+- 教学材料总览：[页面](/teaching-materials.html)
 
 ## 公开综述材料
 

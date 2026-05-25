@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>公开教学材料</title>
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            background: #f7f8fb;
+            color: #1f2937;
+        }
+
+        .page-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 40px 20px 64px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            color: #5269ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .page-header {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 18px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .course-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .course-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 24px 28px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+        }
+
+        .course-card h2 {
+            margin: 0 0 8px;
+            font-size: 1.35rem;
+        }
+
+        .course-card p {
+            margin: 0 0 12px;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .course-card a {
+            color: #5269ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 640px) {
+            .page-wrap {
+                padding: 28px 16px 48px;
+            }
+
+            .page-header,
+            .course-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrap">
+        <a class="back-link" href="/">
+            <i class="bi bi-arrow-left"></i>
+            返回主页
+        </a>
+
+        <section class="page-header">
+            <h1>公开教学材料</h1>
+            <p>这里统一整理目前放在个人主页上的课程公开页。</p>
+        </section>
+
+        <section class="course-list">
+            <article class="course-card">
+                <h2>大模型推理基础设施</h2>
+                <p>2026 年公开版共 34 份 PDF，包含讲义、tutorial 与实验单。</p>
+                <a href="/intro-to-llm-inference-engines.html">进入课程材料页</a>
+            </article>
+
+            <article class="course-card">
+                <h2>研究生论文写作</h2>
+                <p>当前公开第 5 至第 8 讲课件，共 4 份 PDF，均为草稿版。</p>
+                <a href="/graduate-paper-writing-course.html">进入课程材料页</a>
+            </article>
+        </section>
+    </main>
+</body>
+</html>

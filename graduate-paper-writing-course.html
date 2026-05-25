@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>研究生论文写作课程材料</title>
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            background: #f7f8fb;
+            color: #1f2937;
+        }
+
+        .page-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 40px 20px 64px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            color: #5269ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .page-header,
+        .page-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+        }
+
+        .page-header {
+            margin-bottom: 18px;
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .meta-line {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .page-card h2,
+        .page-card h3 {
+            margin-top: 1.25rem;
+        }
+
+        .page-card h2 {
+            margin-top: 2rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-card ul {
+            padding-left: 1.4rem;
+        }
+
+        .page-card li {
+            margin-bottom: 0.45rem;
+        }
+
+        .page-card a {
+            word-break: break-word;
+        }
+
+        .loading-note {
+            color: #64748b;
+        }
+
+        @media (max-width: 640px) {
+            .page-wrap {
+                padding: 28px 16px 48px;
+            }
+
+            .page-header,
+            .page-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrap">
+        <a class="back-link" href="/">
+            <i class="bi bi-arrow-left"></i>
+            返回主页
+        </a>
+
+        <section class="page-header">
+            <h1>研究生论文写作课程材料</h1>
+            <p>这里汇总 2026 年公开版课件 PDF。</p>
+            <div class="meta-line">当前公开 4 份课件，均为草稿版。</div>
+        </section>
+
+        <article class="page-card" id="course-content"><span class="loading-note">加载中...</span></article>
+    </main>
+
+    <script type="text/javascript" src="static/js/marked.min.js"></script>
+    <script>
+        marked.use({ mangle: false, headerIds: false });
+
+        const courseContent = document.getElementById('course-content');
+
+        fetch('/contents/teaching/graduate-paper-writing-course.md')
+            .then((response) => response.text())
+            .then((markdown) => {
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = marked.parse(markdown);
+
+                const title = wrapper.querySelector('h1');
+                if (title) {
+                    title.remove();
+                }
+
+                const firstSection = wrapper.querySelector('h2');
+                while (wrapper.firstChild && wrapper.firstChild !== firstSection) {
+                    wrapper.removeChild(wrapper.firstChild);
+                }
+
+                courseContent.innerHTML = '';
+                courseContent.appendChild(wrapper);
+            })
+            .catch(() => {
+                courseContent.textContent = '课程材料加载失败。';
+            });
+    </script>
+</body>
+</html>
