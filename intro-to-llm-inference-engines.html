@@ -10,21 +10,143 @@
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
     <style>
         body {
-            background: #f8fafc;
+            margin: 0;
+            background: linear-gradient(180deg, #edf2ff 0%, #f8fafc 22%, #f8fafc 100%);
             color: #1f2937;
         }
 
         .page-wrap {
-            max-width: 960px;
+            max-width: 1120px;
             margin: 0 auto;
             padding: 48px 24px 72px;
         }
 
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: #3948d2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .hero-card {
+            display: grid;
+            grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.9fr);
+            gap: 24px;
+            margin-bottom: 24px;
+            padding: 32px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(57, 72, 210, 0.96), rgba(82, 105, 255, 0.9));
+            color: #ffffff;
+            box-shadow: 0 22px 60px rgba(57, 72, 210, 0.25);
+        }
+
+        .hero-eyebrow {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.16);
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+        }
+
+        .hero-card h1 {
+            margin: 8px 0 12px;
+            font-size: clamp(2rem, 3vw, 2.75rem);
+            line-height: 1.15;
+        }
+
+        .hero-card p {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            align-self: end;
+        }
+
+        .stat-card {
+            padding: 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(8px);
+        }
+
+        .stat-value {
+            display: block;
+            font-size: 1.9rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            display: block;
+            margin-top: 6px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.82);
+        }
+
+        .content-layout {
+            display: grid;
+            grid-template-columns: 260px minmax(0, 1fr);
+            gap: 24px;
+            align-items: start;
+        }
+
+        .toc-card,
         .page-card {
             background: #ffffff;
             border-radius: 18px;
             padding: 32px;
             box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+        }
+
+        .toc-card {
+            position: sticky;
+            top: 24px;
+            padding: 24px;
+        }
+
+        .toc-card h2 {
+            margin: 0 0 12px;
+            font-size: 1.05rem;
+            color: #3948d2;
+        }
+
+        .toc-card p {
+            margin: 0 0 16px;
+            color: #64748b;
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .toc-links {
+            display: grid;
+            gap: 10px;
+        }
+
+        .toc-links a {
+            display: block;
+            padding: 10px 12px;
+            border-radius: 12px;
+            color: #1f2937;
+            text-decoration: none;
+            background: #f8fafc;
+            transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .toc-links a:hover {
+            background: #e8edff;
+            color: #3948d2;
+            transform: translateX(2px);
         }
 
         .page-card h1,
@@ -33,16 +155,48 @@
             margin-top: 1.25rem;
         }
 
+        .page-card h2 {
+            padding-top: 8px;
+            scroll-margin-top: 24px;
+        }
+
+        .page-card ul {
+            padding-left: 1.4rem;
+        }
+
+        .page-card li {
+            margin-bottom: 0.45rem;
+        }
+
         .page-card a {
             word-break: break-word;
         }
 
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            text-decoration: none;
+        .loading-note {
+            color: #64748b;
+        }
+
+        @media (max-width: 900px) {
+            .hero-card,
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc-card {
+                position: static;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-wrap {
+                padding: 28px 16px 48px;
+            }
+
+            .hero-card,
+            .page-card,
+            .toc-card {
+                padding: 22px;
+            }
         }
     </style>
 </head>
@@ -53,20 +207,83 @@
             <i class="bi bi-arrow-left"></i>
             返回主页
         </a>
-        <article class="page-card" id="course-content">加载中...</article>
+
+        <section class="hero-card">
+            <div>
+                <span class="hero-eyebrow">Public Course Materials</span>
+                <h1>大模型推理基础设施课程材料</h1>
+                <p>这里集中整理 2026 年公开版课程 PDF，便于学生与外部读者按讲义、tutorial 和实验三条线直接查阅。</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-value">34</span>
+                    <span class="stat-label">公开 PDF</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label">讲义与 handout</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">13</span>
+                    <span class="stat-label">tutorial</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">6</span>
+                    <span class="stat-label">实验与项目说明</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-layout">
+            <aside class="toc-card">
+                <h2>快速导航</h2>
+                <p>按分组跳转到课程讲义、tutorial 或实验说明。</p>
+                <nav class="toc-links" id="course-nav">
+                    <span class="loading-note">目录加载中...</span>
+                </nav>
+            </aside>
+
+            <article class="page-card" id="course-content">加载中...</article>
+        </section>
     </main>
 
     <script type="text/javascript" src="static/js/marked.min.js"></script>
     <script>
         marked.use({ mangle: false, headerIds: false });
 
+        const courseContent = document.getElementById('course-content');
+        const courseNav = document.getElementById('course-nav');
+
         fetch('/contents/teaching/intro-to-llm-inference-engines.md')
             .then((response) => response.text())
             .then((markdown) => {
-                document.getElementById('course-content').innerHTML = marked.parse(markdown);
+                const wrapper = document.createElement('div');
+                wrapper.innerHTML = marked.parse(markdown);
+
+                const title = wrapper.querySelector('h1');
+                if (title) {
+                    title.remove();
+                }
+
+                const headings = Array.from(wrapper.querySelectorAll('h2'));
+                courseNav.innerHTML = '';
+
+                headings.forEach((heading, index) => {
+                    const sectionId = `section-${index + 1}`;
+                    heading.id = sectionId;
+
+                    const link = document.createElement('a');
+                    link.href = `#${sectionId}`;
+                    link.textContent = heading.textContent;
+                    courseNav.appendChild(link);
+                });
+
+                courseContent.innerHTML = '';
+                courseContent.appendChild(wrapper);
             })
             .catch(() => {
-                document.getElementById('course-content').textContent = '课程材料加载失败。';
+                courseNav.innerHTML = '<span class="loading-note">目录加载失败。</span>';
+                courseContent.textContent = '课程材料加载失败。';
             });
     </script>
 </body>
