@@ -50,13 +50,6 @@
 
 - 教学材料总览：[页面](/teaching-materials.html)
 
-## 公开综述材料
-
-两份综述成品 PDF 如下：
-
-- 并行与分布式系统中的高效状态管理综述：[PDF](contents/research_papers/2026/2026_parallel_distributed_state_management_survey.pdf)
-- 国产算力推理引擎综述：[PDF](contents/research_papers/2026/2026_cccf_domestic_inference_engine_survey.pdf)
-
 ---
 
 ## 招生与合作
@@ -86,3 +79,12 @@
 - Email：shuhao_zhang[at]hust.edu.cn
 - ORCID：https://orcid.org/0000-0002-9927-6925
 - 团队主页：https://intellistream.github.io/
+
+---
+
+## 公开综述材料
+
+两份综述成品 PDF 如下：
+
+- 并行与分布式系统中的高效状态管理综述：[PDF](contents/research_papers/2026/2026_parallel_distributed_state_management_survey.pdf)
+- 国产算力推理引擎综述：[PDF](contents/research_papers/2026/2026_cccf_domestic_inference_engine_survey.pdf)
