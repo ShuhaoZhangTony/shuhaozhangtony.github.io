@@ -48,7 +48,8 @@
 
 ## 公开教学材料
 
-- 教学材料总览：[页面](/teaching-materials.html)
+- 大模型推理基础设施：[页面](/intro-to-llm-inference-engines.html)
+- 研究生论文写作：[页面](/graduate-paper-writing-course.html)
 
 ---
 
