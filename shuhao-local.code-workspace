@@ -1,31 +1,32 @@
 {
   "folders": [
     {
-      "name": "public-site",
+      "name": "site | public-site",
       "path": "."
     },
     {
-      "name": "private-materials",
+      "name": "private | private-materials",
       "path": "../private-materials"
     },
     {
-      "name": "parallel-distributed-state-management-survey",
-      "path": "../parallel-distributed-state-management-survey"
-    },
-    {
-      "name": "huawei-stw-memory-rag-talk",
-      "path": "../huawei-stw-memory-rag-talk"
-    },
-    {
-      "name": "graduate-paper-writing-course",
+      "name": "course | graduate-paper-writing-course",
       "path": "../graduate-paper-writing-course"
     },
     {
-      "name": "cccf-domestic-inference-engine-survey",
+      "name": "course | intro-to-llm-inference-engines",
+      "path": "../intro-to-llm-inference-engines"
+    },
+    {
+      "name": "survey | parallel-distributed-state-management-survey",
+      "path": "../parallel-distributed-state-management-survey"
+    },
+    {
+      "name": "survey | cccf-domestic-inference-engine-survey",
       "path": "../cccf-domestic-inference-engine-survey"
     },
     {
-      "path": "../intro-to-llm-inference-engines"
+      "name": "talk | huawei-stw-memory-rag-talk",
+      "path": "../huawei-stw-memory-rag-talk"
     }
   ],
   "settings": {

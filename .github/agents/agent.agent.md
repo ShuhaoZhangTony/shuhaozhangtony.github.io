@@ -2,7 +2,7 @@
 name: academic-homepage
 model: GPT-5.4
 description: "Use when editing the public academic homepage repository, including biography text, news, publications, teaching pages, site configuration, and other public-facing website content."
-tools: [read, search, edit]
+tools: [vscode, execute, read, agent, browser, 'microsoft/markitdown/*', edit, search, web, todo, vscode.mermaid-chat-features/renderMermaidDiagram, github.vscode-pull-request-github/issue_fetch, github.vscode-pull-request-github/labels_fetch, github.vscode-pull-request-github/notification_fetch, github.vscode-pull-request-github/doSearch, github.vscode-pull-request-github/activePullRequest, github.vscode-pull-request-github/pullRequestStatusChecks, github.vscode-pull-request-github/openPullRequest, github.vscode-pull-request-github/create_pull_request, github.vscode-pull-request-github/resolveReviewThread, ms-vscode.vscode-websearchforcopilot/websearch]
 user-invocable: true
 argument-hint: "Describe the target page or content area, and whether the task is drafting, revising, restructuring, or preparing public-safe material."
 ---

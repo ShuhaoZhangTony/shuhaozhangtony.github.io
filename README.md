@@ -42,7 +42,7 @@ This repository includes a workspace file for local development:
 shuhao-local.code-workspace
 ```
 
-Open that workspace file in VS Code after cloning both repositories side by side. By default it expects the private repository to live at `../private-materials`.
+Open that workspace file in VS Code after cloning both repositories side by side. By default it expects these sibling repositories to live one level above the public site repository: `../private-materials`, `../graduate-paper-writing-course`, `../intro-to-llm-inference-engines`, `../parallel-distributed-state-management-survey`, `../cccf-domestic-inference-engine-survey`, and `../huawei-stw-memory-rag-talk`.
 
 The workspace also enables VS Code terminal shell integration so command detection works more reliably.
 
