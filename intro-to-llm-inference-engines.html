@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>大模型推理基础设施课程材料</title>
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #f8fafc;
+            color: #1f2937;
+        }
+
+        .page-wrap {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 48px 24px 72px;
+        }
+
+        .page-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 32px;
+            box-shadow: 0 18px 48px rgba(15, 23, 42, 0.08);
+        }
+
+        .page-card h1,
+        .page-card h2,
+        .page-card h3 {
+            margin-top: 1.25rem;
+        }
+
+        .page-card a {
+            word-break: break-word;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrap">
+        <a class="back-link" href="/">
+            <i class="bi bi-arrow-left"></i>
+            返回主页
+        </a>
+        <article class="page-card" id="course-content">加载中...</article>
+    </main>
+
+    <script type="text/javascript" src="static/js/marked.min.js"></script>
+    <script>
+        marked.use({ mangle: false, headerIds: false });
+
+        fetch('/contents/teaching/intro-to-llm-inference-engines.md')
+            .then((response) => response.text())
+            .then((markdown) => {
+                document.getElementById('course-content').innerHTML = marked.parse(markdown);
+            })
+            .catch(() => {
+                document.getElementById('course-content').textContent = '课程材料加载失败。';
+            });
+    </script>
+</body>
+</html>
