@@ -42,23 +42,8 @@
 
 ---
 
-## Publications
-
-完整论文列表见 [Publications](#publications)。近期工作主要围绕共享状态访问与调度、状态感知执行优化，以及共享状态演化与复用三条研究线展开，发表于 ACL、WWW、SIGMOD、ICDE、TKDE、CVPR、NeurIPS、EMNLP 等会议与期刊。
-
----
-
 ## 联系方式
 
 - Email：shuhao_zhang[at]hust.edu.cn
 - ORCID：https://orcid.org/0000-0002-9927-6925
 - 团队主页：https://intellistream.github.io/
-
----
-
-## 公开综述材料
-
-两份综述成品 PDF 如下：
-
-- 并行与分布式系统中的高效状态管理综述：[PDF](contents/research_papers/2026/2026_parallel_distributed_state_management_survey.pdf)
-- 国产算力推理引擎综述：[PDF](contents/research_papers/2026/2026_cccf_domestic_inference_engine_survey.pdf)
