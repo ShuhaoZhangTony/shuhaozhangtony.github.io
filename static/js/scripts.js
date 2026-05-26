@@ -37,7 +37,6 @@ window.addEventListener('DOMContentLoaded', event => {
                 try {
                     const targetElement = document.getElementById(key);
                     targetElement.innerHTML = yml[key];
-                    rewriteRootRelativeLinks(targetElement);
                 } catch {
                     console.log("Unknown id and value: " + key + "," + yml[key].toString())
                 }
@@ -57,7 +56,6 @@ window.addEventListener('DOMContentLoaded', event => {
             .then(markdown => {
                 const html = marked.parse(markdown);
                 sectionElement.innerHTML = html;
-                rewriteRootRelativeLinks(sectionElement);
             }).then(() => {
                 // MathJax
                 MathJax.typeset();

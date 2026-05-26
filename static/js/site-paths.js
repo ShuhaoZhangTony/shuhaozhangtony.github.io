@@ -29,29 +29,3 @@ function siteUrl(path = '') {
 
     return basePath + trimmedPath;
 }
-
-function rewriteRootRelativeLinks(container = document) {
-    const basePath = getSiteBasePath();
-    const rewriteTargets = [
-        ['a', 'href'],
-        ['img', 'src'],
-        ['source', 'src'],
-        ['link', 'href'],
-    ];
-
-    rewriteTargets.forEach(([selector, attribute]) => {
-        container.querySelectorAll(`${selector}[${attribute}^="/"]`).forEach((element) => {
-            const value = element.getAttribute(attribute);
-
-            if (!value || value.startsWith('//')) {
-                return;
-            }
-
-            if (basePath !== '/' && value.startsWith(basePath)) {
-                return;
-            }
-
-            element.setAttribute(attribute, siteUrl(value));
-        });
-    });
-}
