@@ -2,7 +2,7 @@
 
 [![Screenshot of the Website](https://raw.githubusercontent.com/senli1073/senli1073.github.io/main/screenshot_full.png)](https://senli1073.github.io/)
 
-This template is an academic personal website based on Bootstrap. It uses Markdown files as source content, and the page renders them in the browser at load time, so there is no build step required for basic publishing.
+This repository is an academic personal website based on Bootstrap. Markdown files remain the source content, but the published HTML is now generated at build time so the deployed site no longer depends on browser-side fetches of section markdown.
 
 Demo: https://senli1073.github.io/
 
@@ -67,15 +67,25 @@ git clone https://github.com/<username>/private-materials.git
 1. Edit the content of each section in `contents/*.md`.
 2. Edit the title, copyright information, and other site text in `contents/config.yml`.
 3. Replace the background image and photo in `static/assets/img`.
+4. Run `npm install` once, then run `npm run build` to regenerate the published HTML files.
 
 ### 3. Publish
 
 ```bash
-git commit -am 'init'
+npm run build
+git commit -am 'update site'
 git push
 ```
 
 Then open `https://<username>.github.io`.
+
+## Build model
+
+- `contents/` keeps Markdown source files and downloadable public assets such as PDFs.
+- `static/` keeps CSS, JS, and images.
+- `scripts/build-site.mjs` renders `index.html`, `intro-to-llm-inference-engines.html`, `graduate-paper-writing-course.html`, and `systems.html` as final HTML.
+- The published pages no longer fetch Markdown at runtime.
+
 
 ## License
 

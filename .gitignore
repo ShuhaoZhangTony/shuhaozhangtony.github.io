@@ -2,3 +2,4 @@
 private/
 .env
 .tectonic-cache/
+node_modules/

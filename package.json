@@ -1,0 +1,12 @@
+{
+  "name": "shuhaozhangtony-homepage",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-site.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "marked": "^13.0.2"
+  }
+}

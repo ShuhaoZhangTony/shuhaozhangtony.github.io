@@ -94,10 +94,6 @@
             border-radius: 6px;
         }
 
-        .loading-note {
-            color: #64748b;
-        }
-
         @media (max-width: 640px) {
             .page-wrap {
                 padding: 28px 16px 48px;
@@ -124,38 +120,75 @@
             <div class="meta-line">按“当前系统建设”和“代表性系统积累”两部分整理，便于从研究主题直接映射到系统原型、开源入口与论文。</div>
         </section>
 
-        <article class="page-card" id="systems-content"><span class="loading-note">加载中...</span></article>
+        <article class="page-card"><h2>当前系统建设</h2>
+<h3>SAGE</h3>
+<ul>
+<li>面向国产异构算力的大模型推理服务系统，重点关注在线 serving、调度编排、可观测性与端到端性能优化。</li>
+<li>公开入口：<a href="https://github.com/intellistream/SAGE">GitHub</a></li>
+<li>代表性论文：<a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE (ICML 2026)</a></li>
+</ul>
+<h3>Neuromem</h3>
+<ul>
+<li>面向大模型记忆智能体的中间件系列，重点覆盖流式记忆组织、向量检索、长期记忆写入与跨轮复用。</li>
+<li>当前公开仓库：<a href="https://github.com/intellistream/neruomem-bench">Neuromem-Benchmark</a></li>
+<li>代表性论文：<a href="contents/research_papers/2026/2026_neuromem_icml_2026.pdf">Neuromem (ICML 2026)</a></li>
+</ul>
+<h3>vLLM-HUST</h3>
+<ul>
+<li>面向国产算力的自研推理引擎底座与插件生态，重点覆盖共享 workload、KV 状态管理、插件化优化与评测工具链。</li>
+<li>公开入口：<a href="https://github.com/vLLM-HUST/vllm-hust">vLLM-HUST</a>, <a href="https://github.com/vLLM-HUST/vllm-hust-benchmark">Benchmark</a>, <a href="https://github.com/vLLM-HUST/vllm-hust-dev-hub">Dev Hub</a></li>
+</ul>
+<h2>代表性系统积累</h2>
+<h3>MorphStream</h3>
+<ul>
+<li>面向事务型流处理的系统原型，围绕动态负载下的调度、执行与故障恢复展开。</li>
+<li>公开入口：<a href="https://github.com/intellistream/MorphStream">GitHub</a></li>
+<li>代表性论文：<a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream (SIGMOD 2023)</a>, <a href="contents/research_papers/2024/2024_morphstream_icde_demo_2024.pdf">MorphStream Demo (ICDE 2024)</a>, <a href="contents/research_papers/2025/2025_morphstream_tkde.pdf">MorphStream (TKDE 2025)</a></li>
+</ul>
+<h3>BriskStream</h3>
+<ul>
+<li>面向共享内存多核与 NUMA 架构的流处理平台，围绕执行计划优化与硬件感知调度进行系统设计。</li>
+<li>公开入口：<a href="https://github.com/Xtra-Computing/briskstream">GitHub</a></li>
+<li>代表性论文：<a href="contents/research_papers/2019/2019_briskstream.pdf">BriskStream (SIGMOD 2019)</a></li>
+</ul>
+<h3>CStream</h3>
+<ul>
+<li>面向 IoT 与边缘设备的流数据压缩系统，关注在非对称多核约束下同时平衡吞吐、时延与能耗。</li>
+<li>公开入口：<a href="https://github.com/intellistream/CStream">GitHub</a></li>
+<li>代表性论文：<a href="contents/research_papers/2023/2023_cstream_icde.pdf">CStream (ICDE 2023)</a>, <a href="contents/research_papers/2024/2024_cstream_tkde_2024.pdf">CStream (TKDE 2024)</a></li>
+</ul>
+<h3>FineStream</h3>
+<ul>
+<li>面向 CPU-GPU 集成架构的流处理系统，重点探索细粒度 CPU/GPU 协同调度与窗口计算优化。</li>
+<li>代表性论文：<a href="contents/research_papers/2020/2020_finestream.pdf">FineStream (USENIX ATC 2020)</a>, <a href="contents/research_papers/2021/2021_tpds_finestream_paper_0224v1.pdf">FineStream MQ (TPDS 2021)</a></li>
+</ul>
+<h3>OmniDB</h3>
+<ul>
+<li>面向并行 CPU/GPU 架构的可移植查询处理原型，通过 kernel-adapter 设计降低跨硬件适配成本。</li>
+<li>代表性论文：<a href="contents/research_papers/2013/2013_omnidb_vldb_2013.pdf">OmniDB (VLDB 2013)</a></li>
+</ul>
+<h3>MOTTO</h3>
+<ul>
+<li>面向复杂事件处理的多查询优化器，围绕查询分解、共享与转换降低冗余计算。</li>
+<li>代表性论文：<a href="contents/research_papers/2017/2017_motto.pdf">MOTTO (ICDE 2017)</a></li>
+</ul>
+<h3>OpenMLDB Online Interval Join</h3>
+<ul>
+<li>面向机器学习数据库 OpenMLDB 的在线 interval join 优化工作，聚焦现代多核处理器上的并行执行与算法选择。</li>
+<li>代表性论文：<a href="contents/research_papers/2023/2023_openmldb_icde_2023.pdf">OpenMLDB OIJ (ICDE 2023)</a></li>
+</ul>
+<h2>说明</h2>
+<ul>
+<li>上述系统覆盖从多核/异构硬件上的状态管理与流处理，到大模型推理服务与记忆中间件的持续演进脉络。</li>
+<li>如需更完整的论文列表，可参见主页中的 Publications 栏目。</li>
+</ul></article>
     </main>
 
-    <script type="text/javascript" src="static/js/marked.min.js"></script>
-    <script type="text/javascript" src="static/js/site-paths.js"></script>
     <script>
-        marked.use({ mangle: false, headerIds: false });
-
-        const systemsContent = document.getElementById('systems-content');
-
-        fetch(siteUrl('contents/systems.md'))
-            .then((response) => response.text())
-            .then((markdown) => {
-                const wrapper = document.createElement('div');
-                wrapper.innerHTML = marked.parse(markdown);
-
-                const title = wrapper.querySelector('h1');
-                if (title) {
-                    title.remove();
-                }
-
-                const firstSection = wrapper.querySelector('h2');
-                while (wrapper.firstChild && wrapper.firstChild !== firstSection) {
-                    wrapper.removeChild(wrapper.firstChild);
-                }
-
-                systemsContent.innerHTML = '';
-                systemsContent.appendChild(wrapper);
-            })
-            .catch(() => {
-                systemsContent.textContent = '系统页面加载失败。';
-            });
+        MathJax = {
+            tex: { inlineMath: [['$', '$']] }
+        };
     </script>
+    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </body>
 </html>

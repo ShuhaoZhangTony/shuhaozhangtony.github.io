@@ -6,31 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title id="title"></title>
+    <title>Shuhao Zhang&#39;s Homepage</title>
     <link rel="icon" type="image/png" href="static/assets/img/photo.png" />
-    <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
     <link type="text/css" href="static/css/main.css" rel="stylesheet" />
-
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
-            <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
+            <a class="navbar-brand fw-bold" href="#page-top">Shuhao Zhang</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 MENU
@@ -41,9 +31,9 @@
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#page-top">HOME</a>
                     </li>
-                     <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#news">NEWS</a>
-                    </li> 			
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
                     </li>
@@ -55,114 +45,290 @@
         </div>
     </nav>
 
-    <!-- Top Section -->
     <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
         <div class="top-section-content">
             <div class="container px-5">
                 <div class="row">
                     <div class="col-lg-8">
-                        <h2 id="top-section-bg-text" class="text-white display-3 lh-1 mb-4 font-alt"></h2>
+                        <h2 class="text-white display-3 lh-1 mb-4 font-alt">State Management for LLM Serving Systems</h2>
                     </div>
                     <div class="col-lg-4">
-                        <div class="user-photo photo"><img class="shadow"
-                                src="static/assets/img/me3.jpg"></div>
+                        <div class="user-photo photo"><img class="shadow" src="static/assets/img/me3.jpg"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- Top Section -->
 
-
-    <!-- Home -->
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
         <div class="container px-5">
             <header>
-                <h2 id="home-subtitle"> </h2>
-                <!-- <span class="bi bi-list"></span> -->
+                <h2>Shuhao Zhang &ensp;|&ensp; 张书豪</h2>
             </header>
-            <div class="main-body" id="home-md">加载中...</div>
-
-
+            <div class="main-body"><h1>张书豪</h1>
+<blockquote>
+<p>华中科技大学计算机学院教授｜面向大模型推理引擎、推理服务系统与记忆智能体中间件招收硕士/博士/实习生</p>
+</blockquote>
+<p>张书豪，华中科技大学计算机科学与技术学院教授（<a href="http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm">个人主页</a>）。研究聚焦 <strong>复杂硬件与动态负载下的高效状态管理</strong>，重点关注并行分布式系统，并进一步延伸至 <strong>大模型推理基础设施</strong>，尤其是推理服务中的访问调度、执行优化与状态复用问题。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任助理教授，并在德国柏林工业大学（TUB）从事博士后研究。</p>
+<p>当前工作主要围绕 <strong>大模型推理引擎、推理服务系统与记忆智能体中间件</strong> 展开，重点关注共享状态在访问、执行与演化三个层面的组织问题，以及这些机制对吞吐、P99 时延和服务稳定性的影响。</p>
+<hr>
+<h2>研究板块</h2>
+<p>当前研究大致分为三个相互衔接的板块：</p>
+<ul>
+<li><strong>共享状态访问与运行时调度</strong>：观测、建模并优化共享状态访问与运行时调度；在大模型里主要对应请求排队、合批、路由与 <code>prefill / decode</code> 组织</li>
+<li><strong>状态感知执行优化</strong>：面向 CPU/GPU/异构硬件的执行协同与性能优化；在大模型里主要对应 <code>KV cache</code>、算子执行、通信路径与端到端时延/吞吐</li>
+<li><strong>共享状态演化与复用</strong>：围绕上下文、KV 与检索记忆的持续写入、演化与跨轮复用；在大模型里主要对应长上下文、RAG 和记忆增强推理</li>
+</ul>
+<hr>
+<h2>当前系统建设</h2>
+<p>课题组当前的系统工作主要包括三组相互衔接的系统线：</p>
+<p>系统脉络、公开仓库与代表性论文已整理在下方各系统条目中。</p>
+<ul>
+<li><strong><a href="https://github.com/intellistream/SAGE">SAGE</a></strong>：面向国产异构算力的大模型推理服务系统，重点覆盖在线 serving、调度编排、可观测性与端到端性能优化</li>
+<li><strong>Neuromem</strong>（当前开源的是 <a href="https://github.com/intellistream/neruomem-bench">Neuromem-Benchmark</a>）：面向大模型记忆智能体的中间件系列，重点覆盖流式记忆组织、向量检索、长期记忆写入与跨轮复用</li>
+<li><strong><a href="https://github.com/vLLM-HUST/vllm-hust">vLLM-HUST</a></strong>（含 <a href="https://github.com/vLLM-HUST/vllm-hust-benchmark">Benchmark</a>、<a href="https://github.com/vLLM-HUST/vllm-hust-dev-hub">Dev Hub</a> 等系列仓库）：面向国产算力的华科自研推理引擎底座与插件生态，重点覆盖共享 workload、KV 状态管理、插件化优化与评测工具链</li>
+</ul>
+<hr>
+<h2>招生与合作</h2>
+<p>课题组长期招收对 <strong>系统研究与工程实现</strong> 感兴趣的硕士、博士和长期实习生，方向聚焦 <strong>大模型推理引擎、推理服务系统与记忆智能体中间件</strong>。</p>
+<p>比较契合的背景包括以下几类：</p>
+<ul>
+<li>对系统研究有兴趣，愿意围绕真实负载做可复现实验与指标设计</li>
+<li>喜欢性能工程与原型实现，熟悉 Python/C++、分布式系统或 GPU/异构优化</li>
+<li>想做推理引擎核心问题，例如 batching、scheduling、KV cache 与记忆状态管理、observability 与 benchmarking</li>
+</ul>
+<p>如果具有数据库、操作系统、分布式系统、编译、体系结构、GPU/异构优化，或开源系统项目经验，通常会与上述方向较为契合。联系时建议附上简历、研究或项目经历（含代码链接），以及希望重点开展的 1–2 个问题。</p>
+<hr>
+<h2>联系方式</h2>
+<ul>
+<li>Email：shuhao_zhang[at]hust.edu.cn</li>
+<li>ORCID：<a href="https://orcid.org/0000-0002-9927-6925">https://orcid.org/0000-0002-9927-6925</a></li>
+<li>团队主页：<a href="https://intellistream.github.io/">https://intellistream.github.io/</a></li>
+</ul>
+</div>
         </div>
     </section>
-    <!-- Home -->
 
-    <!-- News -->
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="news">
         <div class="container px-5">
             <header>
-                <h2 id="news-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;NEWS</h2>
+                <h2><i class="bi bi-file-text-fill"></i>&nbsp;NEWS</h2>
             </header>
-            <div class="main-body" id="news-md">加载中...</div>
-
+            <div class="main-body"><ul>
+<li>May 2026 two papers accepted to ICML 2026, including Neuromem and SAGE</li>
+<li>Apr 2026 two collaborative papers accepted to ACL 2026, including one Main Conference paper and one Findings paper</li>
+<li>Mar 2026 recruiting students interested in LLM inference engines and serving systems; prospective students are welcome to contact me by email with a CV and relevant project or code links</li>
+<li>Jan 2026 two papers accepted to WWW 2026</li>
+<li>Nov 2025 launch of our LLM inference system: <a href="https://ws.sage.org.ai/">https://ws.sage.org.ai/</a></li>
+<li>Nov 2025 One paper accepted to SIGMOD 2026</li>
+<li>Nov 2025 One paper accepted to TKDE 2026</li>
+<li>Nov 2025 One paper accepted to AAAI 2026</li>
+<li>Oct 2025 One paper accepted to ICDE 2026</li>
+<li>July 2025 One paper accepted to NDBC 2025</li>
+<li>July 2025 One paper accepted to NDBC 2025</li>
+<li>July 2025 One paper accepted to VLDB 2025</li>
+<li>March 2025 One paper accepted to ICDCS 2025</li>
+<li>March 2025 One paper accepted to TKDE 2025</li>
+<li>March 2025 One paper accepted to ICDE 2025</li>
+<li>March 2025 One paper accepted to CVPR 2025</li>
+</ul>
+</div>
         </div>
     </section>
-    <!-- NEWs  -->
-	
-    <!-- Publications -->
+
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
         <div class="container px-5">
             <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
+                <h2><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
             </header>
-            <div class="main-body" id="publications-md">加载中...</div>
-
+            <div class="main-body"><p>论文标记说明：[First Author]、[Corresponding Author]、[CCF-A]。</p>
+<p>如果下列论文暂时没有直接链接，说明对应 PDF 尚未上传到当前仓库。</p>
+<h2>首页导读</h2>
+<p>近期工作可概括为一条较为连贯的研究主线：围绕复杂系统中的共享状态管理展开，并逐步延伸至大模型推理基础设施。具体而言，相关研究主要关注三类问题：请求组织与运行时调度对吞吐和 P99 时延的影响，<code>KV cache</code> 与执行路径协同对端到端收益的影响，以及长上下文、RAG 和记忆增强推理中信息写入、保留、检索与跨轮复用的系统机制。</p>
+<h2>代表性论文</h2>
+<p>以下代表性论文按研究主线组织，用于提供一个相对紧凑的入口；完整列表见后文。</p>
+<h3>一、共享状态访问、调度与运行时管理</h3>
+<p>这一方向关注共享状态访问中的冲突、热点与排队如何演化为系统级性能退化，以及相关问题如何从经验性调优转化为可观测、可建模、可管理的系统方法。对应工作沿着路径级冲突观测、共享执行路径优化、状态热点与局部性建模，以及兼顾稳态执行与恢复控制的运行时调度框架逐步展开。</p>
+<ul>
+<li>[ICML 2026] <strong>SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning</strong>. Jun Liu, Peilin Liu, Ruicheng Zhang, Senlei Zhang, Yanbo Chen, Ziao Wang, Jinyun Yang, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [Corresponding Author] [CCF-A]</li>
+<li>[TKDE 2025] <strong>Scalable Transactional Stream Processing on Multicore Processors</strong>. Jianjun Zhao, Yancan Mao, Zhonghao Yang, Haikun Liu, Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering (TKDE), 37(7): 4254-4269, 2025. [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD 2023] <strong>MorphStream: Adaptive Scheduling for Scalable Transactional Stream Processing on Multicores</strong>. Yancan Mao, Jianjun Zhao, Shuhao Zhang, Haikun Liu, Volker Markl. Proc. ACM Manag. Data (SIGMOD), 1(1), Article 59, 1-26, 2023. [Corresponding Author] [CCF-A]</li>
+<li>[VLDBJ 2024] <strong>A Survey on Transactional Stream Processing</strong>. Shuhao Zhang, Juan Soto, Volker Markl. The VLDB Journal, 33(2): 451-479, 2024. [First Author] [CCF-A]</li>
+</ul>
+<h3>二、状态感知执行优化与软硬件协同设计</h3>
+<p>这一方向关注状态相关执行在复杂硬件上的协同优化问题，重点分析吞吐、时延、能耗、精度与质量边界之间的耦合关系，以及局部优化为何难以稳定转化为端到端收益。相应研究将状态组织、数据通路与执行映射纳入统一分析框架，并进一步联合建模效率边界、质量边界与硬件代价。</p>
+<ul>
+<li>[ICML 2026] <strong>Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs</strong>. Ruicheng Zhang, Xinyi Li, Tianyi Xu, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [Corresponding Author] [CCF-A]</li>
+<li>[NeurIPS 2024] <strong>LibAMM: Empirical Insights into Approximate Computing for Accelerating Matrix Multiplication</strong>. Xianzhi Zeng, Wenchao Jiang, and Shuhao Zhang. Conference on Neural Information Processing Systems (NeurIPS). [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD 2024] <strong>PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation</strong>. Xianzhi Zeng, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. Proc. ACM Manag. Data (SIGMOD), 2(1): 1-24, 2024. [Corresponding Author] [CCF-A]</li>
+<li>[TKDE 2024] <strong>CStream: Parallel Data Stream Compression on Multicore Edge Devices</strong>. Xianzhi Zeng, Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering, 36(11): 5889-5904, 2024. [Corresponding Author] [CCF-A]</li>
+</ul>
+<h3>三、共享状态演化、复用与稳定推理</h3>
+<p>这一方向关注动态场景下共享状态的持续写入、稳定保留与跨轮复用问题，并进一步考察其对长期稳定推理的支撑作用。相关工作从在线更新与写入感知出发，逐步扩展到写入与保留代价的协同优化，以及面向可更新、可检索、可复用记忆对象的中间层组织。</p>
+<ul>
+<li>[WWW 2026] <strong>FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation</strong>. Senlei Zhang, Tongjun Shi, Dandan Song, Luan Zhang, Shuhao Zhang, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]</li>
+<li>[WWW 2026] <strong>StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning</strong>. Changwu Li, Tongjun Shi, Shuhao Zhang, Binbin Chen, Bingsheng He, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]</li>
+<li>[ICDM 2024] <strong>MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm</strong>. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM). [Corresponding Author]</li>
+<li>[EMNLP 2023] <strong>SentiStream: A Co-Training Framework for Adaptive Online Sentiment Analysis in Evolving Data Streams</strong>. Yuhao Wu, Karthick Sharma, Chun Wei Seah, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, main track). [Corresponding Author]</li>
+</ul>
+<h2>完整论文列表</h2>
+<p>下列列表按研究主题分组，主要覆盖共享状态访问与调度、状态感知执行优化、共享状态演化与复用，以及相关应用与系统研究。</p>
+<h3>一、共享状态访问、调度与运行时管理</h3>
+<ul>
+<li>[ICML] <strong>SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning</strong>. Jun Liu, Peilin Liu, Ruicheng Zhang, Senlei Zhang, Yanbo Chen, Ziao Wang, Jinyun Yang, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [Corresponding Author] [CCF-A]</li>
+<li>[TKDE] <strong>Scalable Transactional Stream Processing on Multicore Processors</strong>. Jianjun Zhao, Yancan Mao, Zhonghao Yang, Haikun Liu, Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering (TKDE), 37(7): 4254-4269, 2025. [Corresponding Author] [CCF-A]</li>
+<li>[ICDCS] <strong>Spacker: Unified State Migration for Distributed Streaming</strong>. Yancan Mao, Shuhao Zhang, Richard Ma. International Conference on Distributed Computing Systems.</li>
+<li>[ICDE] <strong>Fast Parallel Recovery for Transactional Stream Processing on Multicores</strong>. Jianjun Zhao, Haikun Liu, Shuhao Zhang, Zhuohui Duan, Xiaofei Liao, Hai Jin, and Yu Zhang. IEEE 40th International Conference on Data Engineering (ICDE). [CCF-A]</li>
+<li>[ICDE] <strong>MorphStream: Scalable Processing of Transactions over Streams</strong>. Siqi Xiang, Zhonghao Yang, Shuhao Zhang, Jianjun Zhao, and Yancan Mao. IEEE 40th International Conference on Data Engineering (ICDE Demo). [Corresponding Author] [CCF-A]</li>
+<li>[VLDBJ] <strong>A Survey on Transactional Stream Processing</strong>. Shuhao Zhang, Juan Soto, Volker Markl. The VLDB Journal, 33(2): 451-479, 2024. [First Author] [CCF-A]</li>
+<li>[ICDE] <strong>Scalable Online Interval Join on Modern Multicore Processors in OpenMLDB</strong>. Hao Zhang, Xianzhi Zeng, Shuhao Zhang, Xinyi Liu, Mian Lu, and Zhao Zheng. IEEE 39th International Conference on Data Engineering (ICDE). [CCF-A]</li>
+<li>[SIGMOD] <strong>MorphStream: Adaptive Scheduling for Scalable Transactional Stream Processing on Multicores</strong>. Yancan Mao, Jianjun Zhao, Shuhao Zhang, Haikun Liu, Volker Markl. Proc. ACM Manag. Data (SIGMOD), 1(1), Article 59, 1-26, 2023. [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD] <strong>Parallelizing Intra-Window Join on Multicores: An Experimental Study</strong>. Shuhao Zhang, Yancan Mao, Jiong He, Philipp M. Grulich, Steffen Zeuch, Bingsheng He, Richard T. B. Ma, Volker Markl. International Conference on Management of Data (SIGMOD). [First Author] [CCF-A]</li>
+<li>[ICDE] <strong>Towards Concurrent Stateful Stream Processing on Multicore Processors</strong>. Shuhao Zhang, Yingjun Wu, Feng Zhang, Bingsheng He. IEEE 36th International Conference on Data Engineering. [First Author] [CCF-A]</li>
+<li>[SIGMOD] <strong>BriskStream: Scaling Data Stream Processing on Shared-Memory Multicore Architectures</strong>. Shuhao Zhang, Jiong He, Amelie Chi Zhou, Bingsheng He. International Conference on Management of Data (SIGMOD). [First Author] [CCF-A]</li>
+<li>[ICDE] <strong>Multi-Query Optimization for Complex Event Processing in SAP ESP</strong>. Shuhao Zhang, H. T. Vo, D. Dahlmeier, B. He. IEEE 33rd International Conference on Data Engineering. [First Author] [CCF-A]</li>
+<li>[ICDE] <strong>Revisiting the Design of Data Stream Processing Systems on Multi-Core Processors</strong>. Shuhao Zhang, B. He, D. Dahlmeier, A. C. Zhou, T. Heinze. IEEE 33rd International Conference on Data Engineering. [First Author] [CCF-A]</li>
+</ul>
+<h3>二、状态感知执行优化与软硬件协同设计</h3>
+<ul>
+<li>[ICML] <strong>Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs</strong>. Ruicheng Zhang, Xinyi Li, Tianyi Xu, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [Corresponding Author] [CCF-A]</li>
+<li>[TKDE] <strong>Data-Aware Adaptive Compression for Stream Processing</strong>. Yu Zhang, Feng Zhang, Hourun Li, Shuhao Zhang, Xiaoguang Guo, Yuxing Chen, Anqun Pan, and Xiaoyong Du. IEEE Transactions on Knowledge and Data Engineering (TKDE), 36(9): 4531-4549, 2024. [CCF-A]</li>
+<li>[SIGMOD] <strong>Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality</strong>. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. Proc. ACM Manag. Data (SIGMOD), 2(4): 1-31, 2024. [CCF-A]</li>
+<li>[SIGMOD] <strong>MAST: Towards Efficient Analytical Query Processing on Point Cloud Data</strong>. Jiangneng Li, Haitao Yuan, Gao Cong, Han Mao Kiah, Shuhao Zhang. Proc. ACM Manag. Data (SIGMOD), 3(1): 1-27, 2025. [CCF-A]</li>
+<li>[NeurIPS] <strong>LibAMM: Empirical Insights into Approximate Computing for Accelerating Matrix Multiplication</strong>. Xianzhi Zeng, Wenchao Jiang, and Shuhao Zhang. Conference on Neural Information Processing Systems (NeurIPS). [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD] <strong>PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation</strong>. Xianzhi Zeng, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. Proc. ACM Manag. Data (SIGMOD), 2(1): 1-24, 2024. [Corresponding Author] [CCF-A]</li>
+<li>[TKDE] <strong>CStream: Parallel Data Stream Compression on Multicore Edge Devices</strong>. Xianzhi Zeng, Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering, 36(11): 5889-5904, 2024. [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD] <strong>Predictive and Near-Optimal Sampling for View Materialization in Video Databases</strong>. Yanchao Xu, Dongxiang Zhang, Shuhao Zhang, Sai Wu, Zexu Feng, Gang Chen. Proc. ACM Manag. Data (SIGMOD), 2(1): 1-27, 2024. [CCF-A]</li>
+<li>[DEBS] <strong>A Hardware-Conscious Stateful Stream Compression Framework for IoT Applications (Vision)</strong>. Xianzhi Zeng, Shuhao Zhang. International Conference on Distributed and Event-Based Systems (DEBS). [Corresponding Author]</li>
+<li>[ICDE] <strong>Parallelizing Stream Compression for IoT Applications on Asymmetric Multicores</strong>. Xianzhi Zeng and Shuhao Zhang. IEEE 39th International Conference on Data Engineering (ICDE). [CCF-A]</li>
+<li>[ICDE] <strong>CompressStreamDB: Fine-Grained Adaptive Stream Processing without Decompression</strong>. Yu Zhang, Feng Zhang, Hourun Li, Shuhao Zhang, and Xiaoyong Du. IEEE 39th International Conference on Data Engineering (ICDE). [CCF-A]</li>
+<li>[ICDE] <strong>Scalable Machine Learning for Real-Time Fault Diagnosis in Industrial IoT Cooling Roller Systems (SRTFD)</strong>. Dandan Zhao, Karthick Sharma, Yuxin Qi, Qixun Liu, and Shuhao Zhang. IEEE 41st International Conference on Data Engineering (ICDE). [Corresponding Author] [CCF-A]</li>
+<li>[TPDS] <strong>Fine-Grained Multi-Query Stream Processing on Integrated Architectures</strong>. Feng Zhang, Chenyang Zhang, Lin Yang, Cheng Yang, Shuhao Zhang, Bingsheng He, Wei Lu, Xiaoyong Du. IEEE Transactions on Parallel and Distributed Systems (TPDS), 32(9), 2021. [CCF-A]</li>
+<li>[USENIX ATC] <strong>FineStream: Fine-Grained Window-Based Stream Processing on CPU-GPU Integrated Architectures</strong>. Feng Zhang, Lin Yang, Shuhao Zhang, Bingsheng He, Wei Lu, Xiaoyong Du. USENIX Annual Technical Conference (USENIX ATC 20). [CCF-A]</li>
+<li>[SIGMOD Rec.] <strong>Hardware-Conscious Stream Processing: A Survey</strong>. Shuhao Zhang, Feng Zhang, Yingjun Wu, Bingsheng He, Paul Johns. SIGMOD Record, 48(4), 2020. [First Author]</li>
+</ul>
+<h3>三、共享状态演化、复用与稳定推理</h3>
+<ul>
+<li>[EMNLP] <strong>SentiStream: A Co-Training Framework for Adaptive Online Sentiment Analysis in Evolving Data Streams</strong>. Yuhao Wu, Karthick Sharma, Chun Wei Seah, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, main track). [Corresponding Author]</li>
+<li>[ICDM] <strong>MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm</strong>. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM). [Corresponding Author]</li>
+<li>[SIGMOD] <strong>Data Stream Clustering: An In-depth Empirical Study</strong>. Xin Wang, Zhengru Wang, Zhenyu Wu, Shuhao Zhang, Xuanhua Shi, Li Lu. International Conference on Management of Data (SIGMOD). [Corresponding Author] [CCF-A]</li>
+<li>[CVPR] <strong>Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints</strong>. Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye, Shuhao Zhang, and Jiancheng Lv. Conference on Computer Vision and Pattern Recognition (CVPR). [CCF-A]</li>
+<li>[WWW] <strong>StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning</strong>. Changwu Li, Tongjun Shi, Shuhao Zhang, Binbin Chen, Bingsheng He, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]</li>
+<li>[EMNLP] <strong>A Framework of Knowledge Graph-Enhanced Large Language Model Based on Question Decomposition and Atomic Retrieval</strong>. Yading Li, Dandan Song, Changzhi Zhou, Yuhang Tian, Hao Wang, Ziyi Yang, and Shuhao Zhang. Empirical Methods in Natural Language Processing (Findings).</li>
+<li>[TKDE] <strong>A Framework of Knowledge Graph-Enhanced Large Language Model Based on Global Planning</strong>. Yading Li, Dandan Song, Yuhang Tian, Hao Wang, Changzhi Zhou, and Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering (TKDE), 38(2), 2025. [CCF-A]</li>
+<li>[WWW] <strong>FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation</strong>. Senlei Zhang, Tongjun Shi, Dandan Song, Luan Zhang, Shuhao Zhang, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD] <strong>CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams [Experiments &amp; Analysis]</strong>. Mingqi Wang, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, and Hai Jin. International Conference on Management of Data (SIGMOD). [Corresponding Author] [CCF-A]</li>
+</ul>
+<h3>其他论文</h3>
+<ul>
+<li>[ACL Findings] <strong>Multi-Hop Knowledge Editing via Critic-Guided Multi-Agent Reasoning</strong>. Xudong Li, Yuhang Tian, Dandan Song, Zhijing Wu, Shuhao Zhang, Jun Yang, Yongyu Huo, Changzhi Zhou, Xinyu Zhang, Chenhao Li, Huipeng Ma, Luan Zhang, Yan Xu, Qian Liu. Findings of the Association for Computational Linguistics (ACL 2026 Findings).</li>
+<li>[ACL] <strong>FusionFlow: Enabling Deep Structural Exploration for Automated Agentic Workflow Generation</strong>. Xiang Wang, Zongtao Yang, Zhuojian Hong, Shuhao Zhang, Wei Wei. Annual Meeting of the Association for Computational Linguistics (ACL 2026 Main Conference). [CCF-A]</li>
+<li>[ICDE] <strong>GRACE: Alleviating Reconstruction Cost in Dynamic Graph Processing Systems</strong>. Hongru Gao, Shuhao Zhang, Xiaofei Liao, and Hai Jin. IEEE 42nd International Conference on Data Engineering (ICDE). [Corresponding Author] [CCF-A]</li>
+<li>[SIGMOD] <strong>Select Edges Wisely: Monotonic Path Aware Graph Layout Optimization for Disk-Based ANN Search</strong>. Ziyang Yue, Bolong Zheng, Ling Xu, Kanru Xu, Shuhao Zhang, Yajuan Du, Yunjun Gao, Xiaofang Zhou, and Christian S. Jensen. SIGMOD. [CCF-A]</li>
+<li>[IJCAI] <strong>Detecting Hallucination in Large Language Models through Deep Internal Representation Analysis</strong>. Luan Zhang, Dandan Song, Zhijing Wu, Yuhang Tian, Changzhi Zhou, Jing Xu, Ziyi Yang, and Shuhao Zhang. International Joint Conference on Artificial Intelligence (IJCAI). [CCF-A]</li>
+<li>[NC] <strong>MatSwarm: Trusted Swarm Transfer Learning Driven Materials Computation for Secure Big Data Sharing</strong>. Cheng Xu, Ran Wang, Shuhao Zhang, Fangwen Ye, Yusen Tang, Sisui Tang, Hangning Zhang, Wendi Du, and Xiaotong Zhang. Nature Communications, 15(1), 2024.</li>
+<li>[ICPP] <strong>PREACT: Predictive Resource Allocation for Bursty Workloads in a Co-located Data Center</strong>. Ziyang Xiao, Dongxiang Zhang, Dingyu Yang, Shuhao Zhang, Jian Cao, Gang Chen. International Conference in Parallel Processing (ICPP).</li>
+<li>[IWQoS] <strong>Low-Latency Video Conferencing via Optimized Packet Routing and Reordering</strong>. Yao Xiao, Amelie Chi Zhou, Sitian Chen, Shuhao Zhang, Yi Wang, Rui Mao, Xuan Yang. IEEE International Symposium on Quality of Service.</li>
+<li>[VLDBJ] <strong>Payment Behavior Prediction on Shared Parking Lots with TR-GCN</strong>. Qingyu Xu, Feng Zhang, Mingde Zhang, Jidong Zhai, Bingsheng He, Cheng Yang, Shuhao Zhang, Jiazao Lin, Haidi Liu, Xiaoyong Du. The VLDB Journal, 31(5), 2022. [CCF-A]</li>
+<li>[MDPI Algorithms] <strong>Revisiting the Design of Parallel Stream Joins on Trusted Execution Environments</strong>. Souhail Meftah, Shuhao Zhang, Bharadwaj Veeravalli, Khin Mi Mi Aung. MDPI Algorithms.</li>
+<li>[TKDE] <strong>Periodic Weather-Aware LSTM with Event Mechanism for Parking Behavior Prediction</strong>. F. Zhang, Y. Liu, N. Feng, C. Yang, J. Zhai, Shuhao Zhang, B. He, J. Lin, X. Zhang, X. Du. IEEE Transactions on Knowledge and Data Engineering (TKDE), 34(12), 2022. [CCF-A]</li>
+<li>[OJIOT] <strong>NebulaStream: Complex Analytics Beyond the Cloud</strong>. Steffen Zeuch, Eleni Tzirita Zacharatou, Shuhao Zhang, Xenofon Chatziliadis, Ankit Chaudhary, Bonaventura Del Monte, Dimitrios Giouroukis, Philipp M. Grulich, Ariane Ziehn, Volker Markl. Open Journal of Internet Of Things (OJIOT).</li>
+<li>[IJCAI] <strong>PewLSTM: Periodic LSTM with Weather-Aware Gating Mechanism for Parking Behavior Prediction</strong>. Feng Zhang, Ningxuan Feng, Yani Liu, Cheng Yang, Jidong Zhai, Shuhao Zhang, Bingsheng He, Jiazao Lin, Xiaoyong Du. International Joint Conference on Artificial Intelligence (IJCAI). [CCF-A]</li>
+<li>[BigMM] <strong>TraV: An Interactive Exploration System for Massive Trajectory Data</strong>. J. Ang, T. Fu, J. Paul, Shuhao Zhang, B. He, T. S. D. Wenceslao, S. Y. Tan. IEEE Fifth International Conference on Multimedia Big Data (BigMM). [Corresponding Author]</li>
+<li>[TPDS] <strong>Understanding Co-Running Behaviors on Integrated CPU/GPU Architectures</strong>. F. Zhang, J. Zhai, B. He, Shuhao Zhang, W. Chen. IEEE Transactions on Parallel and Distributed Systems (TPDS). [CCF-A]</li>
+<li>[SC] <strong>Elastic Multi-resource Fairness: Balancing Fairness and Efficiency in Coupled CPU/GPU Architectures</strong>. S. Tang, B. He, Shuhao Zhang, Z. Niu. International Conference for High Performance Computing, Networking, Storage and Analysis (SC). [CCF-A]</li>
+<li>[TPDS] <strong>Melia: A MapReduce Framework on OpenCL-Based FPGAs</strong>. Zeke Wang, Shuhao Zhang, Bingsheng He, Wei Zhang. IEEE Transactions on Parallel and Distributed Systems (TPDS), 27(12): 3547-3560, 2016. [CCF-A]</li>
+<li>[MASCOTS] <strong>To Co-run, or Not to Co-run: A Performance Study on Integrated Architectures</strong>. Feng Zhang, Jidong Zhai, Wenguang Chen, Bingsheng He, Shuhao Zhang. IEEE 23rd International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS).</li>
+<li>[VLDB] <strong>In-Cache Query Co-Processing on Coupled CPU-GPU Architectures</strong>. Jiong He, Shuhao Zhang, Bingsheng He. Proceedings of the VLDB Endowment (PVLDB), 8(4): 329-340, 2014. [CCF-A]</li>
+<li>[VLDB] <strong>OmniDB: Towards Portable and Efficient Query Processing on Parallel CPU/GPU Architectures</strong>. Shuhao Zhang, Jiong He, Bingsheng He, Mian Lu. Proceedings of the VLDB Endowment (PVLDB), 6(12): 1374-1377, 2013. [First Author] [CCF-A]</li>
+</ul>
+<h2>论文下载（PDF）</h2>
+<p>以下链接提供的是作者保存的作者版本（如 preprint、accepted manuscript 或 author copy），不是期刊、会议论文集或出版社网站上的正式出版版本。</p>
+<p>已上传论文的直接下载链接：</p>
+<ul>
+<li>2026: <a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE (ICML 2026)</a>, <a href="contents/research_papers/2026/2026_neuromem_icml_2026.pdf">Neuromem (ICML 2026)</a>, <a href="contents/research_papers/2026/2026_flowrag_www_2026.pdf">FlowRAG (WWW 2026)</a>, <a href="contents/research_papers/2026/2026_streamfp_www_2026.pdf">StreamFP (WWW 2026)</a>, <a href="contents/research_papers/2026/2026_grace_icde_2026.pdf">GRACE (ICDE 2026)</a>, <a href="contents/research_papers/2026/2026_candor_bench_sigmod_2026.pdf">CANDOR-Bench (SIGMOD 2026)</a>, <a href="contents/research_papers/2026/2026_select_edges_wisely_sigmod_2026.pdf">Select Edges Wisely (SIGMOD 2026)</a></li>
+<li>2025: <a href="contents/research_papers/2024/2024_adaptive_sampling_sigmod_2025_cr.pdf">Adaptive Sampling (SIGMOD 2025 CR)</a>, <a href="contents/research_papers/2025/2025_srtfd_icde_2025.pdf">SRTFD (ICDE 2025)</a>, <a href="contents/research_papers/2025/2025_ferret_cvpr_2025.pdf">Ferret (CVPR 2025)</a>, <a href="contents/research_papers/2025/2025_detecting_hallucination_ijcai_2025.pdf">Detecting Hallucination (IJCAI 2025)</a>, <a href="contents/research_papers/2025/2025_morphstream_tkde.pdf">MorphStream (TKDE 2025)</a>, <a href="contents/research_papers/2025/2025_data_aware_adaptive_compression_tkde_2025.pdf">Data-Aware Adaptive Compression (TKDE 2025)</a>, <a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker (ICDCS 2025)</a>, <a href="contents/research_papers/2025/2025_global_planning_kg_llm_tkde_2025.pdf">Global Planning KG-LLM (TKDE 2025)</a>, <a href="contents/research_papers/2025/2025_mast_sigmod_2025.pdf">MAST (SIGMOD 2025)</a></li>
+<li>2024: <a href="contents/research_papers/2024/2024_mostream_icdm_2024.pdf">MOStream (ICDM 2024)</a>, <a href="contents/research_papers/2024/2024_pecj_sigmod_2024.pdf">PECJ (SIGMOD 2024)</a>, <a href="contents/research_papers/2024/2024_preact.pdf">PREACT (ICPP 2024)</a>, <a href="contents/research_papers/2024/2024_llvc.pdf">LLVC (IWQoS 2024)</a>, <a href="contents/research_papers/2024/2024_cstream_tkde_2024.pdf">CStream (TKDE 2024)</a>, <a href="contents/research_papers/2024/2024_matswarm_nc_2024.pdf">MatSwarm (NC 2024)</a>, <a href="contents/research_papers/2024/2024_keldar_emnlp_findings_2024.pdf">KELDaR (EMNLP Findings 2024)</a>, <a href="contents/research_papers/2024/2024_libamm_neurips_2024.pdf">LibAMM (NeurIPS 2024)</a>, <a href="contents/research_papers/2024/2024_fast_parallel_recovery_icde_2024.pdf">Fast Parallel Recovery (ICDE 2024)</a>, <a href="contents/research_papers/2024/2024_morphstream_icde_demo_2024.pdf">MorphStream Demo (ICDE 2024)</a>, <a href="contents/research_papers/2024/2024_predictive_sampling_video_db_sigmod_2024.pdf">Predictive Sampling for Video DB (SIGMOD 2024)</a></li>
+<li>2023: <a href="contents/research_papers/2023/2023_cstream_icde.pdf">CStream (ICDE 2023)</a>, <a href="contents/research_papers/2023/2023_cstream_debs.pdf">CStream (DEBS 2023)</a>, <a href="contents/research_papers/2023/2023_cstream_tkde.pdf">CStream (TKDE 2023)</a>, <a href="contents/research_papers/2023/2023_compressstreamdb_icde_2023.pdf">CompressStreamDB (ICDE 2023)</a>, <a href="contents/research_papers/2023/2023_vldbj_tsp_survey.pdf">TSP Survey (VLDBJ 2023)</a>, <a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream (SIGMOD 2023)</a>, <a href="contents/research_papers/2023/2023_openmldb_icde_2023.pdf">OpenMLDB OIJ (ICDE 2023)</a>, <a href="contents/research_papers/2023/2023_sesame_sigmod_2023.pdf">Sesame (SIGMOD 2023)</a>, <a href="contents/research_papers/2023/2023_sentistream_emnlp_2023.pdf">SentiStream (EMNLP 2023)</a></li>
+<li>2022: <a href="contents/research_papers/2022/2022_payment_behavior_trgcn_vldbj_2022.pdf">Payment Behavior Prediction (VLDBJ 2022)</a>, <a href="contents/research_papers/2022/2022_tee_parallel_stream_joins_algorithms_2022.pdf">Parallel Stream Joins on TEE (Algorithms 2022)</a></li>
+<li>2021: <a href="contents/research_papers/2021/2021_intra_window_join_sigmod_2021.pdf">Intra-Window Join (SIGMOD 2021)</a>, <a href="contents/research_papers/2021/2021_tpds_finestream_paper_0224v1.pdf">FineStream MQ (TPDS 2021)</a>, <a href="contents/research_papers/2021/2021_periodic_weather_aware_lstm_tkde_2021.pdf">Periodic Weather-Aware LSTM (TKDE 2021)</a></li>
+<li>2020: <a href="contents/research_papers/2020/2020_tstream.pdf">TStream (ICDE 2020)</a>, <a href="contents/research_papers/2020/2020_finestream.pdf">FineStream (USENIX ATC 2020)</a>, <a href="contents/research_papers/2020/2020_nebulastream_ojiot_2020.pdf">NebulaStream (OJIOT 2020)</a>, <a href="contents/research_papers/2020/2020_hardware_conscious_stream_processing_survey_sigmod_record_2020.pdf">Hardware-Conscious Survey (SIGMOD Rec. 2020)</a>, <a href="contents/research_papers/2020/2020_pewlstm_ijcai_2020.pdf">PewLSTM (IJCAI 2020)</a></li>
+<li>2019: <a href="contents/research_papers/2019/2019_briskstream.pdf">BriskStream (SIGMOD 2019)</a>, <a href="contents/research_papers/2019/2019_trav_bigmm_2019.pdf">TraV (BigMM 2019)</a></li>
+<li>2017: <a href="contents/research_papers/2017/2017_motto.pdf">MOTTO (ICDE 2017)</a>, <a href="contents/research_papers/2017/2017_profiling_final.pdf">Profiling DSP (ICDE 2017)</a>, <a href="contents/research_papers/2017/2017_melia_tpds_2017.pdf">Melia (TPDS 2017)</a></li>
+<li>2016: <a href="contents/research_papers/2016/2016_sc_paper_sc_2016.pdf">SC Paper (SC 2016)</a>, <a href="contents/research_papers/2016/2016_co_run_study_tpds_2016.pdf">Co-Run Study (TPDS 2016)</a></li>
+<li>2015: <a href="contents/research_papers/2015/2015_to_co_run_or_not_mascots_2015.pdf">To Co-run, or Not to Co-run (MASCOTS 2015)</a></li>
+<li>2014: <a href="contents/research_papers/2014/2014_in_cache_query_co_processing_vldb_2014.pdf">In-Cache Query Co-Processing (VLDB 2014)</a></li>
+<li>2013: <a href="contents/research_papers/2013/2013_omnidb_vldb_2013.pdf">OmniDB (VLDB 2013)</a></li>
+</ul>
+</div>
         </div>
     </section>
-    <!-- Publications  -->
 
-    <!-- Resources -->
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="resources">
         <div class="container px-5">
             <header>
                 <h2><i class="bi bi-bookmarks-fill"></i>&nbsp;MORE</h2>
             </header>
-            <div class="main-body" id="resources-md">加载中...</div>
-
+            <div class="main-body"><p>这里收录公开教学材料与研究综述下载入口。</p>
+<h2>系统建设</h2>
+<ul>
+<li>代表性系统建设信息已在主页系统板块中汇总，包括 SAGE、Neuromem 与 vLLM-HUST 等当前工作。</li>
+</ul>
+<h2>教学材料</h2>
+<p>目前公开两门课程：</p>
+<ul>
+<li>大模型推理基础设施：<a href="intro-to-llm-inference-engines.html">页面</a></li>
+<li>研究生论文写作：<a href="graduate-paper-writing-course.html">页面</a></li>
+</ul>
+<p>其中，2026 年研究生论文写作课程当前公开第 5 至第 8 讲课件，均为草稿版，仅供课程同学和相关读者参考，后续仍可能继续修订。</p>
+<h2>公开综述材料</h2>
+<ul>
+<li>并行与分布式系统中的高效状态管理综述（preprint）：<a href="contents/research_papers/preprint/2026_parallel_distributed_state_management_survey.pdf">PDF</a></li>
+<li>国产算力推理引擎综述（preprint）：<a href="contents/research_papers/preprint/2026_cccf_domestic_inference_engine_survey.pdf">PDF</a></li>
+</ul>
+</div>
         </div>
     </section>
-    <!-- Resources -->
-	
-    <!-- Awards 
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
-        <div class="container px-5">
-            <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
-            </header>
-            <div class="main-body" id="awards-md"></div>
 
-        </div>
-    </section>
-    Awards -->
-
-    <!-- Footer-->
     <footer class="bg-bottom text-center py-5">
         <div class="container px-5">
             <div class="text-white-50 small">
-                <div id="copyright-text" class="mb-2"></div>
+                <div class="mb-2"></div>
                 <a id="github-link" href="https://github.com/intellistream">Github</a>
-                <span class="mx-1">&middot;</span>                
+                <span class="mx-1">&middot;</span>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap core JS-->
     <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="static/js/marked.min.js"></script>
     <script>
         MathJax = {
             tex: { inlineMath: [['$', '$']] }
         };
     </script>
     <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const mainNav = document.body.querySelector('#mainNav');
+            if (mainNav) {
+                new bootstrap.ScrollSpy(document.body, {
+                    target: '#mainNav',
+                    offset: 74,
+                });
+            }
 
-    <!-- Core JS-->
-    <script type="text/javascript" src="static/js/site-paths.js"></script>
-    <script type="text/javascript" src="static/js/scripts.js"></script>
-    <script type="text/javascript" src="static/js/js-yaml.min.js"></script>
+            const navbarToggler = document.body.querySelector('.navbar-toggler');
+            const responsiveNavItems = [].slice.call(document.querySelectorAll('#navbarResponsive .nav-link'));
 
-
+            responsiveNavItems.forEach((responsiveNavItem) => {
+                responsiveNavItem.addEventListener('click', () => {
+                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
