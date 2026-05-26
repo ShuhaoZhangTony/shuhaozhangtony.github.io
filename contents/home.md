@@ -22,6 +22,8 @@
 
 课题组当前的系统工作主要包括三组相互衔接的系统线：
 
+系统脉络、公开仓库与代表性论文已整理到独立页面：[系统建设与代表项目](/systems.html)
+
 - **[SAGE](https://github.com/intellistream/SAGE)**：面向国产异构算力的大模型推理服务系统，重点覆盖在线 serving、调度编排、可观测性与端到端性能优化
 - **Neuromem**（当前开源的是 [Neuromem-Benchmark](https://github.com/intellistream/neruomem-bench)）：面向大模型记忆智能体的中间件系列，重点覆盖流式记忆组织、向量检索、长期记忆写入与跨轮复用
 - **[vLLM-HUST](https://github.com/vLLM-HUST/vllm-hust)**（含 [Benchmark](https://github.com/vLLM-HUST/vllm-hust-benchmark)、[Dev Hub](https://github.com/vLLM-HUST/vllm-hust-dev-hub) 等系列仓库）：面向国产算力的华科自研推理引擎底座与插件生态，重点覆盖共享 workload、KV 状态管理、插件化优化与评测工具链

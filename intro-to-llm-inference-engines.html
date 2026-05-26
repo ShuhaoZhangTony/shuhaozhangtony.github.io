@@ -115,7 +115,7 @@
 
 <body>
     <main class="page-wrap">
-        <a class="back-link" href="/">
+        <a class="back-link" href="./">
             <i class="bi bi-arrow-left"></i>
             返回主页
         </a>
@@ -130,12 +130,13 @@
     </main>
 
     <script type="text/javascript" src="static/js/marked.min.js"></script>
+    <script type="text/javascript" src="static/js/site-paths.js"></script>
     <script>
         marked.use({ mangle: false, headerIds: false });
 
         const courseContent = document.getElementById('course-content');
 
-        fetch('/contents/teaching/intro-to-llm-inference-engines.md')
+        fetch(siteUrl('contents/teaching/intro-to-llm-inference-engines.md'))
             .then((response) => response.text())
             .then((markdown) => {
                 const wrapper = document.createElement('div');
@@ -152,6 +153,7 @@
                 }
 
                 courseContent.innerHTML = '';
+                rewriteRootRelativeLinks(wrapper);
                 courseContent.appendChild(wrapper);
             })
             .catch(() => {

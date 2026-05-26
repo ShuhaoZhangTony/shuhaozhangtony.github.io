@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>研究生论文写作课程材料</title>
+    <title>系统建设与代表项目</title>
     <link rel="icon" type="image/png" href="static/assets/img/photo.png" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
@@ -87,6 +87,13 @@
             word-break: break-word;
         }
 
+        .page-card code {
+            background: #eff3ff;
+            color: #3142b8;
+            padding: 0.08rem 0.35rem;
+            border-radius: 6px;
+        }
+
         .loading-note {
             color: #64748b;
         }
@@ -112,12 +119,12 @@
         </a>
 
         <section class="page-header">
-            <h1>研究生论文写作课程材料</h1>
-            <p>这里汇总 2026 年公开版课件 PDF。</p>
-            <div class="meta-line">当前公开 4 份课件，均为草稿版。</div>
+            <h1>系统建设与代表项目</h1>
+            <p>这里集中展示当前公开可见的系统工作，包括大模型推理服务、记忆智能体中间件，以及早期在多核与异构硬件上的代表性系统积累。</p>
+            <div class="meta-line">按“当前系统建设”和“代表性系统积累”两部分整理，便于从研究主题直接映射到系统原型、开源入口与论文。</div>
         </section>
 
-        <article class="page-card" id="course-content"><span class="loading-note">加载中...</span></article>
+        <article class="page-card" id="systems-content"><span class="loading-note">加载中...</span></article>
     </main>
 
     <script type="text/javascript" src="static/js/marked.min.js"></script>
@@ -125,9 +132,9 @@
     <script>
         marked.use({ mangle: false, headerIds: false });
 
-        const courseContent = document.getElementById('course-content');
+        const systemsContent = document.getElementById('systems-content');
 
-        fetch(siteUrl('contents/teaching/graduate-paper-writing-course.md'))
+        fetch(siteUrl('contents/systems.md'))
             .then((response) => response.text())
             .then((markdown) => {
                 const wrapper = document.createElement('div');
@@ -143,12 +150,12 @@
                     wrapper.removeChild(wrapper.firstChild);
                 }
 
-                courseContent.innerHTML = '';
+                systemsContent.innerHTML = '';
                 rewriteRootRelativeLinks(wrapper);
-                courseContent.appendChild(wrapper);
+                systemsContent.appendChild(wrapper);
             })
             .catch(() => {
-                courseContent.textContent = '课程材料加载失败。';
+                systemsContent.textContent = '系统页面加载失败。';
             });
     </script>
 </body>

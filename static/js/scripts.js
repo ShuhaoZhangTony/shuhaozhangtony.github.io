@@ -29,13 +29,15 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
     // Yaml
-    fetch(content_dir + config_file)
+    fetch(siteUrl(content_dir + config_file))
         .then(response => response.text())
         .then(text => {
             const yml = jsyaml.load(text);
             Object.keys(yml).forEach(key => {
                 try {
-                    document.getElementById(key).innerHTML = yml[key];
+                    const targetElement = document.getElementById(key);
+                    targetElement.innerHTML = yml[key];
+                    rewriteRootRelativeLinks(targetElement);
                 } catch {
                     console.log("Unknown id and value: " + key + "," + yml[key].toString())
                 }
@@ -50,11 +52,12 @@ window.addEventListener('DOMContentLoaded', event => {
     section_names.forEach((name, idx) => {
         const sectionElement = document.getElementById(name + '-md');
 
-        fetch(content_dir + name + '.md')
+        fetch(siteUrl(content_dir + name + '.md'))
             .then(response => response.text())
             .then(markdown => {
                 const html = marked.parse(markdown);
                 sectionElement.innerHTML = html;
+                rewriteRootRelativeLinks(sectionElement);
             }).then(() => {
                 // MathJax
                 MathJax.typeset();
