@@ -13,10 +13,6 @@
       "path": "../graduate-paper-writing-course"
     },
     {
-      "name": "course | intro-to-llm-inference-engines",
-      "path": "../intro-to-llm-inference-engines"
-    },
-    {
       "name": "survey | parallel-distributed-state-management-survey",
       "path": "../parallel-distributed-state-management-survey"
     },

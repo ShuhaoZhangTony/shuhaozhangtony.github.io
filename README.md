@@ -42,7 +42,9 @@ This repository includes a workspace file for local development:
 shuhao-local.code-workspace
 ```
 
-Open that workspace file in VS Code after cloning both repositories side by side. By default it expects these sibling repositories to live one level above the public site repository: `../private-materials`, `../graduate-paper-writing-course`, `../intro-to-llm-inference-engines`, `../parallel-distributed-state-management-survey`, `../cccf-domestic-inference-engine-survey`, and `../huawei-stw-memory-rag-talk`.
+Open that workspace file in VS Code after cloning both repositories side by side. By default it expects these sibling repositories to live one level above the public site repository: `../private-materials`, `../graduate-paper-writing-course`, `../parallel-distributed-state-management-survey`, `../cccf-domestic-inference-engine-survey`, and `../huawei-stw-memory-rag-talk`.
+
+The public LLM inference course page is built from `contents/teaching/intro-to-llm-inference-engines.md` and the public assets copied into this repository. Do not add a second local sibling checkout for the same course unless you are intentionally staging unpublished source material outside this public site.
 
 The workspace also enables VS Code terminal shell integration so command detection works more reliably.
 
