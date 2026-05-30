@@ -23,6 +23,34 @@
     {
       "name": "talk | huawei-stw-memory-rag-talk",
       "path": "../huawei-stw-memory-rag-talk"
+    },
+    {
+      "name": "memory | neuromem",
+      "path": "../neuromem"
+    },
+    {
+      "name": "memory | neuromem-bench",
+      "path": "../neuromem-bench"
+    },
+    {
+      "name": "bench | CANDOR-Bench",
+      "path": "../CANDOR-Bench"
+    },
+    {
+      "name": "rag | FlowRAG",
+      "path": "../FlowRAG"
+    },
+    {
+      "name": "streamfp | StreamFP",
+      "path": "../streamfp"
+    },
+    {
+      "name": "serve | vllm-hust",
+      "path": "../vllm-hust"
+    },
+    {
+      "name": "serve | vllm-ascend-hust",
+      "path": "../vllm-ascend-hust"
     }
   ],
   "settings": {
