@@ -4,7 +4,9 @@
 
 ## 首页导读
 
-近期工作可概括为一条较为连贯的研究主线：围绕复杂系统中的共享状态管理展开，并逐步延伸至大模型推理基础设施。具体而言，相关研究主要关注三类问题：请求组织与运行时调度对吞吐和 P99 时延的影响，`KV cache` 与执行路径协同对端到端收益的影响，以及长上下文、RAG 和记忆增强推理中信息写入、保留、检索与跨轮复用的系统机制。
+近期工作大体沿着一条主线展开：从复杂系统中的共享状态管理，逐步延伸到大模型推理基础设施。相关研究主要涉及三类问题：请求组织与运行时调度对吞吐和 P99 时延的影响，`KV cache` 与执行路径协同对端到端收益的影响，以及长上下文、RAG 和记忆增强推理中信息写入、保留、检索与跨轮复用的机制。近年的 `SAGE`、`Neuromem`、`FlowRAG` 和 `StreamFP` 分别对应这几条线索。
+
+下载区个别条目使用简称；正文首次出现时顺带注明，便于对照。
 
 ## 代表性论文
 
@@ -44,19 +46,19 @@
 - [ICDCS] **Spacker: Unified State Migration for Distributed Streaming**. Yancan Mao, Shuhao Zhang, Richard Ma. International Conference on Distributed Computing Systems.
 - [ICDE] **Fast Parallel Recovery for Transactional Stream Processing on Multicores**. Jianjun Zhao, Haikun Liu, Shuhao Zhang, Zhuohui Duan, Xiaofei Liao, Hai Jin, and Yu Zhang. IEEE 40th International Conference on Data Engineering (ICDE). [CCF-A]
 - [ICDE] **MorphStream: Scalable Processing of Transactions over Streams**. Siqi Xiang, Zhonghao Yang, Shuhao Zhang, Jianjun Zhao, and Yancan Mao. IEEE 40th International Conference on Data Engineering (ICDE Demo). [Corresponding Author] [CCF-A]
-- [VLDBJ] **A Survey on Transactional Stream Processing**. Shuhao Zhang, Juan Soto, Volker Markl. The VLDB Journal, 33(2): 451-479, 2024. [First Author] [CCF-A]
-- [ICDE] **Scalable Online Interval Join on Modern Multicore Processors in OpenMLDB**. Hao Zhang, Xianzhi Zeng, Shuhao Zhang, Xinyi Liu, Mian Lu, and Zhao Zheng. IEEE 39th International Conference on Data Engineering (ICDE). [CCF-A]
+- [VLDBJ] **A Survey on Transactional Stream Processing**（下载区写作 TSP Survey）. Shuhao Zhang, Juan Soto, Volker Markl. The VLDB Journal, 33(2): 451-479, 2024. [First Author] [CCF-A]
+- [ICDE] **Scalable Online Interval Join on Modern Multicore Processors in OpenMLDB**（下载区写作 OpenMLDB OIJ）. Hao Zhang, Xianzhi Zeng, Shuhao Zhang, Xinyi Liu, Mian Lu, and Zhao Zheng. IEEE 39th International Conference on Data Engineering (ICDE). [CCF-A]
 - [SIGMOD] **MorphStream: Adaptive Scheduling for Scalable Transactional Stream Processing on Multicores**. Yancan Mao, Jianjun Zhao, Shuhao Zhang, Haikun Liu, Volker Markl. Proc. ACM Manag. Data (SIGMOD), 1(1), Article 59, 1-26, 2023. [Corresponding Author] [CCF-A]
 - [SIGMOD] **Parallelizing Intra-Window Join on Multicores: An Experimental Study**. Shuhao Zhang, Yancan Mao, Jiong He, Philipp M. Grulich, Steffen Zeuch, Bingsheng He, Richard T. B. Ma, Volker Markl. International Conference on Management of Data (SIGMOD). [First Author] [CCF-A]
-- [ICDE] **Towards Concurrent Stateful Stream Processing on Multicore Processors**. Shuhao Zhang, Yingjun Wu, Feng Zhang, Bingsheng He. IEEE 36th International Conference on Data Engineering. [First Author] [CCF-A]
+- [ICDE] **Towards Concurrent Stateful Stream Processing on Multicore Processors**（即 TStream）. Shuhao Zhang, Yingjun Wu, Feng Zhang, Bingsheng He. IEEE 36th International Conference on Data Engineering. [First Author] [CCF-A]
 - [SIGMOD] **BriskStream: Scaling Data Stream Processing on Shared-Memory Multicore Architectures**. Shuhao Zhang, Jiong He, Amelie Chi Zhou, Bingsheng He. International Conference on Management of Data (SIGMOD). [First Author] [CCF-A]
-- [ICDE] **Multi-Query Optimization for Complex Event Processing in SAP ESP**. Shuhao Zhang, H. T. Vo, D. Dahlmeier, B. He. IEEE 33rd International Conference on Data Engineering. [First Author] [CCF-A]
-- [ICDE] **Revisiting the Design of Data Stream Processing Systems on Multi-Core Processors**. Shuhao Zhang, B. He, D. Dahlmeier, A. C. Zhou, T. Heinze. IEEE 33rd International Conference on Data Engineering. [First Author] [CCF-A]
+- [ICDE] **Multi-Query Optimization for Complex Event Processing in SAP ESP**（即 MOTTO）. Shuhao Zhang, H. T. Vo, D. Dahlmeier, B. He. IEEE 33rd International Conference on Data Engineering. [First Author] [CCF-A]
+- [ICDE] **Revisiting the Design of Data Stream Processing Systems on Multi-Core Processors**（下载区写作 Profiling DSP）. Shuhao Zhang, B. He, D. Dahlmeier, A. C. Zhou, T. Heinze. IEEE 33rd International Conference on Data Engineering. [First Author] [CCF-A]
 
 ### 二、状态感知执行优化与软硬件协同设计
 - [ICML] **Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs**. Ruicheng Zhang, Xinyi Li, Tianyi Xu, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference on Machine Learning (ICML). [Corresponding Author] [CCF-A]
 - [TKDE] **Data-Aware Adaptive Compression for Stream Processing**. Yu Zhang, Feng Zhang, Hourun Li, Shuhao Zhang, Xiaoguang Guo, Yuxing Chen, Anqun Pan, and Xiaoyong Du. IEEE Transactions on Knowledge and Data Engineering (TKDE), 36(9): 4531-4549, 2024. [CCF-A]
-- [SIGMOD] **Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality**. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. Proc. ACM Manag. Data (SIGMOD), 2(4): 1-31, 2024. [CCF-A]
+- [SIGMOD] **Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality**（下载区写作 Adaptive Sampling）. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. Proc. ACM Manag. Data (SIGMOD), 2(4): 1-31, 2024. [CCF-A]
 - [SIGMOD] **MAST: Towards Efficient Analytical Query Processing on Point Cloud Data**. Jiangneng Li, Haitao Yuan, Gao Cong, Han Mao Kiah, Shuhao Zhang. Proc. ACM Manag. Data (SIGMOD), 3(1): 1-27, 2025. [CCF-A]
 - [NeurIPS] **LibAMM: Empirical Insights into Approximate Computing for Accelerating Matrix Multiplication**. Xianzhi Zeng, Wenchao Jiang, and Shuhao Zhang. Conference on Neural Information Processing Systems (NeurIPS). [Corresponding Author] [CCF-A]
 - [SIGMOD] **PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation**. Xianzhi Zeng, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. Proc. ACM Manag. Data (SIGMOD), 2(1): 1-24, 2024. [Corresponding Author] [CCF-A]
@@ -74,11 +76,11 @@
 
 - [EMNLP] **SentiStream: A Co-Training Framework for Adaptive Online Sentiment Analysis in Evolving Data Streams**. Yuhao Wu, Karthick Sharma, Chun Wei Seah, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, main track). [Corresponding Author]
 - [ICDM] **MOStream: A Modular and Self-Optimizing Data Stream Clustering Algorithm**. Zhengru Wang, Xin Wang, Shuhao Zhang. International Conference on Data Mining (ICDM). [Corresponding Author]
-- [SIGMOD] **Data Stream Clustering: An In-depth Empirical Study**. Xin Wang, Zhengru Wang, Zhenyu Wu, Shuhao Zhang, Xuanhua Shi, Li Lu. International Conference on Management of Data (SIGMOD). [Corresponding Author] [CCF-A]
+- [SIGMOD] **Data Stream Clustering: An In-depth Empirical Study**（对应系统 Sesame）. Xin Wang, Zhengru Wang, Zhenyu Wu, Shuhao Zhang, Xuanhua Shi, Li Lu. International Conference on Management of Data (SIGMOD). [Corresponding Author] [CCF-A]
 - [CVPR] **Ferret: An Efficient Online Continual Learning Framework under Varying Memory Constraints**. Yuhao Zhou, Yuxin Tian, Jindi Lv, Mingjia Shi, Yuanxi Li, Qing Ye, Shuhao Zhang, and Jiancheng Lv. Conference on Computer Vision and Pattern Recognition (CVPR). [CCF-A]
 - [WWW] **StreamFP: Fingerprint-guided Data Selection for Efficient Stream Learning**. Changwu Li, Tongjun Shi, Shuhao Zhang, Binbin Chen, Bingsheng He, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]
-- [EMNLP] **A Framework of Knowledge Graph-Enhanced Large Language Model Based on Question Decomposition and Atomic Retrieval**. Yading Li, Dandan Song, Changzhi Zhou, Yuhang Tian, Hao Wang, Ziyi Yang, and Shuhao Zhang. Empirical Methods in Natural Language Processing (Findings).
-- [TKDE] **A Framework of Knowledge Graph-Enhanced Large Language Model Based on Global Planning**. Yading Li, Dandan Song, Yuhang Tian, Hao Wang, Changzhi Zhou, and Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering (TKDE), 38(2), 2025. [CCF-A]
+- [EMNLP] **A Framework of Knowledge Graph-Enhanced Large Language Model Based on Question Decomposition and Atomic Retrieval**（对应 KELDaR）. Yading Li, Dandan Song, Changzhi Zhou, Yuhang Tian, Hao Wang, Ziyi Yang, and Shuhao Zhang. Empirical Methods in Natural Language Processing (Findings).
+- [TKDE] **A Framework of Knowledge Graph-Enhanced Large Language Model Based on Global Planning**（下载区写作 Global Planning KG-LLM）. Yading Li, Dandan Song, Yuhang Tian, Hao Wang, Changzhi Zhou, and Shuhao Zhang. IEEE Transactions on Knowledge and Data Engineering (TKDE), 38(2), 2025. [CCF-A]
 - [WWW] **FlowRAG: Continual Learning for Dynamic Retriever in Retrieval-Augmented Generation**. Senlei Zhang, Tongjun Shi, Dandan Song, Luan Zhang, Shuhao Zhang, Xiaofei Liao, and Hai Jin. The Web Conference (WWW). [Corresponding Author] [CCF-A]
 - [SIGMOD] **CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams [Experiments & Analysis]**. Mingqi Wang, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, and Hai Jin. International Conference on Management of Data (SIGMOD). [Corresponding Author] [CCF-A]
 
@@ -90,15 +92,15 @@
 - [IJCAI] **Detecting Hallucination in Large Language Models through Deep Internal Representation Analysis**. Luan Zhang, Dandan Song, Zhijing Wu, Yuhang Tian, Changzhi Zhou, Jing Xu, Ziyi Yang, and Shuhao Zhang. International Joint Conference on Artificial Intelligence (IJCAI). [CCF-A]
 - [NC] **MatSwarm: Trusted Swarm Transfer Learning Driven Materials Computation for Secure Big Data Sharing**. Cheng Xu, Ran Wang, Shuhao Zhang, Fangwen Ye, Yusen Tang, Sisui Tang, Hangning Zhang, Wendi Du, and Xiaotong Zhang. Nature Communications, 15(1), 2024.
 - [ICPP] **PREACT: Predictive Resource Allocation for Bursty Workloads in a Co-located Data Center**. Ziyang Xiao, Dongxiang Zhang, Dingyu Yang, Shuhao Zhang, Jian Cao, Gang Chen. International Conference in Parallel Processing (ICPP).
-- [IWQoS] **Low-Latency Video Conferencing via Optimized Packet Routing and Reordering**. Yao Xiao, Amelie Chi Zhou, Sitian Chen, Shuhao Zhang, Yi Wang, Rui Mao, Xuan Yang. IEEE International Symposium on Quality of Service.
+- [IWQoS] **Low-Latency Video Conferencing via Optimized Packet Routing and Reordering**（下载区写作 LLVC）. Yao Xiao, Amelie Chi Zhou, Sitian Chen, Shuhao Zhang, Yi Wang, Rui Mao, Xuan Yang. IEEE International Symposium on Quality of Service.
 - [VLDBJ] **Payment Behavior Prediction on Shared Parking Lots with TR-GCN**. Qingyu Xu, Feng Zhang, Mingde Zhang, Jidong Zhai, Bingsheng He, Cheng Yang, Shuhao Zhang, Jiazao Lin, Haidi Liu, Xiaoyong Du. The VLDB Journal, 31(5), 2022. [CCF-A]
 - [MDPI Algorithms] **Revisiting the Design of Parallel Stream Joins on Trusted Execution Environments**. Souhail Meftah, Shuhao Zhang, Bharadwaj Veeravalli, Khin Mi Mi Aung. MDPI Algorithms.
 - [TKDE] **Periodic Weather-Aware LSTM with Event Mechanism for Parking Behavior Prediction**. F. Zhang, Y. Liu, N. Feng, C. Yang, J. Zhai, Shuhao Zhang, B. He, J. Lin, X. Zhang, X. Du. IEEE Transactions on Knowledge and Data Engineering (TKDE), 34(12), 2022. [CCF-A]
 - [OJIOT] **NebulaStream: Complex Analytics Beyond the Cloud**. Steffen Zeuch, Eleni Tzirita Zacharatou, Shuhao Zhang, Xenofon Chatziliadis, Ankit Chaudhary, Bonaventura Del Monte, Dimitrios Giouroukis, Philipp M. Grulich, Ariane Ziehn, Volker Markl. Open Journal of Internet Of Things (OJIOT).
 - [IJCAI] **PewLSTM: Periodic LSTM with Weather-Aware Gating Mechanism for Parking Behavior Prediction**. Feng Zhang, Ningxuan Feng, Yani Liu, Cheng Yang, Jidong Zhai, Shuhao Zhang, Bingsheng He, Jiazao Lin, Xiaoyong Du. International Joint Conference on Artificial Intelligence (IJCAI). [CCF-A]
 - [BigMM] **TraV: An Interactive Exploration System for Massive Trajectory Data**. J. Ang, T. Fu, J. Paul, Shuhao Zhang, B. He, T. S. D. Wenceslao, S. Y. Tan. IEEE Fifth International Conference on Multimedia Big Data (BigMM). [Corresponding Author]
-- [TPDS] **Understanding Co-Running Behaviors on Integrated CPU/GPU Architectures**. F. Zhang, J. Zhai, B. He, Shuhao Zhang, W. Chen. IEEE Transactions on Parallel and Distributed Systems (TPDS). [CCF-A]
-- [SC] **Elastic Multi-resource Fairness: Balancing Fairness and Efficiency in Coupled CPU/GPU Architectures**. S. Tang, B. He, Shuhao Zhang, Z. Niu. International Conference for High Performance Computing, Networking, Storage and Analysis (SC). [CCF-A]
+- [TPDS] **Understanding Co-Running Behaviors on Integrated CPU/GPU Architectures**（下载区写作 Co-Run Study）. F. Zhang, J. Zhai, B. He, Shuhao Zhang, W. Chen. IEEE Transactions on Parallel and Distributed Systems (TPDS). [CCF-A]
+- [SC] **Elastic Multi-resource Fairness: Balancing Fairness and Efficiency in Coupled CPU/GPU Architectures**（下载区写作 SC Paper）. S. Tang, B. He, Shuhao Zhang, Z. Niu. International Conference for High Performance Computing, Networking, Storage and Analysis (SC). [CCF-A]
 - [TPDS] **Melia: A MapReduce Framework on OpenCL-Based FPGAs**. Zeke Wang, Shuhao Zhang, Bingsheng He, Wei Zhang. IEEE Transactions on Parallel and Distributed Systems (TPDS), 27(12): 3547-3560, 2016. [CCF-A]
 - [MASCOTS] **To Co-run, or Not to Co-run: A Performance Study on Integrated Architectures**. Feng Zhang, Jidong Zhai, Wenguang Chen, Bingsheng He, Shuhao Zhang. IEEE 23rd International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS).
 - [VLDB] **In-Cache Query Co-Processing on Coupled CPU-GPU Architectures**. Jiong He, Shuhao Zhang, Bingsheng He. Proceedings of the VLDB Endowment (PVLDB), 8(4): 329-340, 2014. [CCF-A]
