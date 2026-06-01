@@ -81,6 +81,18 @@ git push
 
 Then open `https://<username>.github.io`.
 
+### 4. Optional custom domain
+
+If you want GitHub Pages to serve this site from a custom domain, configure a host-only domain such as `home.example.com`.
+
+Rules that matter:
+
+1. The custom domain must be a domain only. Do not include `https://` or any path like `/home/`.
+2. If you publish from the repository branch, keep a root-level `CNAME` file whose only content is that domain.
+3. Point DNS for that subdomain to your GitHub Pages site, then enable the same domain in GitHub Pages settings.
+
+For this repository, the intended homepage domain is `home.shuhao.sage.org.ai`.
+
 ## Build model
 
 - `contents/` keeps Markdown source files and downloadable public assets such as PDFs.
