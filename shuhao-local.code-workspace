@@ -37,20 +37,76 @@
       "path": "../CANDOR-Bench"
     },
     {
-      "name": "rag | FlowRAG",
-      "path": "../FlowRAG"
-    },
-    {
-      "name": "streamfp | StreamFP",
-      "path": "../streamfp"
-    },
-    {
       "name": "serve | vllm-hust",
       "path": "../vllm-hust"
     },
     {
       "name": "serve | vllm-ascend-hust",
       "path": "../vllm-ascend-hust"
+    },
+    {
+      "name": "serve | perf-analyzer (TraceLoom)",
+      "path": "../vllm-hust-perf-analyzer"
+    },
+    {
+      "name": "serve | bidkv (SC 2026)",
+      "path": "../bidkv"
+    },
+    {
+      "name": "serve | quality-bounded-inference",
+      "path": "../quality-bounded-inference-plugin"
+    },
+    {
+      "name": "serve | kv-materialization",
+      "path": "../kv-materialization-plugin"
+    },
+    {
+      "name": "sage | SAGE",
+      "path": "../SAGE"
+    },
+    {
+      "name": "sage | VAMOS (ATC 2026)",
+      "path": "../vamos"
+    },
+    {
+      "name": "sage | slo-aware-serving",
+      "path": "../sage-slo-aware-llm-serving"
+    },
+    {
+      "name": "sage | motto-lab",
+      "path": "../llm-serving-motto-lab"
+    },
+    {
+      "name": "sage | sglang-request-placement",
+      "path": "../sglang-request-placement"
+    },
+    {
+      "name": "sage | workloads",
+      "path": "../llm-serving-workloads"
+    },
+    {
+      "name": "memory | FlowRAG",
+      "path": "../FlowRAG"
+    },
+    {
+      "name": "memory | StreamFP",
+      "path": "../streamfp"
+    },
+    {
+      "name": "memory | temporal-memory",
+      "path": "../sage-temporal-memory"
+    },
+    {
+      "name": "app | workstation",
+      "path": "../vllm-hust-workstation"
+    },
+    {
+      "name": "app | faculty-twin",
+      "path": "../sage-faculty-twin"
+    },
+    {
+      "name": "bench | ascend-realworkload-prof",
+      "path": "../ascend-llm-realworkload-prof"
     }
   ],
   "settings": {
