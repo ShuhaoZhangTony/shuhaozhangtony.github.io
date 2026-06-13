@@ -111,6 +111,10 @@
     {
       "name": "app | faculty-twin",
       "path": "../sage-faculty-twin"
+    },
+    {
+      "name": "serve | vllm-segment-reuse (ASPLOS 2027)",
+      "path": "../vllm-segment-reuse"
     }
   ],
   "settings": {
