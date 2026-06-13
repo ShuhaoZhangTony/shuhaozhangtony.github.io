@@ -13,6 +13,10 @@
       "path": "../graduate-paper-writing-course"
     },
     {
+      "name": "course | intro-to-llm-inference-engines",
+      "path": "../intro-to-llm-inference-engines"
+    },
+    {
       "name": "survey | parallel-distributed-state-management-survey",
       "path": "../parallel-distributed-state-management-survey"
     },
@@ -33,8 +37,24 @@
       "path": "../neuromem-bench"
     },
     {
+      "name": "memory | FlowRAG",
+      "path": "../FlowRAG"
+    },
+    {
+      "name": "memory | StreamFP",
+      "path": "../streamfp"
+    },
+    {
+      "name": "memory | temporal-memory",
+      "path": "../sage-temporal-memory"
+    },
+    {
       "name": "bench | CANDOR-Bench",
       "path": "../CANDOR-Bench"
+    },
+    {
+      "name": "bench | ascend-realworkload-prof",
+      "path": "../ascend-llm-realworkload-prof"
     },
     {
       "name": "serve | vllm-hust",
@@ -85,28 +105,12 @@
       "path": "../llm-serving-workloads"
     },
     {
-      "name": "memory | FlowRAG",
-      "path": "../FlowRAG"
-    },
-    {
-      "name": "memory | StreamFP",
-      "path": "../streamfp"
-    },
-    {
-      "name": "memory | temporal-memory",
-      "path": "../sage-temporal-memory"
-    },
-    {
       "name": "app | workstation",
       "path": "../vllm-hust-workstation"
     },
     {
       "name": "app | faculty-twin",
       "path": "../sage-faculty-twin"
-    },
-    {
-      "name": "bench | ascend-realworkload-prof",
-      "path": "../ascend-llm-realworkload-prof"
     }
   ],
   "settings": {
