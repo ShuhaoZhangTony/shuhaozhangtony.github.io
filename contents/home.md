@@ -12,9 +12,9 @@
 
 当前研究大致分为三个相互衔接的板块：
 
-- **共享状态访问与运行时调度**：观测、建模并优化共享状态访问与运行时调度；在大模型里主要对应请求排队、合批、路由与 `prefill / decode` 组织，相关工作包括 `SAGE`、`MorphStream` 等
-- **状态感知执行优化**：面向 CPU/GPU/异构硬件的执行协同与性能优化；在大模型里主要对应 `KV cache`、算子执行、通信路径与端到端时延/吞吐，相关工作包括 `Neuromem`、`CStream`、`LibAMM` 等
-- **共享状态演化与复用**：围绕上下文、KV 与检索记忆的持续写入、演化与跨轮复用；在大模型里主要对应长上下文、RAG 和记忆增强推理，相关工作包括 `FlowRAG`、`StreamFP` 等
+- **State-Centric Runtime Design**：共享状态在并发执行下的组织、访问与治理——冲突消解、调度优化、事务语义、状态迁移、故障恢复与记忆增强推理；在大模型里主要对应请求排队、合批、路由与 `prefill / decode` 组织以及记忆状态写入与复用，相关工作包括 `SAGE`、`Neuromem`、`MorphStream` 等
+- **Hardware-Conscious Execution**：面向异构与受限硬件的执行协同与性能优化——NUMA 感知、CPU-GPU 协同、边缘压缩、近似计算、磁盘 I/O 与资源分配；在大模型里主要对应 `KV cache`、算子执行、通信路径与端到端时延/吞吐，相关工作包括 `CStream`、`LibAMM` 等
+- **Adaptive Learning and Stable Evolution**：动态场景下共享状态的持续写入、稳定保留与跨轮复用——流聚类、持续学习、自适应采样、知识图谱增强推理、智能体工作流与幻觉检测；在大模型里主要对应长上下文、RAG 和记忆增强推理，相关工作包括 `FlowRAG`、`StreamFP` 等
 
 ---
 
