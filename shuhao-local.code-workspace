@@ -42,7 +42,7 @@
     },
     {
       "name": "memory | StreamFP",
-      "path": "../streamfp"
+      "path": "../StreamFP"
     },
     {
       "name": "memory | temporal-memory",
