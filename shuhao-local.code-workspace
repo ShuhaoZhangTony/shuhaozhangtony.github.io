@@ -9,51 +9,51 @@
       "path": "../private-materials"
     },
     {
-      "name": "course | graduate-paper-writing-course",
+      "name": "course | graduate-paper-writing",
       "path": "../graduate-paper-writing-course"
     },
     {
-      "name": "course | intro-to-llm-inference-engines",
+      "name": "course | llm-inference-engines",
       "path": "../intro-to-llm-inference-engines"
     },
     {
-      "name": "survey | parallel-distributed-state-management-survey",
+      "name": "survey | state-mgmt-survey",
       "path": "../parallel-distributed-state-management-survey"
     },
     {
-      "name": "survey | cccf-domestic-inference-engine-survey",
+      "name": "survey | domestic-inference-survey",
       "path": "../cccf-domestic-inference-engine-survey"
     },
     {
-      "name": "talk | huawei-stw-memory-rag-talk",
+      "name": "talk | huawei-memory-rag",
       "path": "../huawei-stw-memory-rag-talk"
     },
     {
-      "name": "memory | neuromem",
+      "name": "memory | NeuroMem [ICML 2026]",
       "path": "../neuromem"
     },
     {
-      "name": "memory | neuromem-bench",
+      "name": "memory | NeuroMem-bench [ICML 2026]",
       "path": "../neuromem-bench"
     },
     {
-      "name": "memory | FlowRAG",
+      "name": "memory | FlowRAG [WWW 2026]",
       "path": "../FlowRAG"
     },
     {
-      "name": "memory | StreamFP",
+      "name": "memory | StreamFP [WWW 2026]",
       "path": "../StreamFP"
     },
     {
-      "name": "memory | temporal-memory",
+      "name": "memory | temporal-memory [→SIGMOD 2027]",
       "path": "../sage-temporal-memory"
     },
     {
-      "name": "bench | CANDOR-Bench",
+      "name": "bench | CANDOR-Bench [SIGMOD 2026]",
       "path": "../CANDOR-Bench"
     },
     {
-      "name": "bench | ascend-realworkload-prof",
+      "name": "bench | ascend-workload-prof",
       "path": "../ascend-llm-realworkload-prof"
     },
     {
@@ -65,11 +65,11 @@
       "path": "../vllm-ascend-hust"
     },
     {
-      "name": "serve | perf-analyzer (TraceLoom)",
+      "name": "serve | TraceLoom",
       "path": "../vllm-hust-perf-analyzer"
     },
     {
-      "name": "serve | bidkv (SC 2026)",
+      "name": "serve | BidKV [→SC 2026]",
       "path": "../bidkv"
     },
     {
@@ -77,31 +77,35 @@
       "path": "../quality-bounded-inference-plugin"
     },
     {
-      "name": "serve | kv-materialization",
+      "name": "serve | kv-materialization [ref: LEAP/SIGMOD 2024]",
       "path": "../kv-materialization-plugin"
     },
     {
-      "name": "sage | SAGE",
+      "name": "serve | vllm-segment-reuse [→ASPLOS 2027]",
+      "path": "../vllm-segment-reuse"
+    },
+    {
+      "name": "sage | SAGE [ICML 2026]",
       "path": "../SAGE"
     },
     {
-      "name": "sage | VAMOS (ATC 2026)",
+      "name": "sage | VAMOS [→ATC 2026]",
       "path": "../vamos"
     },
     {
-      "name": "sage | slo-aware-serving",
+      "name": "sage | VAMOS-coordination",
       "path": "../sage-slo-aware-llm-serving"
     },
     {
-      "name": "sage | motto-lab",
+      "name": "sage | motto-lab [ref: MOTTO/ICDE 2017]",
       "path": "../llm-serving-motto-lab"
     },
     {
-      "name": "sage | sglang-request-placement",
+      "name": "sage | sglang-placement [→ATC]",
       "path": "../sglang-request-placement"
     },
     {
-      "name": "sage | workloads",
+      "name": "sage | serving-workloads",
       "path": "../llm-serving-workloads"
     },
     {
@@ -111,10 +115,6 @@
     {
       "name": "app | faculty-twin",
       "path": "../sage-faculty-twin"
-    },
-    {
-      "name": "serve | vllm-segment-reuse (ASPLOS 2027)",
-      "path": "../vllm-segment-reuse"
     }
   ],
   "settings": {
