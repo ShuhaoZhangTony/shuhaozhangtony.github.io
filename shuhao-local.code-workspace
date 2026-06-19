@@ -93,10 +93,6 @@
       "path": "../vamos"
     },
     {
-      "name": "sage | VAMOS-coordination",
-      "path": "../sage-slo-aware-llm-serving"
-    },
-    {
       "name": "sage | motto-lab [ref: MOTTO/ICDE 2017]",
       "path": "../llm-serving-motto-lab"
     },
