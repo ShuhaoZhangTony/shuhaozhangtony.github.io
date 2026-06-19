@@ -71,7 +71,6 @@ INTELLISTREAM_REPOS=(
   llm-serving-workloads
   sage-faculty-twin
   sage-temporal-memory
-  sage-slo-aware-llm-serving
   llm-serving-motto-lab
   graduate-paper-writing-course
   intro-to-llm-inference-engines
