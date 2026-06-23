@@ -1,0 +1,229 @@
+% === LLM Serving Systems ===
+
+@inproceedings{yu2022orca,
+  title={Orca: A Distributed Serving System for Transformer-Based Generative Models},
+  author={Yu, Gyeong-In and Jeong, Joo Seong and Kim, Geon-Woo and Kim, Soojeong and Chun, Byung-Gon},
+  booktitle={16th USENIX Symposium on Operating Systems Design and Implementation (OSDI 22)},
+  year={2022}
+}
+
+@inproceedings{kwon2023efficient,
+  title={Efficient Memory Management for Large Language Model Serving with PagedAttention},
+  author={Kwon, Woosuk and Li, Zhuohan and Zhuang, Siyuan and Sheng, Ying and Zheng, Lianmin and Yu, Cody Hao and Gonzalez, Joseph E. and Zhang, Hao and Stoica, Ion},
+  booktitle={Proceedings of the ACM SIGOPS 29th Symposium on Operating Systems Principles (SOSP '23)},
+  pages={611--626},
+  year={2023}
+}
+
+@inproceedings{zheng2024sglang,
+  title={SGLang: Efficient Execution of Structured Language Model Programs},
+  author={Zheng, Lianmin and Yin, Liangsheng and Xie, Zhiqiang and Huang, Jeff and Yu, Cody Hao and Yu, Shiyi and Cao, Sheng and Amalraj, Christos and Shi, Boxin and Chen, Lianhui and others},
+  booktitle={18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+  year={2024}
+}
+
+@inproceedings{zhong2024distserve,
+  title={DistServe: Disaggregating Prefill and Decoding for Goodput-optimized Large Language Model Serving},
+  author={Zhong, Yinmin and Liu, Shengyu and Chen, Junda and Hu, Jian and Zhu, Yibo and Liu, Xuanzhe and Jin, Xin and Zhang, Hao},
+  booktitle={18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+  year={2024}
+}
+
+@inproceedings{patel2024splitwise,
+  title={Splitwise: Efficient Generative LLM Inference Using Phase Splitting},
+  author={Patel, Pratyush and Choukse, Esha and Zhang, Chaojie and Shah, Aashaka and Goiri, {\'\\~I}\~{n}igo and Maleki, Saeed and Bianchini, Ricardo},
+  booktitle={Proceedings of the 51st Annual International Symposium on Computer Architecture (ISCA)},
+  year={2024}
+}
+
+@inproceedings{agrawal2024sarathi,
+  title={Taming Throughput-Latency Tradeoff in LLM Inference with Sarathi-Serve},
+  author={Agrawal, Amey and Kulkarni, Nitin and Mohan, Sushant and Harchol, Yaacov and Zhu, Yu and Chidambaram, Vijay and Venkataraman, Shivaram},
+  booktitle={18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+  year={2024}
+}
+
+@article{qin2024mooncake,
+  title={Mooncake: A KVCache-centric Disaggregated Architecture for LLM Serving},
+  author={Qin, Rongzhi and others},
+  journal={arXiv preprint arXiv:2407.00079},
+  year={2024}
+}
+
+@article{holmes2023deepspeed,
+  title={DeepSpeed-FastGen: High-throughput Text Generation for LLMs via MII and DeepSpeed-Inference},
+  author={Holmes, Connor and Jain, Samyam and Rajbhandari, Samyam and Aminabadi, Reza Yazdani and Alistarh, Dan and He, Yuxiong and Rashid, Amin and Ruwase, Olatunji and Smith, Shaden and Zhang, Minjia},
+  journal={arXiv preprint arXiv:2401.08671},
+  year={2024}
+}
+
+@inproceedings{fu2024serverlessllm,
+  title={ServerlessLLM: Low-Latency Serverless Inference for Large Language Models},
+  author={Fu, Yao and Xue, Lan and Huang, Yeqi and Brabete, Andrei-Octavian and Ustiugov, Dmitrii and Patel, Yash V. and Mai, Luo},
+  booktitle={18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+  year={2024}
+}
+
+@inproceedings{sun2024llumnix,
+  title={Llumnix: Dynamic Scheduling for Large Language Model Serving},
+  author={Sun, Biao and Huang, Ziming and Zhao, Hanyu and Xiao, Wencong and Zhang, Xinyi and Li, Yong and Liu, Wei and Lin, Tao},
+  booktitle={18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+  year={2024}
+}
+
+% === Attention Kernels ===
+
+@article{dao2022flashattention,
+  title={FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness},
+  author={Dao, Tri and Fu, Daniel Y. and Ermon, Stefano and Rudra, Atri and R{\'e}, Christopher},
+  journal={Advances in Neural Information Processing Systems (NeurIPS)},
+  volume={35},
+  year={2022}
+}
+
+@article{dao2023flashattention2,
+  title={FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning},
+  author={Dao, Tri},
+  journal={arXiv preprint arXiv:2307.08691},
+  year={2023}
+}
+
+% === KV Cache Optimizations ===
+
+@inproceedings{yao2025cacheblend,
+  title={CacheBlend: Fast Large Language Model Serving for RAG with Cached Knowledge},
+  author={Yao, Jiayi and Li, Huan and Liu, Yuhan and Ray, Shaokun and Cheng, Yumeng and Zhang, Qingyang and Wu, Kaitong and Hu, Kang and others},
+  booktitle={Proceedings of the ACM EuroSys 2025},
+  year={2025}
+}
+
+@inproceedings{lee2024infinigen,
+  title={InfiniGen: Efficient Generative Inference of Large Language Models with Dynamic KV Cache Management},
+  author={Lee, Wonbeom and Lee, Hyeonwoo and Seo, Q and Lee, Dongun and others},
+  booktitle={18th USENIX Symposium on Operating Systems Design and Implementation (OSDI 24)},
+  year={2024}
+}
+
+@inproceedings{ye2024chunkattention,
+  title={ChunkAttention: Efficient Self-Attention with Prefix-Aware KV Cache and Two-Phase Partition},
+  author={Ye, Zhen and Tao, Xiaohua and Ye, Chen and others},
+  booktitle={Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (ACL 2024)},
+  year={2024}
+}
+
+% === Prompt / Structured Serving ===
+
+@inproceedings{gim2024promptcache,
+  title={Prompt Cache: Modular Attention Reuse for Low-Latency Inference},
+  author={Gim, In and Chen, Guanyu and Lee, Seung-hwan and Sreedhar, Harsha and Kannan, Sreeram and Bateni, Saba and others},
+  booktitle={Proceedings of Machine Learning and Systems (MLSys) 2024},
+  year={2024}
+}
+
+@inproceedings{srivatsa2024preble,
+  title={Preble: Efficient Distributed Prompt Scheduling for LLM Serving},
+  author={Srivatsa, Rekha and He, Xinyang and others},
+  booktitle={arXiv preprint arXiv:2407.00023},
+  year={2024}
+}
+
+@inproceedings{ruan2024cachegen,
+  title={CacheGen: KV Cache Compression and Streaming for Fast Large Language Model Serving},
+  author={Ruan, Yichao and Dong, Hongyi and Wang, Andrew and Pritikin, Silas and Dai, Weijie and others},
+  booktitle={Proceedings of ACM SIGCOMM 2024},
+  year={2024}
+}
+
+@inproceedings{miao2024specinfer,
+  title={SpecInfer: Accelerating Large Language Model Serving with Tree-based Speculative Inference and Verification},
+  author={Miao, Xupeng and Oliaro, Gabriele and Chen, Zhihao and Cheng, Xinhao and Wang, Zeyu and Wong, Rae and Chen, Zhuoming and Arfeen, Daniel and others},
+  booktitle={Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS 2024)},
+  year={2024}
+}
+
+% === Workload Characterization ===
+
+@inproceedings{zheng2023lmsys,
+  title={LMSYS-Chat-1M: A Large-Scale Real-World LLM Conversation Dataset},
+  author={Zheng, Lianmin and Chiang, Wei-Lin and Sheng, Ying and Zhuang, Siyuan and Wu, Zhanghao and Zhuang, Yonghao and Fu, Zhuohan and Zhang, Tianle and others},
+  booktitle={International Conference on Learning Representations (ICLR)},
+  year={2024}
+}
+
+@article{chen2024burstgpt,
+  title={BurstGPT: A Real-World Workload Dataset to Optimize LLM Serving Systems},
+  author={Chen, Yufeng and others},
+  journal={arXiv preprint arXiv:2401.17644},
+  year={2024}
+}
+
+@article{reddi2020mlperf,
+  title={MLPerf Inference Benchmark},
+  author={Reddi, Vijay Janapa and Cheng, Christine and Kanter, David and Diamos, Peter and Micikevicius, Gintaras and others},
+  journal={Proceedings of the 47th Annual International Symposium on Computer Architecture (ISCA)},
+  year={2020}
+}
+
+% === Systems Classics (reuse / chunking / disaggregation analogies) ===
+
+@inproceedings{muthitacharoen2001lbfs,
+  title={A Low-bandwidth Network File System},
+  author={Muthitacharoen, Athicha and Chen, Benjie and Mazi\`eres, David},
+  booktitle={Proceedings of the 18th ACM Symposium on Operating Systems Principles (SOSP '01)},
+  pages={174--187},
+  year={2001}
+}
+
+@inproceedings{xia2016fastcdc,
+  title={FastCDC: A Fast and Efficient Content-Defined Chunking Approach for Data Deduplication},
+  author={Xia, Wen and Jiang, Hong and Feng, Dan and Tian, Lei and Chen, Yu Hua and others},
+  booktitle={Proceedings of the 2016 USENIX Annual Technical Conference (ATC 16)},
+  pages={101--114},
+  year={2016}
+}
+
+@inproceedings{shan2018legoos,
+  title={LegoOS: A Disseminated, Distributed OS for Hardware Resource Disaggregation},
+  author={Shan, Yizhou and Huang, Yutong and Chen, Yilong and Zhang, Yiying},
+  booktitle={13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18)},
+  pages={699--716},
+  year={2018}
+}
+
+% === SGLang / vLLM Blog and Repo ===
+
+@misc{sglang2024repo,
+  title={SGLang},
+  author={{LMSYS Org}},
+  howpublished={\url{https://github.com/sgl-project/sglang}},
+  note={GitHub repository, accessed 2026-03-14},
+  year={2024}
+}
+
+@misc{sglang2024radix,
+  title={SGLang Provides up to 5x Faster Inference with RadixAttention},
+  author={{LMSYS Org}},
+  howpublished={\url{https://lmsys.org/blog/2024-01-17-sglang/}},
+  note={Blog post, accessed 2026-03-14},
+  year={2024}
+}
+
+@article{lumer2026dontbreak,
+  title={Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks},
+  author={Lumer, Elias and Nizar, Faheem and Jangiti, Akshaya and Frank, Kevin and Gulati, Anmol and Phadate, Mandar and Subbiah, Vamse Kumar},
+  journal={arXiv preprint arXiv:2601.06007},
+  year={2026}
+}
+
+@article{pan2025kvflow,
+  title={KVFlow: Efficient Prefix Caching for Accelerating LLM-Based Multi-Agent Workflows},
+  author={Pan, Zaifeng and Patel, Ajjkumar and Hu, Zhengding and Shen, Yipeng and Guan, Yue and Li, Wan-Lu and Qin, Lianhui and Wang, Yida and Ding, Yufei},
+  journal={arXiv preprint arXiv:2507.07400},
+  year={2025}
+}
+@article{su2021roformer,
+  title={RoFormer: Enhanced Transformer with Rotary Position Embedding},
+  author={Su, Jianlin and Lu, Yu and Pan, Shengfeng and Murtadha, Ahmed and Wen, Bo and Liu, Yunfeng},
+  journal={arXiv preprint arXiv:2104.09864},
+  year={2021}
+}
