@@ -24,6 +24,7 @@
 ### 二、Hardware-Conscious Execution
 这一方向关注状态相关执行在异构与受限硬件上的协同优化，分析吞吐、时延、能耗、精度与质量边界之间的耦合关系，以及局部优化为何难以稳定转化为端到端收益。研究覆盖 NUMA 感知的算子放置、CPU-GPU 协同、边缘压缩、近似计算、磁盘 I/O 优化与资源分配。
 
+- [SC 2026] **BidKV: Utility-Guided Preemption Scheduling for KV-Pressure LLM Serving**. Yanbo Chen, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference for High Performance Computing, Networking, Storage and Analysis (SC). [Corresponding Author] [CCF-A]
 - [ICDE 2026] **GRACE: Alleviating Reconstruction Cost in Dynamic Graph Processing Systems**. Hongru Gao, Shuhao Zhang, Xiaofei Liao, and Hai Jin. IEEE 42nd International Conference on Data Engineering (ICDE). [Corresponding Author] [CCF-A]
 - [NeurIPS 2024] **LibAMM: Empirical Insights into Approximate Computing for Accelerating Matrix Multiplication**. Xianzhi Zeng, Wenchao Jiang, and Shuhao Zhang. Conference on Neural Information Processing Systems (NeurIPS). [Corresponding Author] [CCF-A]
 - [SIGMOD 2024] **PECJ: Stream Window Join on Disorder Data Streams with Proactive Error Compensation**. Xianzhi Zeng, Shuhao Zhang, Hongbin Zhong, Hao Zhang, Mian Lu, Zhao Zheng, Yuqiang Chen. Proc. ACM Manag. Data (SIGMOD), 2(1): 1-24, 2024. [Corresponding Author] [CCF-A]
@@ -57,6 +58,7 @@
 - [VLDB] **OmniDB: Towards Portable and Efficient Query Processing on Parallel CPU/GPU Architectures**. Shuhao Zhang, Jiong He, Bingsheng He, Mian Lu. Proceedings of the VLDB Endowment (PVLDB), 6(12): 1374-1377, 2013. [First Author] [CCF-A]
 
 ### 二、Hardware-Conscious Execution
+- [SC] **BidKV: Utility-Guided Preemption Scheduling for KV-Pressure LLM Serving**. Yanbo Chen, Mingqi Wang, Shuhao Zhang, Xiaofei Liao, Hai Jin. International Conference for High Performance Computing, Networking, Storage and Analysis (SC). [Corresponding Author] [CCF-A]
 - [ICDE] **Scalable Online Interval Join on Modern Multicore Processors in OpenMLDB**. Hao Zhang, Xianzhi Zeng, Shuhao Zhang, Xinyi Liu, Mian Lu, and Zhao Zheng. IEEE 39th International Conference on Data Engineering (ICDE). [CCF-A]
 - [SIGMOD] **Parallelizing Intra-Window Join on Multicores: An Experimental Study**. Shuhao Zhang, Yancan Mao, Jiong He, Philipp M. Grulich, Steffen Zeuch, Bingsheng He, Richard T. B. Ma, Volker Markl. International Conference on Management of Data (SIGMOD). [First Author] [CCF-A]
 - [SIGMOD] **BriskStream: Scaling Data Stream Processing on Shared-Memory Multicore Architectures**. Shuhao Zhang, Jiong He, Amelie Chi Zhou, Bingsheng He. International Conference on Management of Data (SIGMOD). [First Author] [CCF-A]

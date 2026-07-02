@@ -1,3 +1,4 @@
+- July 2026 one paper accepted to SC 2026: BidKV
 - May 2026 two papers accepted to ICML 2026, including Neuromem and SAGE
 - Apr 2026 two collaborative papers accepted to ACL 2026, including one Main Conference paper and one Findings paper
 - Mar 2026 recruiting students interested in LLM inference engines and serving systems; prospective students are welcome to contact me by email with a CV and relevant project or code links
