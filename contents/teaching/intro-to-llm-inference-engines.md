@@ -13,7 +13,7 @@
 ## 讲义与导论
 
 - 课程导论讲义：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/handouts/大模型推理基础设施_课程导论讲义.pdf)
-- 专题讲义 BidKV 与状态管理驱动的推理系统优化：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/handouts/大模型推理基础设施_BidKV与状态管理专题讲义.pdf)
+- 案例与练习补充：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/handouts/大模型推理基础设施_案例与练习补充.pdf)
 - 第 1 讲 课程导论：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/lectures/大模型推理基础设施_第01讲_课程导论.pdf)
 - 第 2 讲 工作负载与评价指标：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/lectures/大模型推理基础设施_第02讲_工作负载与评价指标.pdf)
 - 第 3 讲 请求生命周期：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/lectures/大模型推理基础设施_第03讲_请求生命周期.pdf)
