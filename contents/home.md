@@ -2,9 +2,9 @@
 
 > 华中科技大学计算机学院教授｜面向大模型推理引擎、推理服务系统与记忆智能体中间件招收硕士/博士/实习生
 
-张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。研究聚焦 **复杂硬件与动态负载下的高效状态管理**，重点关注并行分布式系统，并进一步延伸至 **大模型推理基础设施**，尤其是推理服务中的访问调度、执行优化与状态复用问题。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任助理教授，并在德国柏林工业大学（TUB）从事博士后研究。
+张书豪，华中科技大学计算机科学与技术学院教授（[个人主页](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm)）。研究聚焦 **状态管理驱动的推理系统优化**，重点关注并行分布式系统，并进一步延伸至 **大模型推理基础设施**，尤其是状态感知调度、硬件感知记忆管理与状态复用推理加速问题。加入 HUST 前，曾于新加坡南洋理工大学（NTU）任助理教授，并在德国柏林工业大学（TUB）从事博士后研究。
 
-当前工作主要围绕 **大模型推理引擎、推理服务系统与记忆智能体中间件** 展开，重点关注共享状态在访问、执行与演化三个层面的组织问题，以及这些机制对吞吐、P99 时延和服务稳定性的影响。
+当前工作主要围绕 **大模型推理引擎、推理服务系统与记忆智能体中间件** 展开，重点关注共享状态在观测、管理与执行三个层面的组织问题，以及这些机制对吞吐、P99 时延和服务稳定性的影响。
 
 分身系统入口：**[SAGE Faculty Twin](https://twin.sage.org.ai/)**。这里提供面向学生与合作同学的数字分身问答、组内成员入口与 Slack `/twin` 绑定。
 
@@ -12,11 +12,11 @@
 
 ## 研究板块
 
-当前研究大致分为三个相互衔接的板块：
+当前研究大致分为三个相互衔接的技术板块：
 
-- **State-Centric Runtime Design**：共享状态在并发执行下的组织、访问与治理——冲突消解、调度优化、事务语义、状态迁移、故障恢复与记忆增强推理；在大模型里主要对应请求排队、合批、路由与 `prefill / decode` 组织以及记忆状态写入与复用，相关工作包括 `SAGE`、`Neuromem`、`MorphStream` 等
-- **Hardware-Conscious Execution**：面向异构与受限硬件的执行协同与性能优化——NUMA 感知、CPU-GPU 协同、边缘压缩、近似计算、磁盘 I/O 与资源分配；在大模型里主要对应 `KV cache`、算子执行、通信路径与端到端时延/吞吐，相关工作包括 `BidKV`、`vLLM-HUST`、`CStream`、`LibAMM` 等
-- **Adaptive Learning and Stable Evolution**：动态场景下共享状态的持续写入、稳定保留与跨轮复用——流聚类、持续学习、自适应采样、知识图谱增强推理、智能体工作流与幻觉检测；在大模型里主要对应长上下文、RAG 和记忆增强推理，相关工作包括 `FlowRAG`、`StreamFP` 等
+- **State-Aware Orchestration and Resource Governance**：状态感知的解耦编排与资源治理，关注长序列与 MoE 的尾时延风险建模、负载感知批处理与联合调度、异构拓扑感知的配额隔离与资源映射；相关工作包括 `BidKV`、`SAGE`、`MorphStream` 等
+- **Hardware-Aware Memory Management and Semantic Consistency**：硬件感知的多级记忆管理与语义一致性，关注 `KV / Prefix / 向量记忆` 的分层管理、一致性读写、快速更新与鲁棒推理闭环；相关工作包括 `Neuromem`、`vLLM-HUST`、`CStream`、`LibAMM` 等
+- **State-Reuse Inference for Long Contexts and MoE**：状态复用驱动的长序列与 MoE 推理加速，关注 KV 状态复用、上下文缓存优化、MoE 稀疏激活与国产互联上的数据通路优化；相关工作包括 `FlowRAG`、`StreamFP`、`CANDOR-Bench` 等
 
 ---
 
