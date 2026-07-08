@@ -17,7 +17,7 @@ const standalonePages = [
     pageTitle: '大模型推理基础设施课程材料',
     title: '大模型推理基础设施课程材料',
     summary: '这里汇总 2026 年公开版课程 PDF，按讲义、tutorial 和实验三类整理。',
-    meta: '共 34 份：讲义与导论 handout 15 份，tutorial 13 份，实验单与课程项目说明 6 份。',
+    meta: '共 35 份：讲义与导论 handout 16 份，tutorial 13 份，实验单与课程项目说明 6 份。',
     errorText: '课程材料加载失败。'
   },
   {

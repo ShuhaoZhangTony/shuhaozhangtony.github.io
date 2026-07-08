@@ -2,7 +2,7 @@
 
 这里汇总《大模型推理基础设施》课程 2026 年公开版 PDF。
 
-共 34 份：讲义与导论 handout 15 份，tutorial 13 份，实验单与课程项目说明 6 份。
+共 35 份：讲义与导论 handout 16 份，tutorial 13 份，实验单与课程项目说明 6 份。
 
 材料按三类组织：
 
@@ -13,6 +13,7 @@
 ## 讲义与导论
 
 - 课程导论讲义：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/handouts/大模型推理基础设施_课程导论讲义.pdf)
+- 专题讲义 BidKV 与状态管理驱动的推理系统优化：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/handouts/大模型推理基础设施_BidKV与状态管理专题讲义.pdf)
 - 第 1 讲 课程导论：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/lectures/大模型推理基础设施_第01讲_课程导论.pdf)
 - 第 2 讲 工作负载与评价指标：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/lectures/大模型推理基础设施_第02讲_工作负载与评价指标.pdf)
 - 第 3 讲 请求生命周期：[PDF](contents/teaching/intro-to-llm-inference-engines/2026/slides/lectures/大模型推理基础设施_第03讲_请求生命周期.pdf)
