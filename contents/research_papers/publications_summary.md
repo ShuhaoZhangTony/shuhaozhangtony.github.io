@@ -52,14 +52,14 @@
 
 **Venue:** SIGMOD - International Conference on Management of Data  
 **Year:** 2026  
-**Authors:** Mingqi Wang, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, Hai Jin  
+**Authors:** Mingqi Wang, Junyao Dong, Zhuoyan Wu, Jun Liu, Ruicheng Zhang, Jianjun Zhao, Ruipeng Wan, Xinyan Lei, Shuhao Zhang, Bolong Zheng, Haikun Liu, Xiaofei Liao, Hai Jin
 **Corresponding Author:** Yes | **First Author:** No  
 **Abstract:** Continuous approximate nearest neighbor search over streaming vector data is increasingly important in open-world settings where distributions drift, noise accumulates, and concurrent access is common. Existing benchmarks focus on static or simplified streaming scenarios and therefore fail to capture the dynamic behavior of real-world workloads. CANDOR-Bench addresses this gap by building a benchmarking framework for in-memory ANNS under dynamic open-world streams, enabling systematic evaluation of ingestion latency, retrieval quality, and update efficiency under high-churn, continuously evolving workloads. The framework provides a reusable basis for studying dynamic vector retrieval systems beyond static ANN settings.
 
 ### 0.7 Data-Aware Adaptive Compression for Stream Processing
 
 **Venue:** TKDE - IEEE Transactions on Knowledge and Data Engineering  
-**Year:** 2025  
+**Year:** 2024
 **Authors:** Yu Zhang, Feng Zhang, Hourun Li, Shuhao Zhang, Xiaoguang Guo, Yuxing Chen, Anqun Pan, Xiaoyong Du  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** This work extends the compressed stream processing line by designing a compression-based stream engine that performs adaptive fine-grained query processing directly on compressed data. The system integrates nine compression methods and a cost model for automatic compression-scheme selection, enabling significantly higher throughput and lower latency than uncompressed stream processing baselines. Compared with prior stream solutions on uncompressed inputs, the framework improves average performance by 3.84×, reduces delay by 68.0%, and saves 68.7% space. Edge trials further show substantial throughput-price and throughput-power gains over cloud-oriented designs.
