@@ -9,9 +9,14 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,fit,calc,shapes.geometric,decorations.pathreplacing}
 
-\setmainfont{Helvetica Neue}
-\setsansfont{Helvetica Neue}
-\setmonofont{Menlo}
+\IfFontExistsTF{Helvetica Neue}{
+  \setmainfont{Helvetica Neue}
+  \setsansfont{Helvetica Neue}
+}{
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+}
+\IfFontExistsTF{Menlo}{\setmonofont{Menlo}}{\setmonofont{Consolas}}
 
 \definecolor{HUSTBlue}{RGB}{0,63,164}
 \definecolor{HUSTDeep}{RGB}{7,34,86}
@@ -83,7 +88,7 @@
 \title{Large Language Model Inference Systems}
 \subtitle{From a User Request to a Production Serving Stack}
 \author{Shuhao Zhang \\ School of Computer Science and Technology, HUST}
-\date{Three-Hour English Course \\ 2026}
+\date{Two-Hour English Course \\ 2026}
 
 \begin{document}
 
@@ -93,7 +98,7 @@
     \draw[HUSTBlue, line width=1.0pt] ([xshift=0.78cm,yshift=-0.90cm]current page.north west) -- ([xshift=5.25cm,yshift=-0.90cm]current page.north west);
     \draw[HUSTCyan, line width=1.0pt] ([xshift=5.35cm,yshift=-0.90cm]current page.north west) -- ([xshift=7.15cm,yshift=-0.90cm]current page.north west);
     \node[anchor=south east, text=HUSTGray, font=\scriptsize, align=right] at ([xshift=-0.78cm,yshift=0.60cm]current page.south east)
-      {Three-Hour English Teaching Edition\\2026};
+      {Two-Hour English Teaching Edition\\2026};
   \end{tikzpicture}
 
   \vspace{1.42cm}
@@ -141,11 +146,11 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Three-hour course roadmap}
+\begin{frame}{The course runs in two complete halves}
   \footnotesize
   \begin{columns}[T,totalwidth=\textwidth]
-    \begin{column}{0.32\textwidth}
-      \begin{block}{Session 1: model to request}
+    \begin{column}{0.47\textwidth}
+      \begin{block}{First half: model to request (55 min)}
         \begin{itemize}
           \item Tokens, attention, and Transformer blocks
           \item Autoregressive generation
@@ -153,28 +158,34 @@
         \end{itemize}
       \end{block}
     \end{column}
-    \begin{column}{0.32\textwidth}
-      \begin{block}{Session 2: serving engine}
+    \begin{column}{0.47\textwidth}
+      \begin{block}{Second half: engine to evidence (55 min)}
         \begin{itemize}
           \item Request and iteration scheduling
           \item Continuous batching and KV paging
-          \item State ownership, reuse, and pressure
-        \end{itemize}
-      \end{block}
-    \end{column}
-    \begin{column}{0.32\textwidth}
-      \begin{block}{Session 3: systems evidence}
-        \begin{itemize}
           \item RAG, MoE, agents, and accelerators
-          \item Heterogeneous execution
           \item Benchmarking and open engineering
         \end{itemize}
       \end{block}
     \end{column}
   \end{columns}
   \vspace{0.10cm}
-  \begin{block}{Guiding thread}
-    Follow the tensor, follow the request, follow the state, and verify the evidence.
+  \begin{block}{One break, one guiding thread}
+    Two hours total: 55 minutes, a 10-minute break, then 55 minutes. Follow the tensor, request, state, and evidence.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Everything needed to teach is inside this deck}
+  \begin{itemize}
+    \item Definitions are stated before they are used.
+    \item Worked examples show assumptions, arithmetic, and the conclusion.
+    \item Checkpoints are followed by an explicit answer key.
+    \item System claims are paired with the measurement needed to support them.
+    \item The closing slides provide the synthesis, research questions, and reading path.
+  \end{itemize}
+  \vspace{0.30cm}
+  \begin{block}{Teaching contract}
+    The instructor may add personal examples, but no missing explanation, exercise answer, or transition must be invented during class.
   \end{block}
 \end{frame}
 
@@ -211,30 +222,41 @@
   \end{itemize}
 \end{frame}
 
-\topicsectionpage{Part I. From Tokens to Autoregressive Inference}{Build the model-side foundation before opening the serving engine}
+\topicsectionpage{First Half, Part I. From Tokens to Autoregressive Inference}{Build the model-side foundation before opening the serving engine}
 
-\begin{frame}{Start with one concrete prompt}
-  \begin{block}{Text entered by the user}
+\begin{frame}{A tiny story the model must understand}
+  \begin{block}{Four word cards arrive from left to right}
     \centering
-    \Large ``I love AI.''
+    \Large \texttt{The}\quad \texttt{cat}\quad \texttt{sat}\quad \texttt{.}
   \end{block}
-  \begin{enumerate}
-    \item The tokenizer splits text into tokens.
-    \item Embedding turns each token ID into a vector.
-    \item Transformer blocks mix information across positions and channels.
-    \item The language-model head scores the next token.
-  \end{enumerate}
-  \vspace{0.2cm}
-  \term{An inference engine serves this computation repeatedly and concurrently.}
+  \begin{columns}[T,totalwidth=\textwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{block}{A beginner can read it as}
+        \begin{itemize}
+          \item \texttt{The}: a sentence is starting.
+          \item \texttt{cat}: this is the actor.
+          \item \texttt{sat}: this is the action.
+          \item \texttt{.}: the sentence ends.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.49\textwidth}
+      \begin{block}{The model-side question}
+        While processing \texttt{sat}, which earlier cards help explain the action?
+      \end{block}
+      \vspace{0.2cm}
+      \term{Attention turns this reading question into arithmetic.}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-\begin{frame}{Token count is not character count}
+\begin{frame}{Tokenization turns the sentence into four work items}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.48\textwidth}
-      \begin{block}{Teaching example}
+      \begin{block}{One possible tokenizer output}
         Suppose the tokenizer returns
         \[
-          [\texttt{I},\ \texttt{love},\ \texttt{AI},\ \texttt{.}]
+          [\texttt{The},\ \texttt{cat},\ \texttt{sat},\ \texttt{.}]
         \]
         The sequence length is therefore \(S=4\).
       \end{block}
@@ -251,105 +273,114 @@
     \end{column}
   \end{columns}
   \vspace{0.25cm}
-  If \(d_{\text{model}}=8\), the four token vectors form a \(4\times 8\) matrix.
+  \begin{block}{Shape before meaning}
+    If \(d_{\text{model}}=8\), the four word cards become four vectors: a \(4\times8\) matrix.
+  \end{block}
 \end{frame}
 
-\begin{frame}{What question does attention answer?}
-  \begin{block}{For every query position}
-    Which earlier positions are useful, and how much information should be taken from each one?
+\begin{frame}{Attention works like a relevance budget}
+  \begin{block}{The card \texttt{sat} asks a reading question}
+    ``Who is doing this action, and which visible cards help me understand it?''
   \end{block}
   \begin{itemize}
-    \item \(Q\): what the current position is looking for.
-    \item \(K\): what each position offers for matching.
-    \item \(V\): the information that will actually be mixed.
+    \item \(Q\), the query: the question written on the current card.
+    \item \(K\), the key: the label each candidate card offers for matching.
+    \item \(V\), the value: the useful payload carried by that card.
   \end{itemize}
   \vspace{0.3cm}
   \begin{center}
-    \Large\term{Match with \(QK^\top\); mix the \(V\) vectors.}
+    \Large\term{Score relevance with \(QK^\top\); spend the budget on \(V\).}
   \end{center}
 \end{frame}
 
-\begin{frame}{Worked attention example: define one row}
-  \begin{block}{We compute only the row for token 3: \texttt{AI}}
+\begin{frame}{Worked example: follow only the card \texttt{sat}}
+  \begin{block}{A toy two-number code makes the arithmetic visible}
     Use one head with \(d_{\text{head}}=2\):
     \[
-      q_{\text{AI}}=[1,1]
+      q_{\text{sat}}=[1,1]
     \]
     \[
-      k_{\text{I}}=[1,0],\quad k_{\text{love}}=[0,1],\quad
-      k_{\text{AI}}=[1,1],\quad k_{\text{.}}=[0,0].
+      k_{\text{The}}=[0,0],\quad k_{\text{cat}}=[1,0],\quad
+      k_{\text{sat}}=[1,1],\quad k_{\text{.}}=[0,1].
     \]
   \end{block}
   \begin{itemize}
-    \item Four query positions and four key positions create a \(4\times4\) score matrix.
-    \item This page follows only its third row; the other rows use the same procedure.
+    \item Think of the two numbers as a deliberately simple matching code.
+    \item We follow only row 3: how strongly \texttt{sat} matches each card.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Step 1: compute the four attention scores}
+\begin{frame}{Step 1: \texttt{sat} scores every card for relevance}
   \[
-    \frac{q_{\text{AI}}K^\top}{\sqrt{2}}
+    \frac{q_{\text{sat}}K^\top}{\sqrt{2}}
     =
-    \frac{[1,\ 1,\ 2,\ 0]}{\sqrt{2}}
+    \frac{[0,\ 1,\ 2,\ 1]}{\sqrt{2}}
     \approx
-    [0.707,\ 0.707,\ 1.414,\ 0].
+    [0,\ 0.707,\ 1.414,\ 0.707].
   \]
-  \begin{enumerate}
-    \item Dot product with \texttt{I}: \(1\cdot1+1\cdot0=1\).
-    \item Dot product with \texttt{love}: \(1\).
-    \item Dot product with \texttt{AI}: \(2\).
-    \item Dot product with \texttt{.}: \(0\).
-  \end{enumerate}
+  \begin{center}
+    \begin{tabular}{lcc}
+      \toprule
+      Card & Raw match & Beginner reading \\
+      \midrule
+      \texttt{The} & \(0\) & weak clue \\
+      \texttt{cat} & \(1\) & useful actor clue \\
+      \texttt{sat} & \(2\) & strongest self/action clue \\
+      \texttt{.} & \(1\) & looks relevant, but is still in the future \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
   \vspace{0.2cm}
-  The scale factor \(\sqrt{d_{\text{head}}}\) keeps large dimensions from producing overly sharp scores.
+  \smallnote{The numbers are pedagogical; a trained model learns its own projections.}
 \end{frame}
 
-\begin{frame}{Step 2: the causal mask blocks the future}
-  \begin{block}{Token 3 may read positions 1--3, but not position 4}
+\begin{frame}{Step 2: cover the card that has not appeared yet}
+  \begin{block}{From the viewpoint of \texttt{sat}, the period is a future card}
     \[
-      [0.707,\ 0.707,\ 1.414,\ 0]
+      [0,\ 0.707,\ 1.414,\ 0.707]
       \longrightarrow
-      [0.707,\ 0.707,\ 1.414,\ -\infty].
+      [0,\ 0.707,\ 1.414,\ -\infty].
     \]
   \end{block}
   \begin{itemize}
-    \item The fourth softmax weight becomes zero.
-    \item The model cannot use a future token to predict an earlier token.
+    \item Imagine placing an opaque card over every future position.
+    \item The covered period receives zero attention after softmax.
     \item All known query rows in the same layer can still be computed in parallel.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Step 3: softmax turns scores into weights}
+\begin{frame}{Step 3: softmax divides a 100\% attention budget}
   \[
     \operatorname{softmax}
-    ([0.707,\ 0.707,\ 1.414,\ -\infty])
+    ([0,\ 0.707,\ 1.414,\ -\infty])
     \approx
-    [0.248,\ 0.248,\ 0.503,\ 0].
+    [0.140,\ 0.284,\ 0.576,\ 0].
   \]
   \begin{itemize}
-    \item Every weight is non-negative.
-    \item The weights sum to approximately one.
-    \item These are position-mixing weights for one layer and one head.
+    \item \texttt{The} receives about \(14\%\).
+    \item \texttt{cat} receives about \(28\%\).
+    \item \texttt{sat} receives about \(58\%\); the future period receives \(0\%\).
   \end{itemize}
   \vspace{0.25cm}
-  \key{They are not next-token probabilities over the vocabulary.}
+  \key{This budget is over visible positions, not over possible next words.}
 \end{frame}
 
-\begin{frame}{Step 4: attention returns a weighted sum of values}
-  Let
+\begin{frame}{Step 4: collect the payload from the visible cards}
+  For this toy example, let the two value dimensions mean
+  \textit{actor clue} and \textit{action clue}:
   \[
-    v_{\text{I}}=[1,0],\quad
-    v_{\text{love}}=[0,2],\quad
-    v_{\text{AI}}=[2,1].
+    v_{\text{The}}=[0,0],\quad
+    v_{\text{cat}}=[1,0],\quad
+    v_{\text{sat}}=[0,1].
   \]
   Then
   \[
-    o_{\text{AI}}
-    =0.248[1,0]+0.248[0,2]+0.503[2,1]
-    \approx [1.254,\ 0.999].
+    o_{\text{sat}}
+    =0.140[0,0]+0.284[1,0]+0.576[0,1]
+    =[0.284,\ 0.576].
   \]
   \begin{block}{Plain-language meaning}
-    The representation of \texttt{AI} now contains a weighted mixture of information from visible positions.
+    The new representation of \texttt{sat} carries both ``the actor was a cat'' and ``this is an action.''
   \end{block}
 \end{frame}
 
@@ -423,7 +454,16 @@
   \smallnote{Suggested classroom format: two minutes alone, two minutes with a partner, then one shared explanation.}
 \end{frame}
 
-\topicsectionpage{Part II. Request Lifecycle and Service Quality}{Connect autoregressive generation to user-visible serving behavior}
+\begin{frame}{Answer key: the model side in four statements}
+  \begin{enumerate}
+    \item Four query positions are compared with four key positions, so the score table has \(4\times4\) entries.
+    \item The causal mask removes attention from each position to future positions; the current and earlier positions remain visible.
+    \item Attention weights select and mix value vectors. Vocabulary probabilities appear later, after the final hidden state is projected to logits.
+    \item The next token becomes part of the input for the following token, so generation repeats until a stop token or length limit.
+  \end{enumerate}
+\end{frame}
+
+\topicsectionpage{First Half, Part II. Request Lifecycle and Service Quality}{Connect autoregressive generation to user-visible serving behavior}
 
 \begin{frame}{From model capability to service capability}
   \begin{columns}[T,totalwidth=\textwidth]
@@ -679,10 +719,10 @@
 \end{frame}
 
 \breakpage
-  {Session 2 resumes with scheduling, continuous batching, and KV state.}
+  {The second half resumes with scheduling, continuous batching, and KV state.}
   {Keep three objects in mind: the candidate requests, the token budget, and the free KV blocks.}
 
-\topicsectionpage{Part III. Scheduling and State Management}{Continuous batching, KV cache, and stateful execution}
+\topicsectionpage{Second Half, Part III. Scheduling and State Management}{Continuous batching, KV cache, and stateful execution}
 
 \begin{frame}{Why scheduling comes first}
   \begin{block}{Scheduling tension}
@@ -696,6 +736,7 @@
   \end{itemize}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Head-of-line blocking in mixed workloads}
   \centering
   \begin{tikzpicture}[x=0.62cm,y=0.62cm]
@@ -713,6 +754,7 @@
     \item Average throughput may look acceptable while TTFT and P99 degrade.
   \end{itemize}
 \end{frame}
+\fi
 
 \begin{frame}{Request-level vs. iteration-level scheduling}
   \small
@@ -792,6 +834,7 @@
   \end{block}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Feasible does not automatically mean fair}
   \begin{block}{Follow-up scenario}
     Request C has waited for two seconds, while A and B have just arrived.
@@ -824,6 +867,8 @@
     Scheduling decisions, KV residency, execution path, and service metrics form one feedback loop.
   \end{block}
 \end{frame}
+
+\fi
 
 \begin{frame}{Why KV cache is central}
   \begin{itemize}
@@ -875,6 +920,7 @@
   \end{block}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{KV cache lifecycle}
   \centering
   \begin{tikzpicture}[
@@ -900,6 +946,8 @@
     Each optimization changes one lifecycle step and may shift cost elsewhere.
   \end{block}
 \end{frame}
+
+\fi
 
 \begin{frame}{Request state and physical KV state are different}
   \begin{block}{Example: request R17}
@@ -937,6 +985,7 @@
   \key{Reference count handles sharing; a device event or fence handles asynchronous completion.}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Why contiguous allocation breaks down}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.50\textwidth}
@@ -959,6 +1008,8 @@
     \end{column}
   \end{columns}
 \end{frame}
+
+\fi
 
 \begin{frame}{Paged KV: a visual analogy}
   \centering
@@ -995,6 +1046,7 @@
   \end{block}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Sharing KV: a small RAG example}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.52\textwidth}
@@ -1030,6 +1082,8 @@
   \end{block}
 \end{frame}
 
+\fi
+
 \begin{frame}{State decisions made by the runtime}
   \small
   \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.1cm}YY}
@@ -1061,7 +1115,16 @@
   \smallnote{A complete answer separates feasibility, policy, expected effect, and evidence.}
 \end{frame}
 
-\topicsectionpage{Part IV. Modern Workloads and Heterogeneous Execution}{Long context, RAG, MoE, agents, and accelerator dynamics}
+\begin{frame}{Answer key: feasibility first, policy second}
+  \begin{enumerate}
+    \item D+E uses \((10\text{ tokens},4\text{ blocks})\) and is feasible. D+F uses \((9,5)\), and E+F uses \((7,5)\), so both exceed the four-block limit.
+    \item If F has the oldest deadline, no pair containing F fits. Run F alone or free at least one block before pairing it.
+    \item Running F alone may reduce instantaneous throughput; delaying F may worsen deadline miss rate or tail latency.
+    \item Record candidate IDs, token and block demand, budgets, free blocks, ages or deadlines, selected set, rejection reasons, and resulting latency.
+  \end{enumerate}
+\end{frame}
+
+\topicsectionpage{Second Half, Part IV. Modern Workloads and Heterogeneous Execution}{Long context, RAG, MoE, agents, and accelerator dynamics}
 
 \begin{frame}{KV pressure changes scheduling}
   \begin{block}{Scenario}
@@ -1085,6 +1148,7 @@
   \key{Scheduling now includes a state-utility decision.}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{New forms of intermediate state}
   \small
   \begin{tabularx}{\textwidth}{>{\bfseries\raggedright\arraybackslash}p{2.5cm}YY}
@@ -1102,6 +1166,8 @@
     Intermediate state is becoming a managed resource, not a temporary tensor.
   \end{block}
 \end{frame}
+
+\fi
 
 \begin{frame}{Long context and RAG}
   \begin{itemize}
@@ -1182,6 +1248,7 @@
   \end{itemize}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Many reuse mechanisms, one selection problem}
   \begin{block}{Selection space}
     APC, prompt cache, CacheBlend, LMCache, and other mechanisms may all help, but each has different cost and applicability.
@@ -1279,6 +1346,8 @@
   \key{This conflict is especially visible on graph-oriented accelerator stacks.}
 \end{frame}
 
+\fi
+
 \begin{frame}{Same FLOPs can produce very different latency}
   \begin{block}{Two kernels each perform 1 GFLOP}
     Kernel A reads 64 MiB from HBM; Kernel B reads 16 MiB.
@@ -1325,6 +1394,7 @@
   \key{Portability means equivalent semantics and observable behavior, not necessarily bitwise identity.}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Measurement checklist}
   \begin{itemize}
     \item End-to-end: TTFT, TPOT, P99, goodput.
@@ -1338,11 +1408,9 @@
   \end{block}
 \end{frame}
 
-\breakpage
-  {Session 3 resumes with heterogeneous execution, evidence, and open engineering.}
-  {Keep the comparison matched: same model, shape, dtype, hardware scope, workload, and metric definition.}
+\fi
 
-\topicsectionpage{Part V. Evidence and Open Engineering Practice}{Benchmarking, reproducibility, and vLLM-HUST workflow}
+\topicsectionpage{Second Half, Part V. Evidence and Open Engineering Practice}{Benchmarking, reproducibility, and open engineering workflow}
 
 \begin{frame}{Why benchmark evidence is fragile}
   \begin{itemize}
@@ -1373,6 +1441,7 @@
   \end{tabularx}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Example: a misleading performance trend}
   \begin{columns}[T,totalwidth=\textwidth]
     \begin{column}{0.48\textwidth}
@@ -1401,6 +1470,8 @@
   \vspace{0.25cm}
   \key{A large jump needs attribution: optimization effect or experiment change.}
 \end{frame}
+
+\fi
 
 \begin{frame}{A controlled A/B result reports a distribution}
   \begin{block}{Hypothesis}
@@ -1463,6 +1534,7 @@
   \end{block}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{vLLM-HUST: putting system work into an open workflow}
   \begin{block}{Practice target}
     vLLM-HUST, vLLM-Ascend-HUST, benchmark, and dev-hub repositories organize real inference-system development tasks.
@@ -1489,6 +1561,8 @@
   \end{block}
 \end{frame}
 
+\fi
+
 \begin{frame}{Final evidence exercise: fact, inference, decision}
   \begin{block}{Trace summary}
     P99 latency is 1.8 s: queueing 1.1 s, prefill 0.4 s, first decode step 0.2 s, and network 0.1 s.
@@ -1501,7 +1575,7 @@
   \end{enumerate}
 \end{frame}
 
-\topicsectionpage{Closing}{Concepts, open questions, and further reading}
+% Closing is integrated directly into the synthesis slides in the two-hour edition.
 
 \begin{frame}{Six concepts to remember}
   \begin{enumerate}
@@ -1514,6 +1588,7 @@
   \end{enumerate}
 \end{frame}
 
+\iffalse % Cut for the two-hour edition.
 \begin{frame}{Open research questions}
   \begin{itemize}
     \item Global selection among KV reuse mechanisms.
@@ -1537,6 +1612,8 @@
     A minimal reproducible experiment exposes the real system boundary and prevents accidental claims.
   \end{block}
 \end{frame}
+
+\fi
 
 \begin{frame}{Recommended reading and systems}
   \begin{itemize}
