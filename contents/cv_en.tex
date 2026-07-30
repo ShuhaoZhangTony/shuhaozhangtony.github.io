@@ -1,0 +1,108 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.65cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+
+\setmainfont{DejaVu Sans}
+\setsansfont{DejaVu Sans}
+\definecolor{accent}{RGB}{0,63,164}
+\definecolor{muted}{RGB}{82,92,110}
+
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{0.75em}{0.35em}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.15em,topsep=0.15em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+
+\newcommand{\cvsection}[1]{\section*{#1}}
+\newcommand{\entry}[2]{\textbf{#1}\hfill{\color{muted}#2}\\}
+
+\begin{document}
+
+{\Huge\bfseries Shuhao Zhang}\\[0.25em]
+Professor, School of Computer Science and Technology, HUST\\
+\href{mailto:shuhao_zhang@hust.edu.cn}{shuhao\_zhang@hust.edu.cn}
+\quad
+\href{https://orcid.org/0000-0002-9927-6925}{ORCID: 0000-0002-9927-6925}
+\quad
+\href{https://home.shuhao.sage.org.ai}{home.shuhao.sage.org.ai}
+
+\vspace{0.45em}
+{\color{accent}\rule{\linewidth}{0.9pt}}
+
+\cvsection{Profile}
+Shuhao Zhang is a Professor in the School of Computer Science and Technology at Huazhong University of Science and Technology. He leads a task under a major national science and technology project of the Ministry of Science and Technology of China and is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
+
+His research focuses on state-management-driven optimization for inference systems, spanning parallel and distributed systems, LLM inference infrastructure, inference serving systems, and memory-agent middleware. Current work emphasizes state-aware scheduling, hardware-aware memory management, KV and intermediate-state reuse, serving stability, and the impact of these mechanisms on throughput, P99 latency, and service reliability.
+
+\cvsection{Appointments}
+\entry{Huazhong University of Science and Technology}{Professor}
+School of Computer Science and Technology.
+
+\entry{Nanyang Technological University}{Assistant Professor}
+Before joining HUST.
+
+\entry{Technische Universitat Berlin}{Postdoctoral Researcher}
+Postdoctoral research on data systems and distributed stream processing.
+
+\cvsection{Education}
+\entry{National University of Singapore}{Ph.D., Computer Science, 2019}
+Research area: database systems, stream processing, parallel and distributed systems.
+
+\entry{Nanyang Technological University}{B.Eng., Computer Engineering, 2014}
+
+\cvsection{Research Themes}
+\begin{itemize}
+  \item State-aware orchestration and resource governance for LLM serving systems.
+  \item Hardware-aware memory management for KV cache, prefix state, vector memory, and multi-level memory systems.
+  \item State-reuse inference for long-context workloads, MoE serving, and domestic heterogeneous accelerators.
+  \item Benchmark-driven systems methodology, reproducible performance claims, and open engineering workflows.
+\end{itemize}
+
+\cvsection{Major Projects and Funding}
+\begin{itemize}
+  \item Task Lead, major national science and technology project of the Ministry of Science and Technology of China.
+  \item Principal Investigator, National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
+  \item Principal Investigator and collaborator on previous research grants from Singapore MOE, Singapore NRF, Temasek Laboratories, and university-level research programs.
+\end{itemize}
+
+\newpage
+\cvsection{Representative Systems}
+\begin{itemize}
+  \item \textbf{vLLM-HUST}: HUST-maintained LLM inference engine stack and benchmark ecosystem for domestic heterogeneous serving practice.
+  \item \textbf{SAGE}: A dataflow-native framework for modular, controllable, and transparent LLM-augmented reasoning.
+  \item \textbf{Neuromem}: Middleware and benchmark line for external memory and memory-agent systems.
+  \item \textbf{MorphStream / TStream / CStream}: Stream processing systems for multicore, stateful, and hardware-conscious execution.
+\end{itemize}
+
+\cvsection{Selected Recent Publications}
+\begin{itemize}
+  \item \textbf{BidKV: Utility-Guided Preemption Scheduling for KV-Pressure LLM Serving}. SC 2026. Corresponding Author.
+  \item \textbf{SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning}. ICML 2026. Corresponding Author.
+  \item \textbf{Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs}. ICML 2026. Corresponding Author.
+  \item \textbf{CANDOR-Bench: Benchmarking In-Memory Continuous ANNS under Dynamic Open-World Streams}. SIGMOD 2026. Corresponding Author.
+  \item \textbf{MorphStream: Adaptive Scheduling for Scalable Transactional Stream Processing on Multicores}. SIGMOD 2023 / TKDE 2025 line of work. Corresponding Author.
+  \item \textbf{Towards Concurrent Stateful Stream Processing on Multicore Processors}. ICDE 2020. First Author.
+  \item \textbf{BriskStream: Scaling Data Stream Processing on Shared-Memory Multicore Architectures}. SIGMOD 2019. First Author.
+\end{itemize}
+
+\cvsection{Honors and Service}
+\begin{itemize}
+  \item HUST Excellent Young Scholar; Huawei Donghu Young Scholar.
+  \item VLDB Review Board Member; SC Program Committee Member; ICDE/TKDE Poster Track Chair.
+  \item Program committee service for KDD, CIKM, DASFAA, SDM, and related venues.
+\end{itemize}
+
+\cvsection{Teaching and Open Materials}
+\begin{itemize}
+  \item Large Language Model Inference Systems and Practice, a practice-oriented graduate course connected to vLLM-HUST development.
+  \item Graduate Paper Writing, public lecture materials for research writing and systems-paper methodology.
+\end{itemize}
+
+\vfill
+{\small\color{muted}Last updated: July 2026. The Markdown and LaTeX sources in this repository are the maintained public sources for this CV and profile.}
+
+\end{document}

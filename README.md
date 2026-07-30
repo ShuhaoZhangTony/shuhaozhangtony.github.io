@@ -1,106 +1,56 @@
-# A simple GitHub Pages template for an academic personal website
+# Shuhao Zhang Homepage
 
-[![Screenshot of the Website](https://raw.githubusercontent.com/senli1073/senli1073.github.io/main/screenshot_full.png)](https://senli1073.github.io/)
+This repository contains the public personal homepage for Shuhao Zhang.
 
-This repository is an academic personal website based on Bootstrap. Markdown files remain the source content, but the published HTML is now generated at build time so the deployed site no longer depends on browser-side fetches of section markdown.
+Markdown files under `contents/` are the source of truth for public website text. The generated HTML files are committed so GitHub Pages can serve the site without runtime Markdown fetching.
 
-Demo: https://senli1073.github.io/
+## Current Public Facts
 
-## Introduction
+- Shuhao Zhang is a Professor in the School of Computer Science and Technology at Huazhong University of Science and Technology.
+- He leads a task under a major national science and technology project of the Ministry of Science and Technology of China.
+- He is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
+- Current research focuses on state-management-driven optimization for LLM inference systems, including state-aware scheduling, hardware-aware memory management, state reuse, serving stability, vLLM-HUST, SAGE, and Neuromem.
 
-- Public website content lives in this repository.
-- Private working materials live in a separate sibling repository.
-- VS Code can open both repositories together with the included multi-root workspace.
+Keep these facts synchronized across:
 
-## Working with a private repository
+- `contents/home.md`
+- `contents/current_bio.md`
+- `contents/cv_en.tex`
+- `contents/cv_en.pdf`
+- `contents/awards.md`
 
-Keep the public site repository and the private materials repository as two separate sibling folders on disk.
+## Build
 
-Recommended local layout:
-
-```text
-projects/
-├── <username>.github.io/
-└── private-materials/
-```
-
-Why this layout is preferred:
-
-1. The public repository never tracks private source files.
-2. VS Code can open both repositories together through a multi-root workspace.
-3. Public content can be copied or generated from the private repository in a controlled way.
-
-Important boundary:
-
-1. Raw files from the private repository should stay private.
-2. Only content that is intentionally publishable should be copied into this public repository.
-3. Do not reintroduce the private repository as a submodule under this repository.
-
-This repository includes a workspace file for local development:
-
-```text
-shuhao-local.code-workspace
-```
-
-Open that workspace file in VS Code after cloning both repositories side by side. By default it expects these sibling repositories to live one level above the public site repository: `../private-materials`, `../graduate-paper-writing-course`, `../parallel-distributed-state-management-survey`, `../cccf-domestic-inference-engine-survey`, and `../huawei-stw-memory-rag-talk`.
-
-The public LLM inference course page is built from `contents/teaching/intro-to-llm-inference-engines.md` and the public assets copied into this repository. Do not add a second local sibling checkout for the same course unless you are intentionally staging unpublished source material outside this public site.
-
-The workspace also enables VS Code terminal shell integration so command detection works more reliably.
-
-## Getting started
-
-### 1. Fork this repository
-
-Clone the public repository:
+Install dependencies once:
 
 ```bash
-git clone https://github.com/<username>/<username>.github.io.git
+npm install
 ```
 
-Clone your private repository next to it:
-
-```bash
-git clone https://github.com/<username>/private-materials.git
-```
-
-### 2. Customize the site
-
-1. Edit the content of each section in `contents/*.md`.
-2. Edit the title, copyright information, and other site text in `contents/config.yml`.
-3. Replace the background image and photo in `static/assets/img`.
-4. Run `npm install` once, then run `npm run build` to regenerate the published HTML files.
-
-### 3. Publish
+Regenerate public HTML:
 
 ```bash
 npm run build
-git commit -am 'update site'
-git push
 ```
 
-Then open `https://<username>.github.io`.
+Regenerate the CV PDF:
 
-### 4. Optional custom domain
+```bash
+cd contents
+tectonic cv_en.tex
+```
 
-If you want GitHub Pages to serve this site from a custom domain, configure a host-only domain such as `home.example.com`.
+## Public/Private Boundary
 
-Rules that matter:
+Only intentionally publishable materials should be placed in this repository. Private drafts, unpublished source material, credentials, and internal working notes should remain outside this public site repository.
 
-1. The custom domain must be a domain only. Do not include `https://` or any path like `/home/`.
-2. If you publish from the repository branch, keep a root-level `CNAME` file whose only content is that domain.
-3. Point DNS for that subdomain to your GitHub Pages site, then enable the same domain in GitHub Pages settings.
+## Generated Pages
 
-For this repository, the intended homepage domain is `home.shuhao.sage.org.ai`.
+The build script renders:
 
-## Build model
+- `index.html`
+- `intro-to-llm-inference-engines.html`
+- `graduate-paper-writing-course.html`
+- `systems.html`
 
-- `contents/` keeps Markdown source files and downloadable public assets such as PDFs.
-- `static/` keeps CSS, JS, and images.
-- `scripts/build-site.mjs` renders `index.html`, `intro-to-llm-inference-engines.html`, `graduate-paper-writing-course.html`, and `systems.html` as final HTML.
-- The published pages no longer fetch Markdown at runtime.
-
-
-## License
-
-Copyright 2023, Sen Li and controlled via the MIT license, a permissive open-source license.
+The intended homepage domain is `home.shuhao.sage.org.ai`.

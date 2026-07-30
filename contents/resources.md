@@ -1,4 +1,10 @@
-这里收录公开教学材料与研究综述下载入口。
+这里收录公开个人材料、教学材料与研究综述下载入口。
+
+## 个人材料
+
+- 当前个人简介：[Markdown](contents/current_bio.md)
+- 英文 CV：[PDF](contents/cv_en.pdf)
+- 荣誉奖励与学术服务：[Markdown](contents/awards.md)
 
 ## 系统建设
 
