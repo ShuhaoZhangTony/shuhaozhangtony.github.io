@@ -6,7 +6,7 @@ This directory contains the English teaching edition of the LLM inference system
 
 - `llm_inference_systems.tex`: editable LaTeX Beamer source
 - `llm_inference_systems.pdf`: compiled classroom deck
-- `llm_inference_systems.pptx`: PowerPoint edition with every teaching slide visible and a complete read-aloud English script in the speaker notes
+- `llm_inference_systems.pptx`: 120-slide PowerPoint edition with incremental build-up sequences for the worked examples and a complete read-aloud English script in the speaker notes
 
 ## Two-hour teaching flow
 
