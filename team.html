@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>团队培养与合作 · 张书豪</title>
+    <link rel="icon" type="image/png" href="static/assets/img/photo.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
+    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            background: #f7f8fb;
+            color: #1f2937;
+        }
+
+        .page-wrap {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 40px 20px 64px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 18px;
+            color: #5269ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .page-header,
+        .page-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 10px 32px rgba(15, 23, 42, 0.06);
+            border: 1px solid rgba(148, 163, 184, 0.16);
+        }
+
+        .page-header {
+            margin-bottom: 18px;
+        }
+
+        .page-header h1 {
+            margin: 0 0 10px;
+            font-size: clamp(1.9rem, 3vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        .page-header p {
+            margin: 0;
+            color: #475569;
+            line-height: 1.8;
+        }
+
+        .meta-line {
+            margin-top: 16px;
+            padding-top: 14px;
+            border-top: 1px solid #e2e8f0;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+
+        .page-card h2,
+        .page-card h3 {
+            margin-top: 1.25rem;
+        }
+
+        .page-card h2 {
+            margin-top: 2rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-card ul {
+            padding-left: 1.4rem;
+        }
+
+        .page-card li {
+            margin-bottom: 0.45rem;
+        }
+
+        .page-card a {
+            word-break: break-word;
+        }
+
+        .page-card code {
+            background: #eff3ff;
+            color: #3142b8;
+            padding: 0.08rem 0.35rem;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 640px) {
+            .page-wrap {
+                padding: 28px 16px 48px;
+            }
+
+            .page-header,
+            .page-card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page-wrap">
+        <a class="back-link" href="./">
+            <i class="bi bi-arrow-left"></i>
+            返回主页
+        </a>
+
+        <section class="page-header">
+            <h1>团队培养与合作</h1>
+            <p>围绕同一个推理内核连接系统研究、工程实现与应用验证。</p>
+            <div class="meta-line">科研与工程训练 · 招生 · 研究与产业合作</div>
+        </section>
+
+        <article class="page-card"><h2>在同一个系统中做研究与工程</h2>
+<p>课题组围绕推理引擎及其扩展组件开展协作。学术训练关注问题定义、机制设计与可复现实验；工程训练关注系统实现、性能分析与质量保障。同学可以根据兴趣与阶段调整侧重点，通过共同的代码、负载与实验形成科研—工程闭环。</p>
+<ul>
+<li><strong>推理内核</strong>：请求调度、KV cache、长上下文、MoE 与国产异构平台优化。</li>
+<li><strong>系统组件</strong>：编排与可观测性、外部记忆、动态检索、流式数据与图状态维护。</li>
+<li><strong>实验与应用</strong>：真实负载、性能评测、数字分身和持续知识服务。</li>
+</ul>
+<figure class="training-figure"><img src="static/assets/img/research-engineering-closed-loop.svg" alt="科研与工程协作流程：方向指导、问题与实验设计、系统实现、质量保障以及应用反馈"><figcaption>以共同的系统实现与实验结果连接科研训练和工程训练。</figcaption></figure>
+
+<p><a href="https://intellistream.github.io/">团队主页与成员信息</a> · <a href="https://github.com/intellistream">开源组织</a> · <a href="research-engineering-closed-loop.html">科研—工程协作模式</a></p>
+<h2>招生与合作</h2>
+<p>长期招收对系统研究与工程实现感兴趣的 <strong>硕士、博士和长期实习生</strong>。数据库、操作系统、分布式系统、编译、体系结构及 GPU／异构优化背景均欢迎。重视围绕真实问题动手实现、测量与解释结果的能力。</p>
+<p><strong>学生申请</strong>：请附简历、研究或项目经历、代码链接，以及希望开展的 1–2 个问题。</p>
+<p><strong>研究与产业合作</strong>：欢迎围绕国产算力推理优化、智能体系统组件、动态数据评测与应用验证展开合作。来信可简述应用需求、现有硬件与负载、希望改善的指标。</p>
+<p><strong>联系：</strong> <a href="mailto:shuhao_zhang@hust.edu.cn">shuhao_zhang@hust.edu.cn</a></p></article>
+    </main>
+
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$']] }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</body>
+</html>

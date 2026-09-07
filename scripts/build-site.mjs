@@ -8,16 +8,32 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 
-const homeSections = ['home', 'news', 'publications', 'resources'];
+const homeSections = ['home', 'research', 'highlights', 'applications', 'team', 'news', 'resources'];
 
 const standalonePages = [
+  {
+    outputFile: 'team.html',
+    sourceMarkdown: 'contents/team-details.md',
+    pageTitle: '团队培养与合作 · 张书豪',
+    title: '团队培养与合作',
+    summary: '围绕同一个推理内核连接系统研究、工程实现与应用验证。',
+    meta: '科研与工程训练 · 招生 · 研究与产业合作'
+  },
+  {
+    outputFile: 'publications.html',
+    sourceMarkdown: 'contents/publications.md',
+    pageTitle: '论文档案 · 张书豪',
+    title: '论文与研究积累',
+    summary: '从推理引擎到持续数据与智能体系统：代表成果、完整论文条目与作者版本下载。',
+    meta: '保留论文原始题名、作者与发表信息；按系统职责浏览。'
+  },
   {
     outputFile: 'intro-to-llm-inference-engines.html',
     sourceMarkdown: 'contents/teaching/intro-to-llm-inference-engines.md',
     pageTitle: '大模型推理系统与实践课程材料',
     title: '大模型推理系统与实践课程材料',
-    summary: '这里汇总 2026 年公开版课程材料，课程以 vLLM-HUST 真实开源开发为主线。',
-    meta: '共 35 份：讲义与导论 handout 16 份，tutorial 13 份，实验单与课程项目说明 6 份。',
+    summary: '这里发布 2027 年首次开课的统一课程 PPT，课程以完整推理链路和 vLLM-HUST 真实开源开发为主线。',
+    meta: '正式课程共 8 讲，每讲 2 小时、48 页（共 384 页）；另提供中英文单文件两小时快速介绍版。',
     errorText: '课程材料加载失败。'
   },
   {
@@ -34,8 +50,8 @@ const standalonePages = [
     sourceMarkdown: 'contents/systems.md',
     pageTitle: '系统建设与代表项目',
     title: '系统建设与代表项目',
-    summary: '这里集中展示当前公开可见的系统工作，包括大模型推理服务、记忆智能体中间件，以及早期在多核与异构硬件上的代表性系统积累。',
-    meta: '按“当前系统建设”和“代表性系统积累”两部分整理，便于从研究主题直接映射到系统原型、开源入口与论文。',
+    summary: '以面向国产算力的推理引擎为内核，向外扩展编排、持续数据、状态维护与评测能力。',
+    meta: '推理内核 → 扩展组件 → 智能体应用；附代表论文与公开代码。',
     errorText: '系统页面加载失败。'
   }
 ];
@@ -72,147 +88,63 @@ function stripStandaloneIntro(html) {
 }
 
 function renderHomePage(config, sections) {
+  const sectionLabels = {
+    research: ['01 / RESEARCH', '研究架构'],
+    highlights: ['02 / SYSTEMS & RESULTS', '代表成果'],
+    applications: ['03 / APPLICATIONS', '应用与验证'],
+    team: ['04 / PEOPLE & COLLABORATION', '团队与合作'],
+    news: ['05 / NEWS', '近期动态'],
+    resources: ['06 / RESOURCES', '教学与资料']
+  };
   return `<!DOCTYPE html>
-<html lang="en">
-
+<html lang="zh-CN">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>${escapeHtml(config.title ?? '')}</title>
-    <link rel="icon" type="image/png" href="static/assets/img/photo.png" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&amp;display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap" rel="stylesheet" />
-    <link type="text/css" href="static/css/styles.css" rel="stylesheet" />
-    <link type="text/css" href="static/css/main.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="${escapeHtml(config.description)}">
+  <meta name="author" content="Shuhao Zhang">
+  <meta property="og:title" content="张书豪 · 持续数据与推理系统">
+  <meta property="og:description" content="${escapeHtml(config.description)}">
+  <meta property="og:type" content="website">
+  <title>${escapeHtml(config.title)}</title>
+  <link rel="icon" href="static/assets/img/photo.png">
+  <link rel="stylesheet" href="static/css/home.css">
 </head>
-
 <body id="page-top">
-    <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
-        <div class="container px-5">
-            <a class="navbar-brand fw-bold" href="#page-top">${config['page-top-title'] ?? ''}</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                MENU
-                <i class="bi-list"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#page-top">HOME</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#news">NEWS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#resources">MORE</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <a class="skip-link" href="#home">跳到正文</a>
+  <header class="site-header">
+    <nav class="shell nav-row" aria-label="主导航">
+      <a class="brand" href="#page-top">张书豪 <span>Shuhao Zhang</span></a>
+      <div class="nav-links">
+        <a href="#research">研究</a><a href="systems.html">系统</a>
+        <a href="#publications">成果</a><a href="#applications">应用</a>
+        <a href="#team">团队与合作</a><a href="#resources">教学</a>
+      </div>
     </nav>
-
-    <section class="top-section" style="background-image: url('static/assets/img/background.jpeg');">
-        <div class="top-section-content">
-            <div class="container px-5">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <h2 class="text-white display-3 lh-1 mb-4 font-alt">${config['top-section-bg-text'] ?? ''}</h2>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="user-photo photo"><img class="shadow" src="static/assets/img/me3.jpg"></div>
-                    </div>
-                </div>
-            </div>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
+          <h1>${config['top-section-bg-text']}</h1>
+          <p class="hero-subtitle">面向智能体应用，构建持续数据与推理系统</p>
+          <p class="hero-en">Inference at the core. Continuous data and state for agents.</p>
+          <div class="hero-actions"><a class="button" href="#research">探索研究架构 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
         </div>
+        <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
+      </div>
     </section>
-
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="home">
-        <div class="container px-5">
-            <header>
-                <h2>${config['home-subtitle'] ?? ''}</h2>
-            </header>
-            <div class="main-body">${sections.home}</div>
-        </div>
-    </section>
-
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="news">
-        <div class="container px-5">
-            <header>
-                <h2><i class="bi bi-file-text-fill"></i>&nbsp;NEWS</h2>
-            </header>
-            <div class="main-body">${sections.news}</div>
-        </div>
-    </section>
-
-    <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
-        <div class="container px-5">
-            <header>
-                <h2><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
-            </header>
-            <div class="main-body">${sections.publications}</div>
-        </div>
-    </section>
-
-    <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="resources">
-        <div class="container px-5">
-            <header>
-                <h2><i class="bi bi-bookmarks-fill"></i>&nbsp;MORE</h2>
-            </header>
-            <div class="main-body">${sections.resources}</div>
-        </div>
-    </section>
-
-    <footer class="bg-bottom text-center py-5">
-        <div class="container px-5">
-            <div class="text-white-50 small">
-                <div class="mb-2">${config['copyright-text'] ?? ''}</div>
-                <a id="github-link" href="https://github.com/intellistream">Github</a>
-                <span class="mx-1">&middot;</span>
-            </div>
-        </div>
-    </footer>
-
-    <script type="text/javascript" src="static/js/bootstrap.bundle.min.js"></script>
-    <script>
-        MathJax = {
-            tex: { inlineMath: [['$', '$']] }
-        };
-    </script>
-    <script type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const mainNav = document.body.querySelector('#mainNav');
-            if (mainNav) {
-                new bootstrap.ScrollSpy(document.body, {
-                    target: '#mainNav',
-                    offset: 74,
-                });
-            }
-
-            const navbarToggler = document.body.querySelector('.navbar-toggler');
-            const responsiveNavItems = [].slice.call(document.querySelectorAll('#navbarResponsive .nav-link'));
-
-            responsiveNavItems.forEach((responsiveNavItem) => {
-                responsiveNavItem.addEventListener('click', () => {
-                    if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                        navbarToggler.click();
-                    }
-                });
-            });
-        });
-    </script>
+    <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">张书豪 <span>Professor, HUST</span></h2>${sections.home}</section>
+    ${Object.entries(sectionLabels).map(([key, [eyebrow, label]]) => `
+    <section class="content-section" id="${key === 'highlights' ? 'publications' : key}" aria-labelledby="${key}-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">${eyebrow}</p><h2 id="${key}-heading">${label}</h2></header>
+      <div class="section-body">${key === 'news' ? `<details><summary>查看动态与录用消息</summary>${sections[key]}</details>` : sections[key]}</div></div>
+    </section>`).join('')}
+  </main>
+  <footer class="site-footer"><div class="shell"><p>张书豪 · 华中科技大学</p><a href="mailto:shuhao_zhang@hust.edu.cn">Email</a> · <a href="https://github.com/intellistream">GitHub</a> · <a href="publications.html">完整论文档案</a> · <a href="#page-top">返回顶部 ↑</a></div></footer>
 </body>
-
-</html>
-`;
+</html>`;
 }
 
 function renderStandalonePage(page) {
@@ -365,7 +297,7 @@ async function build() {
   );
 
   const indexHtml = renderHomePage(config, sections);
-  await fs.writeFile(path.join(rootDir, 'index.html'), indexHtml, 'utf8');
+  await fs.writeFile(path.join(rootDir, 'index.html'), indexHtml.replace(/^[ \t]+$/gm, ''), 'utf8');
 
   for (const page of standalonePages) {
     const markdown = await readText(page.sourceMarkdown);

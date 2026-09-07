@@ -9,7 +9,8 @@ Markdown files under `contents/` are the source of truth for public website text
 - Shuhao Zhang is a Professor in the School of Computer Science and Technology at Huazhong University of Science and Technology.
 - He leads a task under a major national science and technology project of the Ministry of Science and Technology of China.
 - He is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
-- Current research focuses on state-management-driven optimization for LLM inference systems, including state-aware scheduling, hardware-aware memory management, state reuse, serving stability, vLLM-HUST, SAGE, and Neuromem.
+- He was awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II) in 2026.
+- Current research aims to build high-performance inference engines for domestic accelerators as the core of continuous data and inference systems for agent applications. SAGE, Neuromem, FlowRAG, StreamFP, GRACE, and CANDOR-Bench are presented by their extension roles, not as parallel research agendas.
 
 Keep these facts synchronized across:
 
@@ -52,5 +53,17 @@ The build script renders:
 - `intro-to-llm-inference-engines.html`
 - `graduate-paper-writing-course.html`
 - `systems.html`
+- `publications.html`
+- `team.html`
 
-The intended homepage domain is `home.shuhao.sage.org.ai`.
+The live GitHub Pages domain is `me.sage.org.ai` (see `CNAME`).
+
+## Page structure and preview
+
+Homepage sources: `home.md` (bio), `research.md` (architecture), `highlights.md` (representative results), `applications.md`, `team.md`, `news.md`, and `resources.md`, all under `contents/`. The full bibliography remains in `contents/publications.md` and builds to `publications.html`. Existing `#publications`, `#news`, and `#resources` homepage anchors remain available.
+
+Run `npm run build` and `npm run check`. Preview from the repository root with `python -m http.server 8765 --bind 127.0.0.1`, then visit http://127.0.0.1:8765/. The homepage is self-contained and requires no CDN scripts or fonts.
+
+The research narrative was checked against the current external introduction deck and the repository's paper texts. Public source links establish project scope; no unverified performance multipliers or deployment scale are asserted. GRACE belongs to dynamic data maintenance, and external agent memory is distinguished from runtime KV state. Keep CV source and PDF synchronized when changing the biography.
+
+Homepage brevity: keep one architecture explanation and one Sage Mate / Faculty Twin product entry. Detailed training content is maintained in `contents/team-details.md` and built to `team.html`.

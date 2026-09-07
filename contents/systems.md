@@ -1,25 +1,56 @@
-# 系统建设与代表项目
+# 推理内核与系统组件
 
-这里整理目前适合公开展示的系统工作。内容聚焦系统目标、问题边界、公开仓库与代表性论文，不包含申报材料中的项目编号、经费信息或时效性较强的统计口径。
+## 系统内核：vLLM-HUST
 
-## 当前系统建设
+研究目标是构建面向国产算力的极致性能推理引擎，围绕请求调度、KV 驻留与复用、长上下文和 MoE 执行、异构通信与数据通路开展优化。
 
-### SAGE
+[vLLM-HUST](https://github.com/vLLM-HUST/vllm-hust) 是基于 vLLM 的研究与工程载体；配套 [Benchmark](https://github.com/vLLM-HUST/vllm-hust-benchmark) 和 [Dev Hub](https://github.com/vLLM-HUST/vllm-hust-dev-hub) 支撑负载、评测和开发协作。
 
-- 面向国产异构算力的大模型推理服务系统，重点关注在线 serving、调度编排、可观测性与端到端性能优化。
-- 公开入口：[GitHub](https://github.com/intellistream/SAGE)
-- 代表性论文：[SAGE (ICML 2026)](contents/research_papers/2026/2026_sage_icml_2026.pdf)
+**代表机制：BidKV** 研究 KV 压力下基于效用的抢占调度，属于推理运行时。阅读 [BidKV 作者版本](contents/research_papers/2026/2026_bidkv_sc_2026.pdf)。具体性能收益应结合论文中的硬件、模型、负载和基线理解。
 
-### Neuromem
+## 围绕内核扩展的组件
 
-- 面向大模型记忆智能体的中间件系列，重点覆盖流式记忆组织、向量检索、长期记忆写入与跨轮复用。
-- 当前公开仓库：[Neuromem-Benchmark](https://github.com/intellistream/neruomem-bench)
-- 代表性论文：[Neuromem (ICML 2026)](contents/research_papers/2026/2026_neuromem_icml_2026.pdf)
+以下按研究框架中的系统职责展示 mod。各项工作提供可扩展的机制、工具与评测依据；具体集成状态以公开实现为准。
 
-### vLLM-HUST
+### SAGE · 编排与观测
 
-- 面向国产算力的自研推理引擎底座与插件生态，重点覆盖共享 workload、KV 状态管理、插件化优化与评测工具链。
-- 公开入口：[vLLM-HUST](https://github.com/vLLM-HUST/vllm-hust), [Benchmark](https://github.com/vLLM-HUST/vllm-hust-benchmark), [Dev Hub](https://github.com/vLLM-HUST/vllm-hust-dev-hub)
+以数据流组织模块化、可控制、可观测的 LLM 推理流程，连接检索、记忆、工具与模型调用。它扩展推理服务的流程组织能力。
+
+[公开代码](https://github.com/RIDE-Lab/SAGE) · [SAGE 论文（ICML 2026）](contents/research_papers/2026/2026_sage_icml_2026.pdf)
+
+### Neuromem · 外部记忆生命周期
+
+分解外部记忆的流式生命周期，研究写入、维护、检索与跨轮使用，为长期交互提供持续状态。这里的外部记忆与引擎内部的 KV cache 分别承担不同职责。
+
+[Neuromem-Benchmark](https://github.com/RIDE-Lab/neuromem-bench) · [Neuromem 论文（ICML 2026）](contents/research_papers/2026/2026_neuromem_icml_2026.pdf)
+
+### FlowRAG · 动态检索器更新
+
+研究 RAG 场景中动态检索器的持续学习，使检索能力随数据演化，为后续推理提供相关上下文。
+
+[FlowRAG 论文（WWW 2026）](contents/research_papers/2026/2026_flowrag_www_2026.pdf)
+
+### StreamFP · 流式数据选择
+
+通过指纹引导的数据选择提高流学习效率，关注持续到来的数据中哪些样本值得用于更新，为数据维护与学习环节提供方法。
+
+[StreamFP 论文（WWW 2026）](contents/research_papers/2026/2026_streamfp_www_2026.pdf)
+
+### GRACE · 动态图维护
+
+降低动态图处理系统中的重构成本，优化持续更新下的数据结构维护。它属于 **DataSys 的持续数据与状态维护**，为变化中的图数据提供系统能力。
+
+[GRACE 论文（ICDE 2026）](contents/research_papers/2026/2026_grace_icde_2026.pdf)
+
+### CANDOR-Bench · 动态检索评测
+
+评测动态开放数据流下的内存连续近似最近邻检索，关注写入、检索质量和更新效率之间的权衡。它为持续数据组件提供评测依据，与引擎吞吐和延迟评测共同构成系统验证的不同侧面。
+
+[CANDOR-Bench 论文（SIGMOD 2026）](contents/research_papers/2026/2026_candor_bench_sigmod_2026.pdf)
+
+## 应用与实验入口
+
+[Sage Mate（Faculty Twin／教师数字分身）](https://twin.sage.org.ai/) 提供数字分身问答与成员入口。围绕持续知识问答与长期交互，联合考察推理性能、状态更新成本和检索质量。欢迎通过 [邮件](mailto:shuhao_zhang@hust.edu.cn) 讨论应用负载与国产算力上的实验合作。
 
 ## 代表性系统积累
 
@@ -61,7 +92,8 @@
 - 面向机器学习数据库 OpenMLDB 的在线 interval join 优化工作，聚焦现代多核处理器上的并行执行与算法选择。
 - 代表性论文：[OpenMLDB OIJ (ICDE 2023)](contents/research_papers/2023/2023_openmldb_icde_2023.pdf)
 
-## 说明
+## 延伸阅读
 
-- 上述系统覆盖从多核/异构硬件上的状态管理与流处理，到大模型推理服务与记忆中间件的持续演进脉络。
-- 如需更完整的论文列表，可参见主页中的 Publications 栏目。
+这些流处理、异构计算与状态管理工作构成当前系统研究的积累。
+
+[完整论文档案](publications.html) · [研究架构](index.html#research) · [团队与合作](index.html#team)

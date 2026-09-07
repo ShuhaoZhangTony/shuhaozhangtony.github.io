@@ -6,8 +6,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{titlesec}
 
-\setmainfont{DejaVu Sans}
-\setsansfont{DejaVu Sans}
+\IfFontExistsTF{DejaVu Sans}{
+  \setmainfont{DejaVu Sans}
+  \setsansfont{DejaVu Sans}
+}{
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+}
 \definecolor{accent}{RGB}{0,63,164}
 \definecolor{muted}{RGB}{82,92,110}
 
@@ -16,6 +21,7 @@
 \setlist[itemize]{leftmargin=1.2em,itemsep=0.15em,topsep=0.15em}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.35em}
+\setlength{\emergencystretch}{2em}
 
 \newcommand{\cvsection}[1]{\section*{#1}}
 \newcommand{\entry}[2]{\textbf{#1}\hfill{\color{muted}#2}\\}
@@ -34,9 +40,9 @@ Professor, School of Computer Science and Technology, HUST\\
 {\color{accent}\rule{\linewidth}{0.9pt}}
 
 \cvsection{Profile}
-Shuhao Zhang is a Professor in the School of Computer Science and Technology at Huazhong University of Science and Technology. He leads a task under a major national science and technology project of the Ministry of Science and Technology of China and is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
+Shuhao Zhang is a Professor in the School of Computer Science and Technology at Huazhong University of Science and Technology. He leads a task under a major national science and technology project of the Ministry of Science and Technology of China and is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas). In 2026, he was awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II).
 
-His research focuses on state-management-driven optimization for inference systems, spanning parallel and distributed systems, LLM inference infrastructure, inference serving systems, and memory-agent middleware. Current work emphasizes state-aware scheduling, hardware-aware memory management, KV and intermediate-state reuse, serving stability, and the impact of these mechanisms on throughput, P99 latency, and service reliability.
+His research aims to build high-performance inference engines for domestic accelerators in China, forming the core of continuous data and inference systems for agent applications. With vLLM-HUST as an engineering vehicle, he studies scheduling, KV-state management, execution and communication optimization. Orchestration, external memory, dynamic data maintenance, and evaluation components extend this core toward long-running agents.
 
 \cvsection{Appointments}
 \entry{Huazhong University of Science and Technology}{Professor}
@@ -54,16 +60,16 @@ Research area: database systems, stream processing, parallel and distributed sys
 
 \entry{Nanyang Technological University}{B.Eng., Computer Engineering, 2014}
 
-\cvsection{Research Themes}
+\cvsection{Research Focus}
 \begin{itemize}
-  \item State-aware orchestration and resource governance for LLM serving systems.
-  \item Hardware-aware memory management for KV cache, prefix state, vector memory, and multi-level memory systems.
-  \item State-reuse inference for long-context workloads, MoE serving, and domestic heterogeneous accelerators.
-  \item Benchmark-driven systems methodology, reproducible performance claims, and open engineering workflows.
+  \item Inference engine core: scheduling, KV-state reuse, execution and communication on domestic accelerators.
+  \item Extensions: dataflow orchestration, external memory, dynamic retrieval and graph maintenance.
+  \item Validation: reproducible workloads, end-to-end serving quality, and agent applications.
 \end{itemize}
 
 \cvsection{Major Projects and Funding}
 \begin{itemize}
+  \item Principal Investigator, NSFC Research Fund for International Excellent Young Scientists (RFIS-II), awarded in 2026.
   \item Task Lead, major national science and technology project of the Ministry of Science and Technology of China.
   \item Principal Investigator, National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
   \item Principal Investigator and collaborator on previous research grants from Singapore MOE, Singapore NRF, Temasek Laboratories, and university-level research programs.
@@ -72,9 +78,10 @@ Research area: database systems, stream processing, parallel and distributed sys
 \newpage
 \cvsection{Representative Systems}
 \begin{itemize}
-  \item \textbf{vLLM-HUST}: HUST-maintained LLM inference engine stack and benchmark ecosystem for domestic heterogeneous serving practice.
-  \item \textbf{SAGE}: A dataflow-native framework for modular, controllable, and transparent LLM-augmented reasoning.
-  \item \textbf{Neuromem}: Middleware and benchmark line for external memory and memory-agent systems.
+  \item \textbf{vLLM-HUST}: vLLM-based research and engineering stack for inference on domestic accelerators; the core of the systems agenda.
+  \item \textbf{SAGE}: Dataflow orchestration extending the inference core toward modular, controllable LLM reasoning.
+  \item \textbf{Neuromem}: External-memory lifecycle research and benchmarks; part of the continuous-state extensions.
+  \item \textbf{FlowRAG / StreamFP / GRACE / CANDOR-Bench}: Dynamic retrieval, stream learning, graph maintenance, and continuous-ANNS evaluation.
   \item \textbf{MorphStream / TStream / CStream}: Stream processing systems for multicore, stateful, and hardware-conscious execution.
 \end{itemize}
 
@@ -103,6 +110,6 @@ Research area: database systems, stream processing, parallel and distributed sys
 \end{itemize}
 
 \vfill
-{\small\color{muted}Last updated: July 2026. The Markdown and LaTeX sources in this repository are the maintained public sources for this CV and profile.}
+{\small\color{muted}Last updated: September 2026. The Markdown and LaTeX sources in this repository are the maintained public sources for this CV and profile.}
 
 \end{document}

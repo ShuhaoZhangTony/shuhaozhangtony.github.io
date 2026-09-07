@@ -7,7 +7,7 @@
 - 中文速览：[PPTX](contents/teaching/intro-to-llm-inference-engines/2027/slides/quick-intro/LLM推理系统_两小时快速介绍.pptx)
 - English overview：[PPTX](contents/teaching/llm-inference-systems-english/llm_inference_systems.pptx)
 
-## 2027 课程 PPT（8 讲）
+## 2027 课程 PPT（8 讲，每讲 48 页）
 
 1. 课程导论与评价指标：[PPTX](contents/teaching/intro-to-llm-inference-engines/2027/slides/lectures/第01讲_课程导论与评价指标.pptx)
 2. 请求生命周期与 Prefill / Decode：[PPTX](contents/teaching/intro-to-llm-inference-engines/2027/slides/lectures/第02讲_请求生命周期与PrefillDecode.pptx)

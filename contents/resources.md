@@ -1,25 +1,3 @@
-这里收录公开个人材料、教学材料与研究综述下载入口。
-
-## 个人材料
-
-- 当前个人简介：[Markdown](contents/current_bio.md)
-- 英文 CV：[PDF](contents/cv_en.pdf)
-- 荣誉奖励与学术服务：[Markdown](contents/awards.md)
-
-## 系统建设
-
-- 代表性系统建设信息已在主页系统板块中汇总，包括 SAGE、Neuromem 与 vLLM-HUST 等当前工作。
-
-## 教学材料
-
-目前公开两门课程：
-
-- 大模型推理系统与实践：[页面](intro-to-llm-inference-engines.html)
-- 研究生论文写作：[页面](graduate-paper-writing-course.html)
-
-其中，2026 年研究生论文写作课程当前公开第 5 至第 8 讲课件，均为草稿版，仅供课程同学和相关读者参考，后续仍可能继续修订。
-
-## 公开综述材料
-
-- 并行与分布式系统中的高效状态管理综述（preprint）：[PDF](contents/research_papers/preprint/2026_parallel_distributed_state_management_survey.pdf)
-- 国产算力推理引擎综述（preprint）：[PDF](contents/research_papers/preprint/2026_cccf_domestic_inference_engine_survey.pdf)
+- **课程：** [大模型推理系统与实践](intro-to-llm-inference-engines.html) · [研究生论文写作](graduate-paper-writing-course.html)
+- **个人材料：** [英文 CV](contents/cv_en.pdf) · [中英文简介](contents/current_bio.md) · [科研资助、荣誉与学术服务](contents/awards.md)
+- **综述（preprint）：** [国产算力推理引擎](contents/research_papers/preprint/2026_cccf_domestic_inference_engine_survey.pdf) · [并行与分布式状态管理](contents/research_papers/preprint/2026_parallel_distributed_state_management_survey.pdf)
