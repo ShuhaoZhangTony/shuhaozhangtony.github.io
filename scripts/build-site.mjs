@@ -32,8 +32,8 @@ const standalonePages = [
     sourceMarkdown: 'contents/teaching/intro-to-llm-inference-engines.md',
     pageTitle: '大模型推理系统与实践课程材料',
     title: '大模型推理系统与实践课程材料',
-    summary: '这里发布 2027 年首次开课的统一课程 PPT，课程以完整推理链路和 vLLM-HUST 真实开源开发为主线。',
-    meta: '正式课程共 8 讲，每讲 2 小时、48 页（共 384 页）；另提供中英文单文件两小时快速介绍版。',
+    summary: '课程材料统一维护在独立课程仓库中，个人主页只保留仓库入口。',
+    meta: '2027 年首次开课：8 讲正式课程，并保留中英文两小时快速介绍版。',
     errorText: '课程材料加载失败。'
   },
   {
