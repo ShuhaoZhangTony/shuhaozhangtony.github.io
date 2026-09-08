@@ -1,3 +1,3 @@
-- **课程：** [大模型推理系统与实践](intro-to-llm-inference-engines.html) · [研究生论文写作](graduate-paper-writing-course.html)
+- **课程：** [大模型推理系统与实践](https://courses.sage.org.ai/) · [研究生论文写作](graduate-paper-writing-course.html)
 - **个人材料：** [英文 CV](contents/cv_en.pdf) · [中英文简介](contents/current_bio.md) · [科研资助、荣誉与学术服务](contents/awards.md)
 - **综述（preprint）：** [国产算力推理引擎](contents/research_papers/preprint/2026_cccf_domestic_inference_engine_survey.pdf) · [并行与分布式状态管理](contents/research_papers/preprint/2026_parallel_distributed_state_management_survey.pdf)
