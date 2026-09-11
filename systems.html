@@ -144,6 +144,10 @@
 <h3>CANDOR-Bench · 动态检索评测</h3>
 <p>评测动态开放数据流下的内存连续近似最近邻检索，关注写入、检索质量和更新效率之间的权衡。它为持续数据组件提供评测依据，与引擎吞吐和延迟评测共同构成系统验证的不同侧面。</p>
 <p><a href="contents/research_papers/2026/2026_candor_bench_sigmod_2026.pdf">CANDOR-Bench 论文（SIGMOD 2026）</a></p>
+<h3>BriskSeed · 持续检索中的历史复用</h3>
+<p><strong>ICDE 2027 Research First Round 已接收。</strong> 持续插入与删除会使 ANNS 搜索辅助信息失效。BriskSeed 将历史成功搜索结果保存为轻量 seeds，结合按效用管理的两层存储、精确键与签名检索、轻量接受和回退策略，在线加速动态搜索。</p>
+<p>它不修改底层 ANNS 索引，也不假设特定图后端。CANDOR-Bench 的统一插件接口提供多后端评测，BriskSeed 则提供优化机制：在高更新率下改善搜索效率并保持有竞争力的召回。该工作属于持续检索与数据状态维护。</p>
+<p><a href="contents/research_papers/2027/2027_briskseed_icde_2027.md">完整题录与研究摘要</a> · 公开作者版暂未提供。</p>
 <h2>应用与实验入口</h2>
 <p><a href="https://twin.sage.org.ai/">Sage Mate（Faculty Twin／教师数字分身）</a> 提供数字分身问答与成员入口。围绕持续知识问答与长期交互，联合考察推理性能、状态更新成本和检索质量。欢迎通过 <a href="mailto:shuhao_zhang@hust.edu.cn">邮件</a> 讨论应用负载与国产算力上的实验合作。</p>
 <h2>代表性系统积累</h2>

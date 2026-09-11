@@ -1,3 +1,4 @@
+- September 2026 update: **BriskSeed** has been accepted to ICDE 2027, Research First Round. [Paper details](contents/research_papers/2027/2027_briskseed_icde_2027.md).
 - September 2026 获批国家自然科学基金外国优秀青年学者研究基金项目（RFIS-II / Research Fund for International Excellent Young Scientists）。
 - July 2026 one paper accepted to SC 2026: BidKV
 - July 2026 two system demonstrations accepted to ICPP 2026: BriskSnapshot and SAGE

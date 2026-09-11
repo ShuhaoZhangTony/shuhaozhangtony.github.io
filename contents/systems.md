@@ -48,6 +48,14 @@
 
 [CANDOR-Bench 论文（SIGMOD 2026）](contents/research_papers/2026/2026_candor_bench_sigmod_2026.pdf)
 
+### BriskSeed · 持续检索中的历史复用
+
+**ICDE 2027 Research First Round 已接收。** 持续插入与删除会使 ANNS 搜索辅助信息失效。BriskSeed 将历史成功搜索结果保存为轻量 seeds，结合按效用管理的两层存储、精确键与签名检索、轻量接受和回退策略，在线加速动态搜索。
+
+它不修改底层 ANNS 索引，也不假设特定图后端。CANDOR-Bench 的统一插件接口提供多后端评测，BriskSeed 则提供优化机制：在高更新率下改善搜索效率并保持有竞争力的召回。该工作属于持续检索与数据状态维护。
+
+[完整题录与研究摘要](contents/research_papers/2027/2027_briskseed_icde_2027.md) · 公开作者版暂未提供。
+
 ## 应用与实验入口
 
 [Sage Mate（Faculty Twin／教师数字分身）](https://twin.sage.org.ai/) 提供数字分身问答与成员入口。围绕持续知识问答与长期交互，联合考察推理性能、状态更新成本和检索质量。欢迎通过 [邮件](mailto:shuhao_zhang@hust.edu.cn) 讨论应用负载与国产算力上的实验合作。

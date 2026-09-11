@@ -2,7 +2,7 @@
 
 ## 阅读导引
 
-当前研究以面向国产算力的推理引擎为内核。BidKV 对应推理调度；SAGE 对应编排；Neuromem、FlowRAG、StreamFP、GRACE 对应持续数据与状态能力；CANDOR-Bench 对应动态检索评测。早期流处理与异构计算工作提供相关研究积累。
+当前研究以面向国产算力的推理引擎为内核。BidKV 对应推理调度；SAGE 对应编排；Neuromem、FlowRAG、StreamFP、GRACE、BriskSeed 对应持续数据与状态能力；CANDOR-Bench 对应动态检索评测。早期流处理与异构计算工作提供相关研究积累。
 
 [系统架构与代表成果](systems.html) · [返回首页](index.html#publications)
 
@@ -53,6 +53,7 @@
 - [TPDS] **Melia: A MapReduce Framework on OpenCL-Based FPGAs**. Zeke Wang, Shuhao Zhang, Bingsheng He, Wei Zhang. IEEE Transactions on Parallel and Distributed Systems (TPDS), 27(12): 3547-3560, 2016. [CCF-A]
 
 ### 持续学习、动态检索与智能应用
+- [ICDE 2027] **BriskSeed: Online History-Guided Reuse for Accelerating Dynamic Approximate Nearest Neighbor Search**. Hongru Gao, Shuhao Zhang, Haikun Liu, Xiaofei Liao, Hai Jin. 43rd IEEE International Conference on Data Engineering (ICDE 2027). [Accepted — Research First Round] [题录与研究摘要](contents/research_papers/2027/2027_briskseed_icde_2027.md).
 - [SIGMOD] **Enabling Adaptive Sampling for Intra-Window Join: Simultaneously Optimizing Quantity and Quality**（下载区写作 Adaptive Sampling / FreeSam）. Xilin Tang, Feng Zhang, Shuhao Zhang, Yani Liu, Bingsheng He, Xiaoyong Du. Proc. ACM Manag. Data, 2(4): 1-31, 2024 (SIGMOD 2025). [CCF-A]
 - [ICDE] **Scalable Machine Learning for Real-Time Fault Diagnosis in Industrial IoT Cooling Roller Systems (SRTFD)**. Dandan Zhao, Karthick Sharma, Yuxin Qi, Qixun Liu, and Shuhao Zhang. IEEE 41st International Conference on Data Engineering (ICDE). [Corresponding Author] [CCF-A]
 - [EMNLP] **SentiStream: A Co-Training Framework for Adaptive Online Sentiment Analysis in Evolving Data Streams**. Yuhao Wu, Karthick Sharma, Chun Wei Seah, Shuhao Zhang. Empirical Methods in Natural Language Processing (long paper, main track). [Corresponding Author]

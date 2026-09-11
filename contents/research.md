@@ -5,7 +5,7 @@
   <p class="map-connector">围绕推理内核扩展系统能力 ↕</p>
   <div class="module-grid">
     <div><h3>编排与观测</h3><p>SAGE</p><span>组织检索、记忆、工具与推理的数据流</span></div>
-    <div><h3>持续数据与状态</h3><p>Neuromem · FlowRAG<br>StreamFP · GRACE</p><span>记忆生命周期、检索更新、数据选择与动态图维护</span></div>
+    <div><h3>持续数据与状态</h3><p>Neuromem · FlowRAG<br>StreamFP · GRACE · BriskSeed</p><span>记忆生命周期、检索更新与复用、数据选择和动态图维护</span></div>
     <div><h3>评测与反馈</h3><p>CANDOR-Bench<br>引擎 Benchmark</p><span>动态检索质量、更新成本与推理服务性能</span></div>
   </div>
   <p class="map-connector">由应用负载驱动，共同验证 ↕</p>

@@ -1,10 +1,24 @@
 # Coverage Notes
 
-- The raw `research_papers` directory currently contains 62 markdown items.
-- This summary tracks 58 venue-level publication records.
+- This index summarizes publication records and research contributions; bibliographic-only entries are labeled when a public author PDF is unavailable.
 - Thesis materials, draft manuscripts, and duplicate source versions in the raw directory are not counted separately here.
 
-# 0. 最新工作补充（2025–2026）
+# 0. 最新工作补充（2025–2027）
+
+### BriskSeed: Online History-Guided Reuse for Accelerating Dynamic Approximate Nearest Neighbor Search
+
+**Venue:** 43rd IEEE International Conference on Data Engineering (ICDE 2027)
+
+**Year:** 2027
+
+**Authors:** Hongru Gao, Shuhao Zhang, Haikun Liu, Xiaofei Liao, Hai Jin
+
+**Status:** Accepted — Research First Round; public author PDF not yet available.
+
+**Research summary:** Frequent insertions and deletions make auxiliary search information stale in dynamic ANNS. BriskSeed retains successful past search results as lightweight seeds and reuses them online through utility-managed two-tier storage, exact-key and signature lookup, and lightweight acceptance and fallback policies. It neither modifies the underlying ANNS index nor assumes a specific graph backend. Evaluation through the unified CANDOR-Bench plugin interface spans multiple backends and shows improved search efficiency under high update rates while maintaining competitive recall.
+
+**Record:** [Bibliographic entry](2027/2027_briskseed_icde_2027.md)
+
 
 ### 0.1 SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning
 
