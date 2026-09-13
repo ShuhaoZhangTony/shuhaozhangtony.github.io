@@ -16,7 +16,7 @@ const standalonePages = [
     sourceMarkdown: 'contents/team-details.md',
     pageTitle: '团队培养与合作 · 张书豪',
     title: '团队培养与合作',
-    summary: '围绕同一个推理内核连接系统研究、工程实现与应用验证。',
+    summary: '围绕并行执行与状态管理，连接系统研究、工程实现与应用验证。',
     meta: '科研与工程训练 · 招生 · 研究与产业合作'
   },
   {
@@ -50,8 +50,8 @@ const standalonePages = [
     sourceMarkdown: 'contents/systems.md',
     pageTitle: '系统建设与代表项目',
     title: '系统建设与代表项目',
-    summary: '以面向国产算力的推理引擎为内核，向外扩展编排、持续数据、状态维护与评测能力。',
-    meta: '推理内核 → 扩展组件 → 智能体应用；附代表论文与公开代码。',
+    summary: '从硬件感知执行、共享状态并发与迁移，到国产算力上的推理服务。',
+    meta: '代表机制、论文与公开代码；研究范围和工程集成分别说明。',
     errorText: '系统页面加载失败。'
   }
 ];
@@ -89,7 +89,7 @@ function stripStandaloneIntro(html) {
 
 function renderHomePage(config, sections) {
   const sectionLabels = {
-    research: ['01 / RESEARCH', '研究架构'],
+    research: ['01 / RESEARCH', '研究方向'],
     highlights: ['02 / SYSTEMS & RESULTS', '代表成果'],
     applications: ['03 / APPLICATIONS', '应用与验证'],
     team: ['04 / PEOPLE & COLLABORATION', '团队与合作'],
@@ -103,7 +103,7 @@ function renderHomePage(config, sections) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(config.description)}">
   <meta name="author" content="Shuhao Zhang">
-  <meta property="og:title" content="张书豪 · 持续数据与推理系统">
+  <meta property="og:title" content="张书豪 · 并行执行与状态管理">
   <meta property="og:description" content="${escapeHtml(config.description)}">
   <meta property="og:type" content="website">
   <title>${escapeHtml(config.title)}</title>
@@ -128,9 +128,9 @@ function renderHomePage(config, sections) {
         <div>
           <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
           <h1>${config['top-section-bg-text']}</h1>
-          <p class="hero-subtitle">面向智能体应用，构建持续数据与推理系统</p>
-          <p class="hero-en">Inference at the core. Continuous data and state for agents.</p>
-          <div class="hero-actions"><a class="button" href="#research">探索研究架构 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
+          <p class="hero-subtitle">共享状态并发控制 · 在线迁移 · 国产算力推理服务</p>
+          <p class="hero-en">Efficient execution and state management in parallel and distributed systems.</p>
+          <div class="hero-actions"><a class="button" href="#research">了解研究方向 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
         </div>
         <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
       </div>

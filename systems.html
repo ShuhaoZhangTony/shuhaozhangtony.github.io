@@ -116,16 +116,16 @@
 
         <section class="page-header">
             <h1>系统建设与代表项目</h1>
-            <p>以面向国产算力的推理引擎为内核，向外扩展编排、持续数据、状态维护与评测能力。</p>
-            <div class="meta-line">推理内核 → 扩展组件 → 智能体应用；附代表论文与公开代码。</div>
+            <p>从硬件感知执行、共享状态并发与迁移，到国产算力上的推理服务。</p>
+            <div class="meta-line">代表机制、论文与公开代码；研究范围和工程集成分别说明。</div>
         </section>
 
-        <article class="page-card"><h2>系统内核：vLLM-HUST</h2>
+        <article class="page-card"><h2>当前重点：vLLM-HUST 推理引擎</h2>
 <p>研究目标是构建面向国产算力的极致性能推理引擎，围绕请求调度、KV 驻留与复用、长上下文和 MoE 执行、异构通信与数据通路开展优化。</p>
 <p><a href="https://github.com/vLLM-HUST/vllm-hust">vLLM-HUST</a> 是基于 vLLM 的研究与工程载体；配套 <a href="https://github.com/vLLM-HUST/vllm-hust-benchmark">Benchmark</a> 和 <a href="https://github.com/vLLM-HUST/vllm-hust-dev-hub">Dev Hub</a> 支撑负载、评测和开发协作。</p>
 <p><strong>代表机制：BidKV</strong> 研究 KV 压力下基于效用的抢占调度，属于推理运行时。阅读 <a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV 作者版本</a>。具体性能收益应结合论文中的硬件、模型、负载和基线理解。</p>
-<h2>围绕内核扩展的组件</h2>
-<p>以下按研究框架中的系统职责展示 mod。各项工作提供可扩展的机制、工具与评测依据；具体集成状态以公开实现为准。</p>
+<h2>推理工作流、外部记忆与动态检索</h2>
+<p>下面按研究对象介绍代表性工作。工作流组织、外部记忆、检索与动态图维护分别解决不同层次的问题；它们为智能体应用提供相互关联的系统能力。</p>
 <h3>SAGE · 编排与观测</h3>
 <p>以数据流组织模块化、可控制、可观测的 LLM 推理流程，连接检索、记忆、工具与模型调用。它扩展推理服务的流程组织能力。</p>
 <p><a href="https://github.com/RIDE-Lab/SAGE">公开代码</a> · <a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE 论文（ICML 2026）</a></p>
@@ -139,7 +139,7 @@
 <p>通过指纹引导的数据选择提高流学习效率，关注持续到来的数据中哪些样本值得用于更新，为数据维护与学习环节提供方法。</p>
 <p><a href="contents/research_papers/2026/2026_streamfp_www_2026.pdf">StreamFP 论文（WWW 2026）</a></p>
 <h3>GRACE · 动态图维护</h3>
-<p>降低动态图处理系统中的重构成本，优化持续更新下的数据结构维护。它属于 <strong>DataSys 的持续数据与状态维护</strong>，为变化中的图数据提供系统能力。</p>
+<p>降低动态图处理系统中的重构成本，优化持续更新下的数据结构维护，为变化中的图数据提供系统能力。</p>
 <p><a href="contents/research_papers/2026/2026_grace_icde_2026.pdf">GRACE 论文（ICDE 2026）</a></p>
 <h3>CANDOR-Bench · 动态检索评测</h3>
 <p>评测动态开放数据流下的内存连续近似最近邻检索，关注写入、检索质量和更新效率之间的权衡。它为持续数据组件提供评测依据，与引擎吞吐和延迟评测共同构成系统验证的不同侧面。</p>
@@ -149,14 +149,21 @@
 <p>它不修改底层 ANNS 索引，也不假设特定图后端。CANDOR-Bench 的统一插件接口提供多后端评测，BriskSeed 则提供优化机制：在高更新率下改善搜索效率并保持有竞争力的召回。该工作属于持续检索与数据状态维护。</p>
 <p><a href="contents/research_papers/2027/2027_briskseed_icde_2027.md">完整题录与研究摘要</a> · 公开作者版暂未提供。</p>
 <h2>应用与实验入口</h2>
-<p><a href="https://twin.sage.org.ai/">Sage Mate（Faculty Twin／教师数字分身）</a> 提供数字分身问答与成员入口。围绕持续知识问答与长期交互，联合考察推理性能、状态更新成本和检索质量。欢迎通过 <a href="mailto:shuhao_zhang@hust.edu.cn">邮件</a> 讨论应用负载与国产算力上的实验合作。</p>
-<h2>代表性系统积累</h2>
+<p><a href="https://twin.sage.org.ai/">教师数字分身</a> 提供知识问答与成员入口。围绕持续知识问答与长期交互，考察推理性能、状态更新成本和检索质量。欢迎通过 <a href="mailto:shuhao_zhang@hust.edu.cn">邮件</a> 讨论应用负载与国产算力上的实验合作。</p>
+<h2>共享状态的并发、迁移与恢复</h2>
+<h3>Spacker · 分布式流处理的状态迁移</h3>
+<p>将迁移规划与执行解耦，分别控制迁移顺序、推进粒度与副本策略。在 Flink 中统一这些机制，研究时延峰值、迁移完成时间和稳态开销之间的取舍。</p>
+<p><a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker 论文（ICDCS 2025）</a></p>
+<h3>RTSFaaS · 有状态 Serverless 工作流</h3>
+<p>合作研究结合访问亲和性、对象租约与依赖图，通过单边 RDMA 减少远程协调，并维持事务执行约束。</p>
+<p><a href="https://www.usenix.org/conference/atc25/presentation/zhao-jianjun">论文与报告（USENIX ATC 2025）</a></p>
 <h3>MorphStream</h3>
 <ul>
 <li>面向事务型流处理的系统原型，围绕动态负载下的调度、执行与故障恢复展开。</li>
 <li>公开入口：<a href="https://github.com/intellistream/MorphStream">GitHub</a></li>
 <li>代表性论文：<a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream (SIGMOD 2023)</a>, <a href="contents/research_papers/2024/2024_morphstream_icde_demo_2024.pdf">MorphStream Demo (ICDE 2024)</a>, <a href="contents/research_papers/2025/2025_morphstream_tkde.pdf">MorphStream (TKDE 2025)</a></li>
 </ul>
+<h2>硬件感知执行与流处理</h2>
 <h3>BriskStream</h3>
 <ul>
 <li>面向共享内存多核与 NUMA 架构的流处理平台，围绕执行计划优化与硬件感知调度进行系统设计。</li>

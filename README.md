@@ -64,6 +64,6 @@ Homepage sources: `home.md` (bio), `research.md` (architecture), `highlights.md`
 
 Run `npm run build` and `npm run check`. Preview from the repository root with `python -m http.server 8765 --bind 127.0.0.1`, then visit http://127.0.0.1:8765/. The homepage is self-contained and requires no CDN scripts or fonts.
 
-The research narrative was checked against the current external introduction deck and the repository's paper texts. Public source links establish project scope; no unverified performance multipliers or deployment scale are asserted. GRACE belongs to dynamic data maintenance, and external agent memory is distinguished from runtime KV state. Keep CV source and PDF synchronized when changing the biography.
+The research narrative was checked against the academic report and the repository's paper texts. It connects hardware-conscious execution, shared-state concurrency and migration, and inference serving. vLLM-HUST remains the current engineering focus, not a claim that all previous papers implement engine components. Public source links establish project scope; no unverified performance multipliers or deployment scale are asserted. GRACE concerns dynamic data maintenance, and external agent memory is distinguished from runtime KV state. Keep CV source and PDF synchronized when changing the biography.
 
 Homepage brevity: keep one architecture explanation and one Sage Mate / Faculty Twin product entry. Detailed training content is maintained in `contents/team-details.md` and built to `team.html`.

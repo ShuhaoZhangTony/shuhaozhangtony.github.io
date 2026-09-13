@@ -1,5 +1,11 @@
-### Sage Mate（Faculty Twin／教师数字分身）
+### 教师数字分身与持续知识服务
 
-面向学生与合作交流的智能体产品，将 SAGE 编排、持续记忆与推理服务连接起来，支持知识问答和长期交互。
+教师数字分身提供面向学生与合作交流的知识问答入口。长期交互产生的推理请求、记忆更新和检索需求，也为系统研究提供应用场景。
 
-**[体验 Sage Mate ↗](https://twin.sage.org.ai/)** · [产品代码](https://github.com/RIDE-Lab/sage-mate)
+**[体验教师数字分身 ↗](https://twin.sage.org.ai/)**
+
+### 真实应用中的系统问题
+
+已有合作研究涉及工业冷却辊的实时故障诊断，以及跨地域音视频通信的数据包路由与重排序。相关方法分别发表于 ICDE 2025 和 IWQoS 2024。
+
+[工业实时故障诊断论文](contents/research_papers/2025/2025_srtfd_icde_2025.pdf) · [低时延视频会议论文](contents/research_papers/2024/2024_llvc.pdf)

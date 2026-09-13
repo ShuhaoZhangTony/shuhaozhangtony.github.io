@@ -1,17 +1,15 @@
-智能体的每一轮交互，都可能带来新的推理请求、记忆写入和知识更新。我们的核心问题是：**如何在国产算力上高效执行推理，并在数据和状态持续变化时维持端到端服务质量？**
+并行系统的性能不仅取决于计算能力。访存、同步、等待，以及共享状态的维护和迁移，都会改变实际收益。我们的研究围绕这些运行开销，探索如何依据硬件和负载条件选择执行机制。
 
-<div class="system-map" aria-label="研究架构：推理引擎内核、扩展组件与智能体应用">
-  <div class="map-core"><span class="eyebrow">系统内核 · INFERENCE ENGINE</span><h3>面向国产算力的极致性能推理引擎</h3><p>vLLM-HUST · 请求调度 · KV 驻留与复用 · 执行与通信优化</p></div>
-  <p class="map-connector">围绕推理内核扩展系统能力 ↕</p>
+<div class="system-map" aria-label="研究方向：硬件感知执行、共享状态并发与迁移、推理服务">
+  <div class="map-core"><span class="eyebrow">PARALLEL &amp; DISTRIBUTED SYSTEMS</span><h3>并行执行与状态管理</h3><p>刻画真实执行代价 · 解析共享状态依赖 · 选择运行时策略</p></div>
   <div class="module-grid">
-    <div><h3>编排与观测</h3><p>SAGE</p><span>组织检索、记忆、工具与推理的数据流</span></div>
-    <div><h3>持续数据与状态</h3><p>Neuromem · FlowRAG<br>StreamFP · GRACE · BriskSeed</p><span>记忆生命周期、检索更新与复用、数据选择和动态图维护</span></div>
-    <div><h3>评测与反馈</h3><p>CANDOR-Bench<br>引擎 Benchmark</p><span>动态检索质量、更新成本与推理服务性能</span></div>
+    <div><h3>硬件感知的并行执行</h3><p>多核与异构执行<br>状态共享开销</p><span>按核能力、访存和同步成本组织计算，研究算法与硬件的适用条件</span></div>
+    <div><h3>共享状态的并发与迁移</h3><p>依赖驱动并发控制<br>在线迁移与故障恢复</p><span>从多核事务流到分布式工作流，协调状态访问、执行顺序和状态交接</span></div>
+    <div><h3>状态代价感知的推理服务</h3><p>KV 压力下的抢占<br>推理工作流调度</p><span>结合回收容量与中断代价组织请求，通过显式执行图控制多阶段任务</span></div>
   </div>
-  <p class="map-connector">由应用负载驱动，共同验证 ↕</p>
-  <div class="map-application"><h3>智能体应用</h3><p>Sage Mate（Faculty Twin）· 持续知识问答</p></div>
+  <div class="map-application"><h3>当前重点：面向国产算力的高性能推理引擎</h3><p>以 vLLM-HUST 连接机制研究、工程实现与真实负载验证</p></div>
 </div>
 
-这里的 mod 指围绕推理内核扩展的系统组件与研究能力；具体实现和接入方式以各项目公开代码为准。
+长期交互和持续更新还带来外部记忆、检索历史复用与动态数据维护问题。这些研究与推理运行时相互联系，也各自具有独立的研究对象和评价方法。
 
-[组件机制、性能评价与开源入口 →](systems.html)
+[代表机制、系统实现与论文 →](systems.html)

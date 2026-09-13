@@ -34,7 +34,7 @@ Professor, School of Computer Science and Technology, HUST\\
 \quad
 \href{https://orcid.org/0000-0002-9927-6925}{ORCID: 0000-0002-9927-6925}
 \quad
-\href{https://home.shuhao.sage.org.ai}{home.shuhao.sage.org.ai}
+\href{https://me.sage.org.ai}{me.sage.org.ai}
 
 \vspace{0.45em}
 {\color{accent}\rule{\linewidth}{0.9pt}}
@@ -42,14 +42,17 @@ Professor, School of Computer Science and Technology, HUST\\
 \cvsection{Profile}
 Shuhao Zhang is a Professor in the School of Computer Science and Technology at Huazhong University of Science and Technology. He leads a task under a major national science and technology project of the Ministry of Science and Technology of China and is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas). In 2026, he was awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II).
 
-His research aims to build high-performance inference engines for domestic accelerators in China, forming the core of continuous data and inference systems for agent applications. With vLLM-HUST as an engineering vehicle, he studies scheduling, KV-state management, execution and communication optimization. Orchestration, external memory, dynamic data maintenance, and evaluation components extend this core toward long-running agents.
+His research focuses on efficient execution and state management in parallel and distributed systems: hardware-conscious execution, shared-state concurrency control, online migration, and recovery. His current systems agenda centers on inference serving for domestic accelerators in China, using vLLM-HUST to study request scheduling, KV-state management, and efficient execution. Related work explores reasoning workflows, external memory, and dynamic retrieval.
 
 \cvsection{Appointments}
 \entry{Huazhong University of Science and Technology}{Professor}
 School of Computer Science and Technology.
 
 \entry{Nanyang Technological University}{Assistant Professor}
-Before joining HUST.
+2023-2024.
+
+\entry{Singapore University of Technology and Design}{Assistant Professor}
+2021-2023.
 
 \entry{Technische Universitat Berlin}{Postdoctoral Researcher}
 Postdoctoral research on data systems and distributed stream processing.
@@ -62,9 +65,9 @@ Research area: database systems, stream processing, parallel and distributed sys
 
 \cvsection{Research Focus}
 \begin{itemize}
-  \item Inference engine core: scheduling, KV-state reuse, execution and communication on domestic accelerators.
-  \item Extensions: dataflow orchestration, external memory, dynamic retrieval and graph maintenance.
-  \item Validation: reproducible workloads, end-to-end serving quality, and agent applications.
+  \item Hardware-conscious execution on multicore and heterogeneous architectures.
+  \item Shared-state concurrency control, online migration, and failure recovery.
+  \item Cost-aware inference scheduling, reasoning workflows, and state reuse.
 \end{itemize}
 
 \cvsection{Major Projects and Funding}
@@ -78,16 +81,16 @@ Research area: database systems, stream processing, parallel and distributed sys
 \newpage
 \cvsection{Representative Systems}
 \begin{itemize}
-  \item \textbf{vLLM-HUST}: vLLM-based research and engineering stack for inference on domestic accelerators; the core of the systems agenda.
-  \item \textbf{SAGE}: Dataflow orchestration extending the inference core toward modular, controllable LLM reasoning.
-  \item \textbf{Neuromem}: External-memory lifecycle research and benchmarks; part of the continuous-state extensions.
+  \item \textbf{vLLM-HUST / BidKV}: Inference serving on domestic accelerators and utility-guided preemption under KV pressure.
+  \item \textbf{SAGE}: Dataflow-native execution for modular and controllable LLM reasoning.
+  \item \textbf{Neuromem}: External-memory lifecycle decomposition and evaluation.
   \item \textbf{BriskSeed / FlowRAG / StreamFP / GRACE / CANDOR-Bench}: Online search-history reuse, dynamic retrieval, stream learning, graph maintenance, and continuous-ANNS evaluation.
-  \item \textbf{MorphStream / TStream / CStream}: Stream processing systems for multicore, stateful, and hardware-conscious execution.
+  \item \textbf{MorphStream / Spacker / CStream}: Dependency-driven scheduling, distributed state migration, and hardware-conscious stream processing.
 \end{itemize}
 
 \cvsection{Selected Recent Publications}
 \begin{itemize}
-  \item \textbf{BriskSeed: Online History-Guided Reuse for Accelerating Dynamic Approximate Nearest Neighbor Search}. Hongru Gao, Shuhao Zhang, Haikun Liu, Xiaofei Liao, Hai Jin. ICDE 2027, Research First Round. Accepted.
+  \item \textbf{BriskSeed: Online History-Guided Reuse for Accelerating Dynamic Approximate Nearest Neighbor Search}. Hongru Gao, \textbf{Shuhao Zhang}, Haikun Liu, Xiaofei Liao, Hai Jin. ICDE 2027. Accepted. Corresponding Author.
   \item \textbf{BidKV: Utility-Guided Preemption Scheduling for KV-Pressure LLM Serving}. SC 2026. Corresponding Author.
   \item \textbf{SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning}. ICML 2026. Corresponding Author.
   \item \textbf{Neuromem: A Granular Decomposition of the Streaming Lifecycle in External Memory for LLMs}. ICML 2026. Corresponding Author.
@@ -100,7 +103,7 @@ Research area: database systems, stream processing, parallel and distributed sys
 \cvsection{Honors and Service}
 \begin{itemize}
   \item HUST Excellent Young Scholar; Huawei Donghu Young Scholar.
-  \item VLDB Review Board Member; SC Program Committee Member; ICDE/TKDE Poster Track Chair.
+  \item VLDB Review Board Member; SC Program Committee Member; ICDE 2024 Poster Track Chair.
   \item Program committee service for KDD, CIKM, DASFAA, SDM, and related venues.
 \end{itemize}
 

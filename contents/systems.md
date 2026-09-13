@@ -1,6 +1,6 @@
-# 推理内核与系统组件
+# 并行执行、状态管理与推理系统
 
-## 系统内核：vLLM-HUST
+## 当前重点：vLLM-HUST 推理引擎
 
 研究目标是构建面向国产算力的极致性能推理引擎，围绕请求调度、KV 驻留与复用、长上下文和 MoE 执行、异构通信与数据通路开展优化。
 
@@ -8,9 +8,9 @@
 
 **代表机制：BidKV** 研究 KV 压力下基于效用的抢占调度，属于推理运行时。阅读 [BidKV 作者版本](contents/research_papers/2026/2026_bidkv_sc_2026.pdf)。具体性能收益应结合论文中的硬件、模型、负载和基线理解。
 
-## 围绕内核扩展的组件
+## 推理工作流、外部记忆与动态检索
 
-以下按研究框架中的系统职责展示 mod。各项工作提供可扩展的机制、工具与评测依据；具体集成状态以公开实现为准。
+下面按研究对象介绍代表性工作。工作流组织、外部记忆、检索与动态图维护分别解决不同层次的问题；它们为智能体应用提供相互关联的系统能力。
 
 ### SAGE · 编排与观测
 
@@ -38,7 +38,7 @@
 
 ### GRACE · 动态图维护
 
-降低动态图处理系统中的重构成本，优化持续更新下的数据结构维护。它属于 **DataSys 的持续数据与状态维护**，为变化中的图数据提供系统能力。
+降低动态图处理系统中的重构成本，优化持续更新下的数据结构维护，为变化中的图数据提供系统能力。
 
 [GRACE 论文（ICDE 2026）](contents/research_papers/2026/2026_grace_icde_2026.pdf)
 
@@ -58,15 +58,29 @@
 
 ## 应用与实验入口
 
-[Sage Mate（Faculty Twin／教师数字分身）](https://twin.sage.org.ai/) 提供数字分身问答与成员入口。围绕持续知识问答与长期交互，联合考察推理性能、状态更新成本和检索质量。欢迎通过 [邮件](mailto:shuhao_zhang@hust.edu.cn) 讨论应用负载与国产算力上的实验合作。
+[教师数字分身](https://twin.sage.org.ai/) 提供知识问答与成员入口。围绕持续知识问答与长期交互，考察推理性能、状态更新成本和检索质量。欢迎通过 [邮件](mailto:shuhao_zhang@hust.edu.cn) 讨论应用负载与国产算力上的实验合作。
 
-## 代表性系统积累
+## 共享状态的并发、迁移与恢复
+
+### Spacker · 分布式流处理的状态迁移
+
+将迁移规划与执行解耦，分别控制迁移顺序、推进粒度与副本策略。在 Flink 中统一这些机制，研究时延峰值、迁移完成时间和稳态开销之间的取舍。
+
+[Spacker 论文（ICDCS 2025）](contents/research_papers/2025/2025_spacker_icdcs_2025.pdf)
+
+### RTSFaaS · 有状态 Serverless 工作流
+
+合作研究结合访问亲和性、对象租约与依赖图，通过单边 RDMA 减少远程协调，并维持事务执行约束。
+
+[论文与报告（USENIX ATC 2025）](https://www.usenix.org/conference/atc25/presentation/zhao-jianjun)
 
 ### MorphStream
 
 - 面向事务型流处理的系统原型，围绕动态负载下的调度、执行与故障恢复展开。
 - 公开入口：[GitHub](https://github.com/intellistream/MorphStream)
 - 代表性论文：[MorphStream (SIGMOD 2023)](contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf), [MorphStream Demo (ICDE 2024)](contents/research_papers/2024/2024_morphstream_icde_demo_2024.pdf), [MorphStream (TKDE 2025)](contents/research_papers/2025/2025_morphstream_tkde.pdf)
+
+## 硬件感知执行与流处理
 
 ### BriskStream
 

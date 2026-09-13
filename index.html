@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="张书豪，华中科技大学教授。以面向国产算力的极致性能推理引擎为系统内核，面向智能体应用构建持续数据与推理系统。">
+  <meta name="description" content="张书豪，华中科技大学教授。研究并行与分布式系统中的硬件感知执行、共享状态并发控制与在线迁移，当前重点面向国产算力上的推理服务。">
   <meta name="author" content="Shuhao Zhang">
-  <meta property="og:title" content="张书豪 · 持续数据与推理系统">
-  <meta property="og:description" content="张书豪，华中科技大学教授。以面向国产算力的极致性能推理引擎为系统内核，面向智能体应用构建持续数据与推理系统。">
+  <meta property="og:title" content="张书豪 · 并行执行与状态管理">
+  <meta property="og:description" content="张书豪，华中科技大学教授。研究并行与分布式系统中的硬件感知执行、共享状态并发控制与在线迁移，当前重点面向国产算力上的推理服务。">
   <meta property="og:type" content="website">
   <title>Shuhao Zhang&#39;s Homepage</title>
   <link rel="icon" href="static/assets/img/photo.png">
@@ -29,59 +29,60 @@
       <div class="shell hero-grid">
         <div>
           <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
-          <h1>面向国产算力的<br>极致性能推理引擎</h1>
-          <p class="hero-subtitle">面向智能体应用，构建持续数据与推理系统</p>
-          <p class="hero-en">Inference at the core. Continuous data and state for agents.</p>
-          <div class="hero-actions"><a class="button" href="#research">探索研究架构 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
+          <h1>并行执行与状态管理<br>关键技术与系统</h1>
+          <p class="hero-subtitle">共享状态并发控制 · 在线迁移 · 国产算力推理服务</p>
+          <p class="hero-en">Efficient execution and state management in parallel and distributed systems.</p>
+          <div class="hero-actions"><a class="button" href="#research">了解研究方向 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
         </div>
         <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
       </div>
     </section>
-    <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">张书豪 <span>Professor, HUST</span></h2><p>张书豪，华中科技大学计算机科学与技术学院教授，主持科技部重大项目课题，入选国家自然科学基金优秀青年科学基金项目（海外），获批国家自然科学基金外国优秀青年学者研究基金项目（RFIS-II）。曾任新加坡南洋理工大学助理教授，并在德国柏林工业大学从事博士后研究。</p>
-<p>研究以 <strong>面向国产算力的极致性能推理引擎</strong> 为系统内核，面向智能体应用构建 <strong>持续数据与推理系统</strong>。围绕推理运行时的调度、KV 状态管理、执行与通信优化，向外扩展编排、长期记忆、数据维护和评测能力，让不断变化的数据能够支撑持续运行的智能体。</p>
+    <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">张书豪 <span>Professor, HUST</span></h2><p>张书豪，华中科技大学计算机科学与技术学院教授，主持科技部重大项目课题，入选国家自然科学基金优秀青年科学基金项目（海外），获批国家自然科学基金外国优秀青年学者研究基金项目（RFIS-II）。曾任新加坡南洋理工大学、新加坡科技设计大学助理教授，并在德国柏林工业大学从事博士后研究。</p>
+<p>研究聚焦 <strong>并行执行与状态管理</strong>：根据硬件特征组织计算，根据共享状态依赖协调并发，并在迁移、恢复和复用过程中控制运行开销。当前重点面向 <strong>国产算力上的推理服务</strong>，以 vLLM-HUST 为工程载体，研究请求调度、KV 状态管理与高效执行，同时开展推理工作流、外部记忆和动态检索研究。</p>
 <p><a href="http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm">华中科技大学教师主页</a> · <a href="contents/current_bio.md">English bio</a> · <a href="https://orcid.org/0000-0002-9927-6925">ORCID</a></p>
 </section>
 
     <section class="content-section" id="research" aria-labelledby="research-heading">
-      <div class="shell"><header class="section-heading"><p class="eyebrow">01 / RESEARCH</p><h2 id="research-heading">研究架构</h2></header>
-      <div class="section-body"><p>智能体的每一轮交互，都可能带来新的推理请求、记忆写入和知识更新。我们的核心问题是：<strong>如何在国产算力上高效执行推理，并在数据和状态持续变化时维持端到端服务质量？</strong></p>
-<div class="system-map" aria-label="研究架构：推理引擎内核、扩展组件与智能体应用">
-  <div class="map-core"><span class="eyebrow">系统内核 · INFERENCE ENGINE</span><h3>面向国产算力的极致性能推理引擎</h3><p>vLLM-HUST · 请求调度 · KV 驻留与复用 · 执行与通信优化</p></div>
-  <p class="map-connector">围绕推理内核扩展系统能力 ↕</p>
+      <div class="shell"><header class="section-heading"><p class="eyebrow">01 / RESEARCH</p><h2 id="research-heading">研究方向</h2></header>
+      <div class="section-body"><p>并行系统的性能不仅取决于计算能力。访存、同步、等待，以及共享状态的维护和迁移，都会改变实际收益。我们的研究围绕这些运行开销，探索如何依据硬件和负载条件选择执行机制。</p>
+<div class="system-map" aria-label="研究方向：硬件感知执行、共享状态并发与迁移、推理服务">
+  <div class="map-core"><span class="eyebrow">PARALLEL &amp; DISTRIBUTED SYSTEMS</span><h3>并行执行与状态管理</h3><p>刻画真实执行代价 · 解析共享状态依赖 · 选择运行时策略</p></div>
   <div class="module-grid">
-    <div><h3>编排与观测</h3><p>SAGE</p><span>组织检索、记忆、工具与推理的数据流</span></div>
-    <div><h3>持续数据与状态</h3><p>Neuromem · FlowRAG<br>StreamFP · GRACE · BriskSeed</p><span>记忆生命周期、检索更新与复用、数据选择和动态图维护</span></div>
-    <div><h3>评测与反馈</h3><p>CANDOR-Bench<br>引擎 Benchmark</p><span>动态检索质量、更新成本与推理服务性能</span></div>
+    <div><h3>硬件感知的并行执行</h3><p>多核与异构执行<br>状态共享开销</p><span>按核能力、访存和同步成本组织计算，研究算法与硬件的适用条件</span></div>
+    <div><h3>共享状态的并发与迁移</h3><p>依赖驱动并发控制<br>在线迁移与故障恢复</p><span>从多核事务流到分布式工作流，协调状态访问、执行顺序和状态交接</span></div>
+    <div><h3>状态代价感知的推理服务</h3><p>KV 压力下的抢占<br>推理工作流调度</p><span>结合回收容量与中断代价组织请求，通过显式执行图控制多阶段任务</span></div>
   </div>
-  <p class="map-connector">由应用负载驱动，共同验证 ↕</p>
-  <div class="map-application"><h3>智能体应用</h3><p>Sage Mate（Faculty Twin）· 持续知识问答</p></div>
+  <div class="map-application"><h3>当前重点：面向国产算力的高性能推理引擎</h3><p>以 vLLM-HUST 连接机制研究、工程实现与真实负载验证</p></div>
 </div>
 
-<p>这里的 mod 指围绕推理内核扩展的系统组件与研究能力；具体实现和接入方式以各项目公开代码为准。</p>
-<p><a href="systems.html">组件机制、性能评价与开源入口 →</a></p>
+<p>长期交互和持续更新还带来外部记忆、检索历史复用与动态数据维护问题。这些研究与推理运行时相互联系，也各自具有独立的研究对象和评价方法。</p>
+<p><a href="systems.html">代表机制、系统实现与论文 →</a></p>
 </div></div>
     </section>
     <section class="content-section" id="publications" aria-labelledby="highlights-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">02 / SYSTEMS & RESULTS</p><h2 id="highlights-heading">代表成果</h2></header>
       <div class="section-body"><div class="result-grid">
-<article><span class="eyebrow">推理内核</span><h3>vLLM-HUST · BidKV</h3><p>以 vLLM 为基础开展引擎优化，研究 KV 压力下的效用驱动抢占调度。</p><a href="https://github.com/vLLM-HUST/vllm-hust">引擎代码 ↗</a> · <a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV 论文</a></article>
-<article><span class="eyebrow">编排与记忆 / ICML 2026</span><h3>SAGE · Neuromem</h3><p>以数据流组织推理流程，分解外部记忆的写入、维护与读取。</p><a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE 论文</a> · <a href="contents/research_papers/2026/2026_neuromem_icml_2026.pdf">Neuromem 论文</a></article>
-<article><span class="eyebrow">持续数据与评测</span><h3>BriskSeed · 持续检索</h3><p>BriskSeed（ICDE 2027 已接收）在线复用历史搜索 seeds，使用 CANDOR-Bench 评测；与 FlowRAG、StreamFP、GRACE 共同拓展持续数据能力。</p><a href="systems.html">组件与论文 →</a></article>
+<article><span class="eyebrow">硬件感知执行</span><h3>多核与异构系统</h3><p>CStream 分析边缘多核上的压缩与共享开销；LibAMM 比较近似矩阵计算的实际时延与误差。</p><a href="contents/research_papers/2024/2024_cstream_tkde_2024.pdf">CStream · TKDE 2024</a> · <a href="systems.html">相关系统 →</a></article>
+<article><span class="eyebrow">并发与分布式状态</span><h3>依赖、迁移与恢复</h3><p>MorphStream 依据依赖结构选择调度策略；Spacker 解耦流处理状态迁移的规划与执行。</p><a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream · SIGMOD 2023</a> · <a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker · ICDCS 2025</a></article>
+<article><span class="eyebrow">推理服务</span><h3>请求与工作流执行</h3><p>BidKV（SC 2026 已接收）研究效用驱动抢占；SAGE（ICML 2026 已接收）以数据流组织可控制的推理流程。</p><a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV 论文</a> · <a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE 论文</a></article>
 </div>
 
-<p><a href="systems.html">全部系统与开源入口</a> · <strong><a href="publications.html">完整论文档案与 PDF →</a></strong></p>
+<p><a href="systems.html">系统与开源入口</a> · <strong><a href="publications.html">完整论文档案与 PDF →</a></strong></p>
 </div></div>
     </section>
     <section class="content-section" id="applications" aria-labelledby="applications-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">03 / APPLICATIONS</p><h2 id="applications-heading">应用与验证</h2></header>
-      <div class="section-body"><h3>Sage Mate（Faculty Twin／教师数字分身）</h3>
-<p>面向学生与合作交流的智能体产品，将 SAGE 编排、持续记忆与推理服务连接起来，支持知识问答和长期交互。</p>
-<p><strong><a href="https://twin.sage.org.ai/">体验 Sage Mate ↗</a></strong> · <a href="https://github.com/RIDE-Lab/sage-mate">产品代码</a></p>
+      <div class="section-body"><h3>教师数字分身与持续知识服务</h3>
+<p>教师数字分身提供面向学生与合作交流的知识问答入口。长期交互产生的推理请求、记忆更新和检索需求，也为系统研究提供应用场景。</p>
+<p><strong><a href="https://twin.sage.org.ai/">体验教师数字分身 ↗</a></strong></p>
+<h3>真实应用中的系统问题</h3>
+<p>已有合作研究涉及工业冷却辊的实时故障诊断，以及跨地域音视频通信的数据包路由与重排序。相关方法分别发表于 ICDE 2025 和 IWQoS 2024。</p>
+<p><a href="contents/research_papers/2025/2025_srtfd_icde_2025.pdf">工业实时故障诊断论文</a> · <a href="contents/research_papers/2024/2024_llvc.pdf">低时延视频会议论文</a></p>
 </div></div>
     </section>
     <section class="content-section" id="team" aria-labelledby="team-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">04 / PEOPLE & COLLABORATION</p><h2 id="team-heading">团队与合作</h2></header>
-      <div class="section-body"><p>长期招收 <strong>硕士、博士和长期实习生</strong>，围绕国产算力推理引擎及其系统组件开展科研与工程协作。欢迎数据库、操作系统、分布式系统、编译与异构计算背景的同学。</p>
+      <div class="section-body"><p>长期招收 <strong>硕士、博士和长期实习生</strong>。重点方向包括 <strong>共享状态并发控制、在线状态迁移、KV 压力下的推理调度、多核与异构执行</strong>。欢迎分布式系统、操作系统、体系结构、编译与性能优化背景的同学，共同完成系统设计、实现与真实负载实验。</p>
 <p><strong>申请与合作：</strong> 请简述希望研究的问题或应用需求，附简历、项目经历或代码链接，联系 <a href="mailto:shuhao_zhang@hust.edu.cn">shuhao_zhang@hust.edu.cn</a>。</p>
 <p><a href="team.html">培养模式与合作详情</a> · <a href="https://intellistream.github.io/">团队与成员</a></p>
 </div></div>
