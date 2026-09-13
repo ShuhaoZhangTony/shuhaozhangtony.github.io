@@ -2,10 +2,9 @@
 
 《大模型推理系统与实践》的课件、快速介绍、课程说明、实验材料与教学代码统一维护在独立课程仓库中。个人主页只保留课程入口，不再复制或发布课程文件。
 
+## 课程主页与仓库
+
 - [课程主页：courses.sage.org.ai](https://courses.sage.org.ai/)
-
-## 课程仓库
-
 - [intellistream/intro-to-llm-inference-engines](https://github.com/intellistream/intro-to-llm-inference-engines)
 - [2027 年正式课程材料](https://github.com/intellistream/intro-to-llm-inference-engines/tree/main/build/slides/2027)
 - [两小时课程介绍（中英文 PPTX）](https://github.com/intellistream/intro-to-llm-inference-engines/tree/main/build/slides/2027/course-overview)

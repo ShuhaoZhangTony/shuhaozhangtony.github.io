@@ -24,15 +24,15 @@ const standalonePages = [
     sourceMarkdown: 'contents/publications.md',
     pageTitle: '论文档案 · 张书豪',
     title: '论文与研究积累',
-    summary: '从推理引擎到持续数据与智能体系统：代表成果、完整论文条目与作者版本下载。',
-    meta: '保留论文原始题名、作者与发表信息；按系统职责浏览。'
+    summary: '并行与分布式系统中的执行、状态管理与在线适应：论文题录及作者版本下载。',
+    meta: '保留原始题名、作者与发表信息；研究论文、综述和系统演示分别标注。'
   },
   {
     outputFile: 'intro-to-llm-inference-engines.html',
     sourceMarkdown: 'contents/teaching/intro-to-llm-inference-engines.md',
     pageTitle: '大模型推理系统与实践课程材料',
     title: '大模型推理系统与实践课程材料',
-    summary: '课程材料统一维护在独立课程仓库中，个人主页只保留仓库入口。',
+    summary: '课程材料统一维护在独立课程仓库中，个人主页只保留课程主页入口。',
     meta: '2027 年首次开课：课程介绍、8 讲 PPTX 与 14 讲 Beamer 三套材料。',
     errorText: '课程材料加载失败。'
   },

@@ -2,6 +2,8 @@
 
 **Authors:** Hongru Gao, Shuhao Zhang, Haikun Liu, Xiaofei Liao, Hai Jin
 
+**Corresponding author:** Shuhao Zhang
+
 **Venue:** 43rd IEEE International Conference on Data Engineering (ICDE 2027)
 
 **Track:** Research First Round

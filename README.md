@@ -10,7 +10,7 @@ Markdown files under `contents/` are the source of truth for public website text
 - He leads a task under a major national science and technology project of the Ministry of Science and Technology of China.
 - He is a recipient of the National Natural Science Foundation of China Excellent Young Scientists Fund (Overseas).
 - He was awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II) in 2026.
-- Current research aims to build high-performance inference engines for domestic accelerators as the core of continuous data and inference systems for agent applications. SAGE, Neuromem, FlowRAG, StreamFP, GRACE, and CANDOR-Bench are presented by their extension roles, not as parallel research agendas.
+- Research spans efficient execution and state management in parallel and distributed systems, with additional work on continual learning and dynamic retrieval. Current systems development focuses on inference engines for domestic accelerators. Preserve each paper's research contribution when describing its role in an integrated system.
 
 Keep these facts synchronized across:
 

@@ -5,6 +5,51 @@
 
 # 0. 最新工作补充（2025–2027）
 
+### Demonstrating SAGE
+
+**Full title:** Demonstrating SAGE: A Dataflow-Native Framework for Modular, Controllable, and Transparent LLM-Augmented Reasoning
+**Authors:** Jun Liu, Shuhao Zhang
+**Venue:** ICPP 2026, Demo Track
+**Status:** Accepted Demo
+**Corresponding Author:** Shuhao Zhang
+**Summary:** A demonstration of dataflow-native, modular and observable LLM-augmented reasoning with SAGE.
+
+### BriskSnapshot
+
+**Full title:** BriskSnapshot: A Live Demo of Join-Backed Semantic Windows for Streaming AI Pipelines
+**Authors:** Ziao Wang, Shuhao Zhang
+**Venue:** ICPP 2026, Demo Track
+**Status:** Accepted Demo
+**Corresponding Author:** Shuhao Zhang
+**Summary:** A demonstration of join-backed semantic windows for streaming AI pipelines.
+
+### ComStar
+
+**Full title:** ComStar: Compression-Aware Stream Query for Heterogeneous Hybrid Architecture
+**Authors:** Yani Liu, Feng Zhang, Yu Zhang, Shuhao Zhang, Bingsheng He, Jianhua Wang, Jidong Zhai, Xiaoyong Du
+**Venue:** IEEE Transactions on Parallel and Distributed Systems, 37(4): 948-965, 2026
+**Status:** Published
+**Record:** [DOI](https://doi.org/10.1109/TPDS.2026.3662253)
+**Summary:** Compression-aware stream query processing on heterogeneous hybrid architectures.
+
+### RTSFaaS
+
+**Full title:** Towards High-Performance Transactional Stateful Serverless Workflows with Affinity-Aware Leasing
+**Authors:** Jianjun Zhao, Haikun Liu, Shuhao Zhang, Haodi Lu, Yancan Mao, Zhuohui Duan, Xiaofei Liao, Hai Jin
+**Venue:** USENIX Annual Technical Conference, 1535-1551, 2025
+**Status:** Published
+**Record:** [Official paper page](https://www.usenix.org/conference/atc25/presentation/zhao-jianjun)
+**Summary:** Transactional stateful serverless workflows using affinity-aware leasing. This collaborative work complements the distributed execution and state-management research line.
+
+### ActiShade
+
+**Full title:** ActiShade: Activating Overshadowed Knowledge to Guide Multi-Hop Reasoning in Large Language Models
+**Authors:** Huipeng Ma, Luan Zhang, Dandan Song, Linmei Hu, Yuhang Tian, Jun Yang, Changzhi Zhou, Chenhao Li, Yizhou Jin, Xudong Li, Meng Lin, Mingxing Zhang, Shuhao Zhang
+**Venue:** Proceedings of the AAAI Conference on Artificial Intelligence, 40(38): 32419-32427, 2026
+**Status:** Published
+**Record:** [Official paper page](https://ojs.aaai.org/index.php/AAAI/article/view/40517)
+**Summary:** A collaborative study of activating overshadowed knowledge to support multi-hop reasoning in large language models.
+
 ### BriskSeed: Online History-Guided Reuse for Accelerating Dynamic Approximate Nearest Neighbor Search
 
 **Venue:** 43rd IEEE International Conference on Data Engineering (ICDE 2027)
@@ -12,6 +57,8 @@
 **Year:** 2027
 
 **Authors:** Hongru Gao, Shuhao Zhang, Haikun Liu, Xiaofei Liao, Hai Jin
+
+**Corresponding Author:** Shuhao Zhang
 
 **Status:** Accepted — Research First Round; public author PDF not yet available.
 
@@ -88,8 +135,8 @@
 
 ### 0.9 Select Edges Wisely: Monotonic Path Aware Graph Layout Optimization for Disk-Based ANN Search
 
-**Venue:** SIGMOD - International Conference on Management of Data  
-**Year:** 2026  
+**Venue:** Proceedings of the VLDB Endowment, 18(11): 4337-4349
+**Year:** 2025
 **Authors:** Ziyang Yue, Bolong Zheng, Ling Xu, Kanru Xu, Shuhao Zhang, Yajuan Du, Yunjun Gao, Xiaofang Zhou, Christian S. Jensen  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** Approximate nearest neighbor (ANN) search is a critical primitive in modern retrieval systems, but disk-based graph indexes often suffer from poor locality and inefficient layout optimization. This work proposes MARGO, a monotonic path-aware graph layout optimization method for disk-based ANN search. It formalizes graph layout quality through an objective that emphasizes edges important to monotonic paths, introduces a greedy optimization strategy to preserve more effective search paths, and further improves efficiency with a two-stage decoupling design. The resulting method improves locality and search efficiency for disk-resident ANN indexes under memory-constrained settings.
@@ -246,8 +293,8 @@
 
 ### 2.8 A Framework of Knowledge Graph-Enhanced Large Language Model Based on Global Planning
 
-**Venue:** TKDE - IEEE Transactions on Knowledge and Data Engineering  
-**Year:** 2025  
+**Venue:** IEEE Transactions on Knowledge and Data Engineering, 38(2): 736-748
+**Year:** 2026 (online-first 2025)
 **Authors:** Yading Li, Dandan Song, Yuhang Tian, Hao Wang, Changzhi Zhou, Shuhao Zhang  
 **Corresponding Author:** No | **First Author:** No  
 **Abstract:** Knowledge graphs can provide structured support for large language model reasoning, but existing KG-enhanced LLM methods either rely on the original question alone or alternate retrieval and reasoning without sufficient planning. This work proposes KELGoP, a framework of KG-enhanced LLM reasoning based on global planning. It introduces fine-grained question categorization and category-driven decomposition for complex questions, supports controllable atomic retrieval over KG subgraphs, and adapts reasoning strategies according to question-answering performance. Experiments on KGQA workloads show that the framework improves controllability, robustness, and answer quality over existing baselines.
