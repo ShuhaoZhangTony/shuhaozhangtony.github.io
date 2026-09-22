@@ -2,4 +2,6 @@
 
 **申请与合作：** 请简述希望研究的问题或应用需求，附简历、项目经历或代码链接，联系 [shuhao_zhang@hust.edu.cn](mailto:shuhao_zhang@hust.edu.cn)。
 
+**系统报名提示：** 报名时，研究方向请选择“计算机系统结构”。
+
 [培养模式与合作详情](team.html) · [团队与成员](https://intellistream.github.io/)
