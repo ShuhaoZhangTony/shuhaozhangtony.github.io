@@ -103,7 +103,7 @@ function renderHomePage(config, sections) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(config.description)}">
   <meta name="author" content="Shuhao Zhang">
-  <meta property="og:title" content="张书豪 · 并行执行与状态管理">
+  <meta property="og:title" content="张书豪 · 动态环境下的数据密集型系统">
   <meta property="og:description" content="${escapeHtml(config.description)}">
   <meta property="og:type" content="website">
   <title>${escapeHtml(config.title)}</title>
@@ -128,8 +128,8 @@ function renderHomePage(config, sections) {
         <div>
           <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
           <h1>${config['top-section-bg-text']}</h1>
-          <p class="hero-subtitle">共享状态并发控制 · 在线迁移 · 国产算力推理服务</p>
-          <p class="hero-en">Efficient execution and state management in parallel and distributed systems.</p>
+          <p class="hero-subtitle">任务执行 · 信息维护 · 在线服务调控</p>
+          <p class="hero-en">Data-intensive systems that adapt to changing tasks, information, and resources.</p>
           <div class="hero-actions"><a class="button" href="#research">了解研究方向 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
         </div>
         <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
