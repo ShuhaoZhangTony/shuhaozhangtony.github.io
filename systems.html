@@ -116,14 +116,23 @@
 
         <section class="page-header">
             <h1>系统建设与代表项目</h1>
-            <p>从硬件感知执行、共享状态并发与迁移，到国产算力上的推理服务。</p>
-            <div class="meta-line">代表机制、论文与公开代码；研究范围和工程集成分别说明。</div>
+            <p>三条科学路线，以及连接机制契约、状态原生执行与国产算力推理服务的系统架构。</p>
+            <div class="meta-line">代表机制、统一系统、论文与公开代码；已形成成果与在研系统分别说明。</div>
         </section>
 
         <article class="page-card"><h2>当前重点：vLLM-HUST 推理引擎</h2>
 <p>研究目标是构建面向国产算力的极致性能推理引擎，围绕请求调度、KV 驻留与复用、长上下文和 MoE 执行、异构通信与数据通路开展优化。</p>
 <p><a href="https://github.com/vLLM-HUST/vllm-hust">vLLM-HUST</a> 是基于 vLLM 的研究与工程载体；配套 <a href="https://github.com/vLLM-HUST/vllm-hust-benchmark">Benchmark</a> 和 <a href="https://github.com/vLLM-HUST/vllm-hust-dev-hub">Dev Hub</a> 支撑负载、评测和开发协作。</p>
 <p><strong>代表机制：BidKV</strong> 研究 KV 压力下基于效用的抢占调度，属于推理运行时。阅读 <a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV 作者版本</a>。具体性能收益应结合论文中的硬件、模型、负载和基线理解。</p>
+<h2>统一系统架构：ECPA 与 StateAxis</h2>
+<p>三条研究路线产生不同层次的优化机制。当前进一步研究如何让这些机制形成可组合、可演进的系统，而不是彼此隔离的原型。</p>
+<h3>ECPA · 机制契约与组合</h3>
+<p>ECPA 研究推理系统扩展如何声明能力与依赖，如何完成接入验证、生命周期管理、冲突隔离和安全退出。它面向算子、缓存、调度和服务策略等不同扩展，目标是让机制的组合行为可检查、可复现。</p>
+<p><a href="https://github.com/intellistream/vllm-hust-ext-manager">ECPA 研究仓库</a></p>
+<h3>StateAxis · 状态中心的原生推理引擎</h3>
+<p>StateAxis 研究如何统一管理推理状态的所有权、连续布局、访问路径、放置迁移与生命周期，使异构执行、信息复用和在线服务调控建立在一致的状态基础上。</p>
+<p><a href="https://github.com/Qixin-Gaoke/stateaxis">StateAxis 研究仓库</a></p>
+<p>ECPA 统一“机制”，StateAxis 统一“状态”。两者均为正在推进的系统研究，用于连接三条科学路线，不替代各路线中具体机制的独立问题与实验结论。</p>
 <h2>推理工作流、外部记忆与动态检索</h2>
 <p>下面按研究对象介绍代表性工作。工作流组织、外部记忆、检索与动态图维护分别解决不同层次的问题；它们为智能体应用提供相互关联的系统能力。</p>
 <h3>SAGE · 编排与观测</h3>

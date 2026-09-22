@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="张书豪，华中科技大学教授。研究动态环境下的数据密集型系统，围绕任务执行、信息维护与在线服务调控开展系统研究。">
+  <meta name="description" content="张书豪，华中科技大学教授。研究动态环境下的数据密集型系统，围绕任务执行、信息维护、在线服务调控及其统一系统开展研究。">
   <meta name="author" content="Shuhao Zhang">
   <meta property="og:title" content="张书豪 · 动态环境下的数据密集型系统">
-  <meta property="og:description" content="张书豪，华中科技大学教授。研究动态环境下的数据密集型系统，围绕任务执行、信息维护与在线服务调控开展系统研究。">
+  <meta property="og:description" content="张书豪，华中科技大学教授。研究动态环境下的数据密集型系统，围绕任务执行、信息维护、在线服务调控及其统一系统开展研究。">
   <meta property="og:type" content="website">
   <title>Shuhao Zhang&#39;s Homepage</title>
   <link rel="icon" href="static/assets/img/photo.png">
@@ -31,40 +31,48 @@
           <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
           <h1>动态环境下的数据密集型系统<br>执行与服务优化</h1>
           <p class="hero-subtitle">任务执行 · 信息维护 · 在线服务调控</p>
-          <p class="hero-en">Data-intensive systems that adapt to changing tasks, information, and resources.</p>
+          <p class="hero-en">Data-intensive systems for changing tasks, evolving information, and resource-constrained services.</p>
           <div class="hero-actions"><a class="button" href="#research">了解研究方向 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
         </div>
         <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
       </div>
     </section>
     <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">张书豪 <span>Professor, HUST</span></h2><p>张书豪，华中科技大学计算机科学与技术学院教授，主持科技部重大项目课题，入选国家自然科学基金优秀青年科学基金项目（海外），获批国家自然科学基金外国优秀青年学者研究基金项目（RFIS-II）。曾任新加坡南洋理工大学、新加坡科技设计大学助理教授，并在德国柏林工业大学从事博士后研究。</p>
-<p>研究聚焦 <strong>动态环境下的数据密集型系统</strong>，重点回答三个问题：任务依赖变化时如何高效执行，数据与知识持续更新时如何维护和复用，资源与负载变化时如何让在线服务稳定运行。当前结合 <strong>大模型推理、动态检索与有状态数据处理</strong> 开展研究，并以 vLLM-HUST 等开源系统连接机制研究、工程实现与真实负载验证。</p>
+<p>研究聚焦 <strong>动态环境下的数据密集型系统</strong>：当任务依赖、可用信息和运行资源持续变化时，系统如何保持高效、可控与可靠。围绕这一问题，课题组研究 <strong>依赖驱动的任务执行、持续变化信息的维护与复用、资源约束下的在线服务调控</strong>，并进一步探索机制契约与状态原生执行，使分散的优化能够组成可演进的系统。</p>
+<p>当前结合 <strong>大模型推理、动态检索与有状态数据处理</strong> 开展研究，以 vLLM-HUST、ECPA 与 StateAxis 等系统连接机制研究、工程实现和真实负载验证。</p>
 <p><a href="http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm">华中科技大学教师主页</a> · <a href="contents/current_bio.md">English bio</a> · <a href="https://orcid.org/0000-0002-9927-6925">ORCID</a></p>
 </section>
 
     <section class="content-section" id="research" aria-labelledby="research-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">01 / RESEARCH</p><h2 id="research-heading">研究方向</h2></header>
-      <div class="section-body"><p>真实系统需要持续面对变化：任务会产生新的依赖，数据和知识会不断更新，负载与可用资源也会波动。我们的研究关注系统如何在这些变化中保持高效、可控和可靠。</p>
+      <div class="section-body"><p>真实系统持续面对三类变化：任务产生新的依赖，数据和知识不断演化，负载与可用资源持续波动。我们的研究分别以任务、信息和在线服务为直接管理对象，研究系统如何在变化中保持高效、可控与可靠。</p>
 <div class="system-map" aria-label="研究方向：任务执行、信息维护与在线服务调控">
   <div class="map-core"><span class="eyebrow">DATA-INTENSIVE SYSTEMS</span><h3>动态环境下的数据密集型系统</h3><p>面向任务、信息与资源的持续变化</p></div>
+  <div class="map-connector">三条科学研究路线</div>
   <div class="module-grid">
     <div><h3>依赖驱动的任务执行</h3><p>多阶段推理<br>并发与异构执行</p><span>识别任务之间真正的依赖，根据负载和硬件选择合适的执行方式</span></div>
     <div><h3>持续变化信息的维护与复用</h3><p>动态数据与检索<br>历史结果与外部记忆</p><span>降低持续更新的维护成本，并判断哪些历史信息值得继续使用</span></div>
     <div><h3>资源约束下的在线服务调控</h3><p>容量与负载变化<br>恢复与状态迁移</p><span>在资源紧张或配置变化时调整请求和状态，使服务持续稳定运行</span></div>
   </div>
-  <div class="map-application"><h3>当前重点：面向国产算力的高性能推理引擎</h3><p>以 vLLM-HUST 为工程载体，在真实模型与负载上验证系统方法</p></div>
+  <div class="map-connector">跨路线统筹系统</div>
+  <div class="integration-grid">
+    <div><span class="eyebrow">MECHANISMS</span><h3>ECPA · 机制契约与组合</h3><p>统一扩展的声明、接入、验证、隔离与退出，使不同优化机制能够安全组合。</p></div>
+    <div><span class="eyebrow">STATE</span><h3>StateAxis · 状态原生执行</h3><p>统一状态的所有权、布局、访问、迁移与生命周期，使执行和服务共享一致的状态基础。</p></div>
+  </div>
+  <div class="map-support"><strong>共享支撑：</strong>工作负载、基准、性能剖析、故障注入与回归验证</div>
+  <div class="map-application"><h3>当前重点：面向国产算力的高性能推理引擎</h3><p>以 vLLM-HUST 为工程载体，在真实模型、硬件与负载上验证系统方法</p></div>
 </div>
 
-<p>三条路线覆盖从任务进入系统、信息持续积累，到服务长期运行的完整过程。学生可以从任务调度、数据结构与检索、外部记忆、推理服务或有状态流处理等方向切入。</p>
+<p>三条路线回答不同的科学问题；ECPA 统一机制，StateAxis 统一状态。二者不是新的平行方向，而是将任务执行、信息维护与服务调控连接为完整系统。应用场景用于检验方法的通用性，不替代科学问题本身。</p>
 <p><a href="systems.html">代表机制、系统实现与论文 →</a></p>
 </div></div>
     </section>
     <section class="content-section" id="publications" aria-labelledby="highlights-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">02 / SYSTEMS & RESULTS</p><h2 id="highlights-heading">代表成果</h2></header>
       <div class="section-body"><div class="result-grid">
-<article><span class="eyebrow">任务执行</span><h3>让复杂任务高效运行</h3><p>SAGE 组织多阶段智能体任务，MorphStream 根据运行时依赖调整并发执行。</p><a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE · ICML 2026</a> · <a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream · SIGMOD 2023</a></article>
-<article><span class="eyebrow">信息维护</span><h3>让变化的信息可维护、可复用</h3><p>GRACE 降低动态结构的更新成本，BriskSeed 与 Neuromem 研究历史搜索和外部记忆的持续使用。</p><a href="contents/research_papers/2026/2026_grace_icde_2026.pdf">GRACE · ICDE 2026</a> · <a href="systems.html">相关系统 →</a></article>
-<article><span class="eyebrow">服务调控</span><h3>让在线服务持续运行</h3><p>BidKV 应对推理服务的容量压力，Spacker 支持运行中的状态迁移与资源调整。</p><a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV · SC 2026</a> · <a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker · ICDCS 2025</a></article>
+<article><span class="eyebrow">任务执行</span><h3>组织动态任务的执行路径</h3><p>SAGE 显式组织多阶段任务，MorphStream 根据运行时依赖调整并发执行。</p><a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE · ICML 2026</a> · <a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream · SIGMOD 2023</a></article>
+<article><span class="eyebrow">信息维护</span><h3>维护持续演化的信息</h3><p>GRACE 降低动态结构的维护成本，BriskSeed 与 Neuromem 研究历史搜索和外部记忆的持续复用。</p><a href="contents/research_papers/2026/2026_grace_icde_2026.pdf">GRACE · ICDE 2026</a> · <a href="systems.html">相关系统 →</a></article>
+<article><span class="eyebrow">服务调控</span><h3>调控资源受限的在线服务</h3><p>BidKV 应对推理服务的容量压力，Spacker 支持运行中的状态迁移与资源调整。</p><a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV · SC 2026</a> · <a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker · ICDCS 2025</a></article>
 </div>
 
 <p><a href="systems.html">系统与开源入口</a> · <strong><a href="publications.html">完整论文档案与 PDF →</a></strong></p>
@@ -73,16 +81,16 @@
     <section class="content-section" id="applications" aria-labelledby="applications-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">03 / APPLICATIONS</p><h2 id="applications-heading">应用与验证</h2></header>
       <div class="section-body"><h3>开放系统与真实负载</h3>
-<p>我们将研究方法落实到可运行的系统和评测工具中。当前重点建设 vLLM-HUST 国产算力推理引擎，并持续开放任务执行、动态检索和状态管理相关代码。</p>
+<p>我们将研究方法落实到可运行的系统和可信的实验中。当前重点建设 vLLM-HUST 国产算力推理引擎，并持续开放任务执行、动态检索、状态管理与评测相关代码。</p>
 <p><a href="systems.html">查看系统与开源入口</a></p>
 <h3>真实应用中的系统问题</h3>
-<p>教师数字分身提供持续知识问答场景，用于观察推理请求、记忆更新和检索需求。合作研究还涉及工业实时故障诊断与低时延音视频通信。</p>
+<p>教师数字分身提供持续知识问答场景，用于观察推理请求、记忆更新和检索需求。合作研究还涉及电力运维、生物信息模型推理、工业实时故障诊断与低时延音视频通信。应用用于检验系统方法在不同负载、硬件和可靠性要求下的边界。</p>
 <p><a href="https://twin.sage.org.ai/">体验教师数字分身 ↗</a> · <a href="contents/research_papers/2025/2025_srtfd_icde_2025.pdf">工业实时故障诊断论文</a></p>
 </div></div>
     </section>
     <section class="content-section" id="team" aria-labelledby="team-heading">
       <div class="shell"><header class="section-heading"><p class="eyebrow">04 / PEOPLE & COLLABORATION</p><h2 id="team-heading">团队与合作</h2></header>
-      <div class="section-body"><p>长期招收 <strong>硕士、博士和长期实习生</strong>。学生可以从 <strong>任务调度、动态数据与检索、外部记忆、推理服务、状态迁移</strong> 等方向切入，在真实系统中完成问题分析、设计实现与实验验证。欢迎分布式系统、操作系统、体系结构、编译与性能优化背景的同学。</p>
+      <div class="section-body"><p>长期招收 <strong>硕士、博士和长期实习生</strong>。学生可围绕 <strong>任务执行、信息维护、在线服务调控</strong> 三条路线开展研究，也可参与 ECPA、StateAxis 与 vLLM-HUST 等系统建设，在真实硬件和负载上完成问题分析、机制设计、系统实现与实验验证。欢迎分布式系统、操作系统、体系结构、编译与性能优化背景的同学。</p>
 <p><strong>申请与合作：</strong> 请简述希望研究的问题或应用需求，附简历、项目经历或代码链接，联系 <a href="mailto:shuhao_zhang@hust.edu.cn">shuhao_zhang@hust.edu.cn</a>。</p>
 <p><strong>系统报名提示：</strong> 报名时，研究方向请选择“计算机系统结构”。</p>
 <p><a href="team.html">培养模式与合作详情</a> · <a href="https://intellistream.github.io/">团队与成员</a></p>
