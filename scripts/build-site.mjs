@@ -50,8 +50,8 @@ const standalonePages = [
     sourceMarkdown: 'contents/systems.md',
     pageTitle: '系统建设与代表项目',
     title: '系统建设与代表项目',
-    summary: '从硬件感知执行、共享状态并发与迁移，到国产算力上的推理服务。',
-    meta: '代表机制、论文与公开代码；研究范围和工程集成分别说明。',
+    summary: '三条科学路线，以及连接机制契约、状态原生执行与国产算力推理服务的系统架构。',
+    meta: '代表机制、统一系统、论文与公开代码；已形成成果与在研系统分别说明。',
     errorText: '系统页面加载失败。'
   }
 ];
@@ -129,7 +129,7 @@ function renderHomePage(config, sections) {
           <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
           <h1>${config['top-section-bg-text']}</h1>
           <p class="hero-subtitle">任务执行 · 信息维护 · 在线服务调控</p>
-          <p class="hero-en">Data-intensive systems that adapt to changing tasks, information, and resources.</p>
+          <p class="hero-en">Data-intensive systems for changing tasks, evolving information, and resource-constrained services.</p>
           <div class="hero-actions"><a class="button" href="#research">了解研究方向 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
         </div>
         <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
