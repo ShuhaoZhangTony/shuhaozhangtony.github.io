@@ -123,7 +123,7 @@
         <article class="page-card"><h2>当前重点：vLLM-HUST 推理引擎</h2>
 <p>研究目标是构建面向国产算力的极致性能推理引擎，围绕请求调度、KV 驻留与复用、长上下文和 MoE 执行、异构通信与数据通路开展优化。</p>
 <p><a href="https://github.com/vLLM-HUST/vllm-hust">vLLM-HUST</a> 是基于 vLLM 的研究与工程载体；配套 <a href="https://github.com/vLLM-HUST/vllm-hust-benchmark">Benchmark</a> 和 <a href="https://github.com/vLLM-HUST/vllm-hust-dev-hub">Dev Hub</a> 支撑负载、评测和开发协作。</p>
-<p><strong>代表机制：BidKV</strong> 研究 KV 压力下基于效用的抢占调度，属于推理运行时。阅读 <a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV 作者版本</a>。具体性能收益应结合论文中的硬件、模型、负载和基线理解。</p>
+<p><strong>代表机制：BidKV</strong> 研究 KV 压力下基于效用的抢占调度，属于推理运行时。相关资料见 <a href="https://sc26.conference-program.com/presentation/?id=pap1108&sess=sess210">SC26 议程</a>、<a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">会议论文作者版</a>与<a href="https://www.zte.com.cn/china/about/magazine/zte-communications/2026/cn202604/specialtopic/cn202604002.html">中文期刊文章</a>。具体性能收益应结合论文中的硬件、模型、负载和基线理解。</p>
 <h2>统一系统架构：ECPA 与 StateAxis</h2>
 <p>三条研究路线产生不同层次的优化机制。当前进一步研究如何让这些机制形成可组合、可演进的系统，而不是彼此隔离的原型。</p>
 <h3>ECPA · 机制契约与组合</h3>

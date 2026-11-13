@@ -1,5 +1,7 @@
-- September 2026 update: **BriskSeed** has been accepted to ICDE 2027, Research First Round. [Paper details](contents/research_papers/2027/2027_briskseed_icde_2027.md).
+- 2026 年 11 月，**BidKV** 列入 SC26 正式议程，报告安排在 11 月 18 日的 Resource-Aware LLM Serving Pipelines 分会场。[会议议程](https://sc26.conference-program.com/presentation/?id=pap1108&sess=sess210)
+- 2026 年 9 月，**BriskSeed** 获 ICDE 2027 研究论文首轮录用。[官方录用名单](https://icde2027.github.io/accepted-papers.html) · [论文简介](contents/research_papers/2027/2027_briskseed_icde_2027.md)
 - September 2026 获批国家自然科学基金外国优秀青年学者研究基金项目（RFIS-II / Research Fund for International Excellent Young Scientists）。
+- 2026 年 8 月，《BidKV：显存受限推理的 KV 缓存回收机制》发表于《中兴通讯技术》大模型推理存算专题。[期刊文章](https://www.zte.com.cn/china/about/magazine/zte-communications/2026/cn202604/specialtopic/cn202604002.html)
 - July 2026 one paper accepted to SC 2026: BidKV
 - July 2026 two system demonstrations accepted to ICPP 2026: BriskSnapshot and SAGE
 - May 2026 two papers accepted to ICML 2026, including Neuromem and SAGE

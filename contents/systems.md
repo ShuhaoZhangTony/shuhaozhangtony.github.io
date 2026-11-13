@@ -6,7 +6,7 @@
 
 [vLLM-HUST](https://github.com/vLLM-HUST/vllm-hust) 是基于 vLLM 的研究与工程载体；配套 [Benchmark](https://github.com/vLLM-HUST/vllm-hust-benchmark) 和 [Dev Hub](https://github.com/vLLM-HUST/vllm-hust-dev-hub) 支撑负载、评测和开发协作。
 
-**代表机制：BidKV** 研究 KV 压力下基于效用的抢占调度，属于推理运行时。阅读 [BidKV 作者版本](contents/research_papers/2026/2026_bidkv_sc_2026.pdf)。具体性能收益应结合论文中的硬件、模型、负载和基线理解。
+**代表机制：BidKV** 研究 KV 压力下基于效用的抢占调度，属于推理运行时。相关资料见 [SC26 议程](https://sc26.conference-program.com/presentation/?id=pap1108&sess=sess210)、[会议论文作者版](contents/research_papers/2026/2026_bidkv_sc_2026.pdf)与[中文期刊文章](https://www.zte.com.cn/china/about/magazine/zte-communications/2026/cn202604/specialtopic/cn202604002.html)。具体性能收益应结合论文中的硬件、模型、负载和基线理解。
 
 ## 统一系统架构：ECPA 与 StateAxis
 
