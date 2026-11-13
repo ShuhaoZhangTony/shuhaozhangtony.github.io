@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shuhao Zhang is a professor at HUST. His research focuses on data-intensive systems in dynamic environments, from task execution and information reuse to online service control.">
+  <meta name="author" content="Shuhao Zhang">
+  <meta property="og:title" content="Shuhao Zhang&#39;s Homepage">
+  <meta property="og:description" content="Shuhao Zhang is a professor at HUST. His research focuses on data-intensive systems in dynamic environments, from task execution and information reuse to online service control.">
+  <meta property="og:type" content="website">
+  <title>Shuhao Zhang&#39;s Homepage</title>
+  <link rel="alternate" hreflang="zh-CN" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="icon" href="static/assets/img/photo.png">
+  <link rel="stylesheet" href="static/css/home.css">
+  <script src="static/js/home-language.js" defer></script>
+</head>
+<body id="page-top">
+  <a class="skip-link" href="#home">Skip to content</a>
+  <header class="site-header">
+    <nav class="shell nav-row" aria-label="Main navigation">
+      <a class="brand" href="#page-top">Shuhao Zhang</a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="systems.html">Systems</a>
+        <a href="#publications">Results</a>
+        <a href="#applications">Applications</a>
+        <a href="#team">People</a>
+        <a href="#resources">Teaching</a>
+      </div>
+      <a class="language-switch" href="index.html" lang="zh-CN" hreflang="zh-CN" aria-label="切换到中文">中文</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
+          <h1>Data-intensive systems in dynamic environments</h1>
+          <p class="hero-subtitle">Task execution · Information maintenance · Online service control</p>
+
+          <div class="hero-actions"><a class="button" href="#research">Explore the research ↓</a><a class="button button-outline" href="#team">Join or collaborate ↗</a></div>
+        </div>
+        <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="Professor Shuhao Zhang" width="280" height="340"><figcaption>Shuhao Zhang<br>School of Computer Science and Technology · HUST</figcaption></figure>
+      </div>
+    </section>
+    <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">Shuhao Zhang <span>Professor, HUST</span></h2><p>Shuhao Zhang is a professor in the School of Computer Science and Technology at Huazhong University of Science and Technology (HUST). He leads a task under a major national science and technology project of China’s Ministry of Science and Technology. He received the NSFC Excellent Young Scientists Fund (Overseas) and was awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II). Before joining HUST, he was an assistant professor at Nanyang Technological University and Singapore University of Technology and Design, and a postdoctoral researcher at Technische Universität Berlin.</p>
+<p>His research focuses on <strong>data-intensive systems in dynamic environments</strong>. His group studies how systems can remain efficient, controllable, and reliable as task dependencies, available information, and runtime resources change. The group works on <strong>dependency-driven task execution, maintenance and reuse of evolving information, and online service control under resource constraints</strong>. It also studies how to compose mechanisms through explicit contracts and make state a first-class concern in execution.</p>
+<p>Current work spans <strong>LLM inference, dynamic retrieval, and stateful data processing</strong>. Systems such as vLLM-HUST, ECPA, and StateAxis connect mechanism design, engineering, and evaluation on real workloads.</p>
+<p><a href="http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm">HUST faculty profile</a> · <a href="contents/current_bio.md">Full bio</a> · <a href="https://orcid.org/0000-0002-9927-6925">ORCID</a></p>
+</section>
+
+    <section class="content-section" id="research" aria-labelledby="research-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">01 / RESEARCH</p><h2 id="research-heading">Research</h2></header>
+      <div class="section-body"><p>Task dependencies, data, and available resources change while systems are running. We study how systems can adapt to these changes in the way they execute tasks, maintain information, and manage online services.</p>
+<div class="system-map" aria-label="Research areas: task execution, information maintenance, and online service control">
+  <div class="map-core"><span class="eyebrow">DATA-INTENSIVE SYSTEMS</span><h3>Data-intensive systems in dynamic environments</h3><p>Adapting to changes in tasks, information, and resources</p></div>
+  <div class="map-connector">Three research directions</div>
+  <div class="module-grid">
+    <div><h3>Dependency-driven task execution</h3><p>Multi-stage inference<br>Concurrent and heterogeneous execution</p><span>Identify task dependencies and choose how to execute tasks given the workload and hardware.</span></div>
+    <div><h3>Maintenance and reuse of evolving information</h3><p>Dynamic data and retrieval<br>Past results and external memory</p><span>Reduce the cost of continuous updates and decide which past results to reuse.</span></div>
+    <div><h3>Online service control under resource constraints</h3><p>Changes in load and capacity<br>Recovery and state migration</p><span>Adjust requests and state as resources become scarce or configurations change.</span></div>
+  </div>
+  <div class="map-connector">Systems that connect the research directions</div>
+  <div class="integration-grid">
+    <div><span class="eyebrow">MECHANISMS</span><h3>ECPA · Mechanism contracts and composition</h3><p>Define how extensions declare capabilities, join the system, are validated and isolated, and are removed.</p></div>
+    <div><span class="eyebrow">STATE</span><h3>StateAxis · State-centric execution</h3><p>Give execution and serving a consistent model of state ownership, layout, access, migration, and lifecycle.</p></div>
+  </div>
+  <div class="map-support"><strong>Evaluation tools</strong> · Workloads, benchmarks, profiling, fault injection, and regression testing</div>
+  <div class="map-application"><h3>Current focus · High-performance inference on Chinese accelerators</h3><p>Use vLLM-HUST to evaluate system mechanisms with real models, hardware, and workloads.</p></div>
+</div>
+
+<p>ECPA and StateAxis connect the three research directions through contracts for mechanisms and a shared model of state. Application workloads help us test how broadly these methods apply.</p>
+<p><a href="systems.html">Mechanisms, systems, and papers (Chinese) →</a></p>
+</div></div>
+    </section>
+    <section class="content-section" id="publications" aria-labelledby="highlights-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">02 / SYSTEMS & RESULTS</p><h2 id="highlights-heading">Selected Results</h2></header>
+      <div class="section-body"><div class="result-grid">
+<article><span class="eyebrow">TASK EXECUTION</span><h3>Executing tasks with changing dependencies</h3><p>SAGE organizes multi-stage tasks. MorphStream adjusts concurrent execution based on runtime dependencies.</p><a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE · ICML 2026</a> · <a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream · SIGMOD 2023</a></article>
+<article><span class="eyebrow">INFORMATION MAINTENANCE</span><h3>Maintaining and reusing evolving information</h3><p>GRACE reduces the cost of maintaining dynamic graph structures. BriskSeed and Neuromem study the reuse of search history and external memory.</p><a href="contents/research_papers/2026/2026_grace_icde_2026.pdf">GRACE · ICDE 2026</a> · <a href="systems.html">Related systems (Chinese) →</a></article>
+<article><span class="eyebrow">SERVICE CONTROL</span><h3>Operating services under resource constraints</h3><p>BidKV addresses memory pressure in LLM serving. Spacker supports state migration and resource adjustment while stream processing jobs are running.</p><a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV · SC 2026</a> · <a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker · ICDCS 2025</a></article>
+</div>
+
+<p><a href="systems.html">Systems and open-source projects (Chinese)</a> · <strong><a href="publications.html">Full publication archive and PDFs →</a></strong></p>
+</div></div>
+    </section>
+    <section class="content-section" id="applications" aria-labelledby="applications-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">03 / APPLICATIONS</p><h2 id="applications-heading">Applications and Evaluation</h2></header>
+      <div class="section-body"><h3>Open systems and real workloads</h3>
+<p>We implement our methods in working systems and evaluate them on real workloads. Our current focus is vLLM-HUST, an inference engine for Chinese accelerators. We continue to share code for task execution, dynamic retrieval, state management, and evaluation.</p>
+<p><a href="systems.html">Systems and open-source projects (Chinese)</a></p>
+<h3>Applications</h3>
+<p>Our faculty digital twin provides an ongoing question-answering workload for studying inference requests, memory updates, and retrieval. Other collaborations include power grid operations, inference for bioinformatics models, real-time industrial fault diagnosis, and low-latency audio and video communication. These applications help us test how our methods behave under different workloads, hardware, and reliability requirements.</p>
+<p><a href="https://twin.sage.org.ai/">Try the faculty digital twin ↗</a> · <a href="contents/research_papers/2025/2025_srtfd_icde_2025.pdf">Paper on real-time industrial fault diagnosis</a></p>
+</div></div>
+    </section>
+    <section class="content-section" id="team" aria-labelledby="team-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">04 / PEOPLE & COLLABORATION</p><h2 id="team-heading">People and Collaboration</h2></header>
+      <div class="section-body"><p>We welcome applications from prospective <strong>master’s and PhD students and long-term interns</strong>. Students can work on task execution, information maintenance, or online service control, and contribute to systems such as ECPA, StateAxis, and vLLM-HUST. Projects span problem analysis, mechanism design, implementation, and experiments on real hardware and workloads. We welcome backgrounds in distributed systems, operating systems, computer architecture, compilers, and performance optimization.</p>
+<p><strong>Applications and collaboration</strong>. Please email <a href="mailto:shuhao_zhang@hust.edu.cn">shuhao_zhang@hust.edu.cn</a> with a short description of the problem you want to work on or your application needs. Students should include a CV, relevant project experience, or links to code.</p>
+<p><strong>HUST application portal</strong>. Select Computer Architecture (计算机系统结构) as your research direction.</p>
+<p><a href="team.html">Training and collaboration (Chinese)</a> · <a href="https://intellistream.github.io/">Lab and team members</a></p>
+</div></div>
+    </section>
+    <section class="content-section" id="news" aria-labelledby="news-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">05 / NEWS</p><h2 id="news-heading">News</h2></header>
+      <div class="section-body"><details><summary>News and paper acceptances</summary><ul>
+<li>November 2026. <strong>BidKV</strong> is scheduled for November 18 in the Resource-Aware LLM Serving Pipelines session at SC26. <a href="https://sc26.conference-program.com/presentation/?id=pap1108&sess=sess210">Conference program</a></li>
+<li>September 2026. <strong>BriskSeed</strong> was accepted in the first research round of ICDE 2027. <a href="https://icde2027.github.io/accepted-papers.html">Official acceptance list</a> · <a href="contents/research_papers/2027/2027_briskseed_icde_2027.md">Paper overview</a></li>
+<li>September 2026. Awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II).</li>
+<li>August 2026. Our article on <strong>BidKV</strong> appeared in the ZTE Technology Journal special issue on compute and storage for LLM inference. <a href="https://www.zte.com.cn/china/about/magazine/zte-communications/2026/cn202604/specialtopic/cn202604002.html">Journal article (Chinese)</a></li>
+<li>July 2026 one paper accepted to SC 2026: BidKV</li>
+<li>July 2026 two system demonstrations accepted to ICPP 2026: BriskSnapshot and SAGE</li>
+<li>May 2026 two papers accepted to ICML 2026, including Neuromem and SAGE</li>
+<li>Apr 2026 two collaborative papers accepted to ACL 2026, including one Main Conference paper and one Findings paper</li>
+<li>Mar 2026 recruiting students interested in LLM inference engines and serving systems; prospective students are welcome to contact me by email with a CV and relevant project or code links</li>
+<li>Jan 2026 two papers accepted to WWW 2026</li>
+<li>Nov 2025 launch of our LLM inference system: <a href="https://ws.sage.org.ai/">https://ws.sage.org.ai/</a></li>
+<li>Nov 2025 One paper accepted to SIGMOD 2026</li>
+<li>Nov 2025 One paper accepted to TKDE 2026</li>
+<li>Nov 2025 One paper accepted to AAAI 2026</li>
+<li>Oct 2025 One paper accepted to ICDE 2026</li>
+<li>July 2025 One paper accepted to NDBC 2025</li>
+<li>July 2025 One paper accepted to NDBC 2025</li>
+<li>July 2025 One paper accepted to VLDB 2025</li>
+<li>March 2025 One paper accepted to ICDCS 2025</li>
+<li>March 2025 One paper accepted to TKDE 2025</li>
+<li>March 2025 One paper accepted to ICDE 2025</li>
+<li>March 2025 One paper accepted to CVPR 2025</li>
+</ul>
+</details></div></div>
+    </section>
+    <section class="content-section" id="resources" aria-labelledby="resources-heading">
+      <div class="shell"><header class="section-heading"><p class="eyebrow">06 / RESOURCES</p><h2 id="resources-heading">Teaching and Resources</h2></header>
+      <div class="section-body"><ul>
+<li><strong>Courses</strong> · Database Systems and Implementation · <a href="https://courses.sage.org.ai/">LLM Inference Systems and Practice</a> · <a href="graduate-paper-writing-course.html">Graduate Research Paper Writing</a></li>
+<li><strong>Profile</strong> · <a href="contents/cv_en.pdf">CV</a> · <a href="contents/current_bio.md">Bio in English and Chinese</a> · <a href="contents/awards.md">Research funding, honors, and academic service (Chinese)</a></li>
+<li><strong>Surveys (preprints)</strong> · <a href="contents/research_papers/preprint/2026_cccf_domestic_inference_engine_survey.pdf">Inference engines for Chinese accelerators</a> · <a href="contents/research_papers/preprint/2026_parallel_distributed_state_management_survey.pdf">Parallel and distributed state management</a></li>
+</ul>
+</div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell"><p>Shuhao Zhang · Huazhong University of Science and Technology</p><a href="mailto:shuhao_zhang@hust.edu.cn">Email</a> · <a href="https://github.com/intellistream">GitHub</a> · <a href="publications.html">Full publication archive</a> · <a href="#page-top">Back to top ↑</a></div></footer>
+</body>
+</html>

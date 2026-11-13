@@ -87,39 +87,60 @@ function stripStandaloneIntro(html) {
   return withoutTitle.slice(firstSectionIndex).trim();
 }
 
-function renderHomePage(config, sections) {
-  const sectionLabels = {
-    research: ['01 / RESEARCH', '研究方向'],
-    highlights: ['02 / SYSTEMS & RESULTS', '代表成果'],
-    applications: ['03 / APPLICATIONS', '应用与验证'],
-    team: ['04 / PEOPLE & COLLABORATION', '团队与合作'],
-    news: ['05 / NEWS', '近期动态'],
-    resources: ['06 / RESOURCES', '教学与资料']
+function renderHomePage(config, sections, locale) {
+  const english = locale === 'en';
+  const chinese = {
+    skip: '跳到正文',
+    navigation: '主导航',
+    brand: '张书豪 <span>Shuhao Zhang</span>',
+    nav: ['研究', '系统', '成果', '应用', '团队与合作', '教学'],
+    headline: config['top-section-bg-text'],
+    subtitle: '任务执行 · 信息维护 · 在线服务调控',
+    researchAction: '了解研究方向 ↓',
+    teamAction: '招生与合作 ↗',
+    portraitAlt: '张书豪教授',
+    affiliation: '华中科技大学 · 计算机科学与技术学院',
+    sections: ['研究方向', '代表成果', '应用与验证', '团队与合作', '近期动态', '教学与资料'],
+    newsSummary: '查看动态与录用消息',
+    footer: '张书豪 · 华中科技大学',
+    publicationArchive: '完整论文档案',
+    backToTop: '返回顶部 ↑'
   };
+  const copy = english ? config : chinese;
+  const sectionKeys = ['research', 'highlights', 'applications', 'team', 'news', 'resources'];
+  const eyebrows = ['01 / RESEARCH', '02 / SYSTEMS & RESULTS', '03 / APPLICATIONS',
+    '04 / PEOPLE & COLLABORATION', '05 / NEWS', '06 / RESOURCES'];
+  const navTargets = ['#research', 'systems.html', '#publications', '#applications', '#team', '#resources'];
+  const alternate = english
+    ? { href: 'index.html', lang: 'zh-CN', label: '中文', title: '切换到中文' }
+    : { href: 'en.html', lang: 'en', label: 'English', title: 'Switch to English' };
+  const chineseTitle = '张书豪 · 动态环境下的数据密集型系统';
   return `<!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="${locale}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="${escapeHtml(config.description)}">
   <meta name="author" content="Shuhao Zhang">
-  <meta property="og:title" content="张书豪 · 动态环境下的数据密集型系统">
+  <meta property="og:title" content="${english ? escapeHtml(config.title) : chineseTitle}">
   <meta property="og:description" content="${escapeHtml(config.description)}">
   <meta property="og:type" content="website">
   <title>${escapeHtml(config.title)}</title>
+  <link rel="alternate" hreflang="zh-CN" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
   <link rel="icon" href="static/assets/img/photo.png">
   <link rel="stylesheet" href="static/css/home.css">
+  <script src="static/js/home-language.js" defer></script>
 </head>
 <body id="page-top">
-  <a class="skip-link" href="#home">跳到正文</a>
+  <a class="skip-link" href="#home">${copy.skip}</a>
   <header class="site-header">
-    <nav class="shell nav-row" aria-label="主导航">
-      <a class="brand" href="#page-top">张书豪 <span>Shuhao Zhang</span></a>
+    <nav class="shell nav-row" aria-label="${copy.navigation}">
+      <a class="brand" href="#page-top">${copy.brand}</a>
       <div class="nav-links">
-        <a href="#research">研究</a><a href="systems.html">系统</a>
-        <a href="#publications">成果</a><a href="#applications">应用</a>
-        <a href="#team">团队与合作</a><a href="#resources">教学</a>
+        ${navTargets.map((target, index) => `<a href="${target}">${copy.nav[index]}</a>`).join('\n        ')}
       </div>
+      <a class="language-switch" href="${alternate.href}" lang="${alternate.lang}" hreflang="${alternate.lang}" aria-label="${alternate.title}">${alternate.label}</a>
     </nav>
   </header>
   <main>
@@ -127,25 +148,26 @@ function renderHomePage(config, sections) {
       <div class="shell hero-grid">
         <div>
           <p class="eyebrow">HUST · SYSTEMS RESEARCH</p>
-          <h1>${config['top-section-bg-text']}</h1>
-          <p class="hero-subtitle">任务执行 · 信息维护 · 在线服务调控</p>
-          <p class="hero-en">Data-intensive systems for changing tasks, evolving information, and resource-constrained services.</p>
-          <div class="hero-actions"><a class="button" href="#research">了解研究方向 ↓</a><a class="button button-outline" href="#team">招生与合作 ↗</a></div>
+          <h1>${copy.headline}</h1>
+          <p class="hero-subtitle">${copy.subtitle}</p>
+          ${english ? '' : '<p class="hero-en" lang="en">Data-intensive systems for changing tasks, evolving information, and resource-constrained services.</p>'}
+          <div class="hero-actions"><a class="button" href="#research">${copy.researchAction}</a><a class="button button-outline" href="#team">${copy.teamAction}</a></div>
         </div>
-        <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="张书豪教授" width="280" height="340"><figcaption>张书豪 / Shuhao Zhang<br>华中科技大学 · 计算机科学与技术学院</figcaption></figure>
+        <figure class="portrait"><img src="static/assets/img/me3.jpg" alt="${copy.portraitAlt}" width="280" height="340"><figcaption>${english ? 'Shuhao Zhang' : '张书豪 / Shuhao Zhang'}<br>${copy.affiliation}</figcaption></figure>
       </div>
     </section>
-    <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">张书豪 <span>Professor, HUST</span></h2>${sections.home}</section>
-    ${Object.entries(sectionLabels).map(([key, [eyebrow, label]]) => `
+    <section class="shell bio" id="home" aria-labelledby="bio-heading"><h2 id="bio-heading">${english ? 'Shuhao Zhang' : '张书豪'} <span>Professor, HUST</span></h2>${sections.home}</section>
+    ${sectionKeys.map((key, index) => `
     <section class="content-section" id="${key === 'highlights' ? 'publications' : key}" aria-labelledby="${key}-heading">
-      <div class="shell"><header class="section-heading"><p class="eyebrow">${eyebrow}</p><h2 id="${key}-heading">${label}</h2></header>
-      <div class="section-body">${key === 'news' ? `<details><summary>查看动态与录用消息</summary>${sections[key]}</details>` : sections[key]}</div></div>
+      <div class="shell"><header class="section-heading"><p class="eyebrow">${eyebrows[index]}</p><h2 id="${key}-heading">${copy.sections[index]}</h2></header>
+      <div class="section-body">${key === 'news' ? `<details><summary>${copy.newsSummary}</summary>${sections[key]}</details>` : sections[key]}</div></div>
     </section>`).join('')}
   </main>
-  <footer class="site-footer"><div class="shell"><p>张书豪 · 华中科技大学</p><a href="mailto:shuhao_zhang@hust.edu.cn">Email</a> · <a href="https://github.com/intellistream">GitHub</a> · <a href="publications.html">完整论文档案</a> · <a href="#page-top">返回顶部 ↑</a></div></footer>
+  <footer class="site-footer"><div class="shell"><p>${copy.footer}</p><a href="mailto:shuhao_zhang@hust.edu.cn">Email</a> · <a href="https://github.com/intellistream">GitHub</a> · <a href="publications.html">${copy.publicationArchive}</a> · <a href="#page-top">${copy.backToTop}</a></div></footer>
 </body>
 </html>`;
 }
+
 
 function renderStandalonePage(page) {
   return `<!DOCTYPE html>
@@ -285,19 +307,19 @@ function renderStandalonePage(page) {
 }
 
 async function build() {
-  const config = yaml.load(await readText('contents/config.yml'));
-
-  const sections = Object.fromEntries(
-    await Promise.all(
-      homeSections.map(async (sectionName) => {
-        const markdown = await readText(`contents/${sectionName}.md`);
-        return [sectionName, renderMarkdown(markdown)];
-      })
-    )
-  );
-
-  const indexHtml = renderHomePage(config, sections);
-  await fs.writeFile(path.join(rootDir, 'index.html'), indexHtml.replace(/^[ \t]+$/gm, ''), 'utf8');
+  const homepages = [
+    { locale: 'zh-CN', directory: 'contents', outputFile: 'index.html' },
+    { locale: 'en', directory: 'contents/en', outputFile: 'en.html' }
+  ];
+  for (const { locale, directory, outputFile } of homepages) {
+    const config = yaml.load(await readText(`${directory}/config.yml`));
+    const sections = Object.fromEntries(await Promise.all(homeSections.map(async (section) => {
+      const markdown = await readText(`${directory}/${section}.md`);
+      return [section, renderMarkdown(markdown)];
+    })));
+    const html = renderHomePage(config, sections, locale);
+    await fs.writeFile(path.join(rootDir, outputFile), html.replace(/^[ \t]+$/gm, ''), 'utf8');
+  }
 
   for (const page of standalonePages) {
     const markdown = await readText(page.sourceMarkdown);

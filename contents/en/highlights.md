@@ -1,0 +1,7 @@
+<div class="result-grid">
+<article><span class="eyebrow">TASK EXECUTION</span><h3>Executing tasks with changing dependencies</h3><p>SAGE organizes multi-stage tasks. MorphStream adjusts concurrent execution based on runtime dependencies.</p><a href="contents/research_papers/2026/2026_sage_icml_2026.pdf">SAGE · ICML 2026</a> · <a href="contents/research_papers/2023/2023_morphstream_sigmod_2023.pdf">MorphStream · SIGMOD 2023</a></article>
+<article><span class="eyebrow">INFORMATION MAINTENANCE</span><h3>Maintaining and reusing evolving information</h3><p>GRACE reduces the cost of maintaining dynamic graph structures. BriskSeed and Neuromem study the reuse of search history and external memory.</p><a href="contents/research_papers/2026/2026_grace_icde_2026.pdf">GRACE · ICDE 2026</a> · <a href="systems.html">Related systems (Chinese) →</a></article>
+<article><span class="eyebrow">SERVICE CONTROL</span><h3>Operating services under resource constraints</h3><p>BidKV addresses memory pressure in LLM serving. Spacker supports state migration and resource adjustment while stream processing jobs are running.</p><a href="contents/research_papers/2026/2026_bidkv_sc_2026.pdf">BidKV · SC 2026</a> · <a href="contents/research_papers/2025/2025_spacker_icdcs_2025.pdf">Spacker · ICDCS 2025</a></article>
+</div>
+
+[Systems and open-source projects (Chinese)](systems.html) · **[Full publication archive and PDFs →](publications.html)**

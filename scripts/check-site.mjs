@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const pages = ['index.html', 'team.html', 'systems.html', 'publications.html', 'intro-to-llm-inference-engines.html', 'graduate-paper-writing-course.html'];
+const pages = ['index.html', 'en.html', 'team.html', 'systems.html', 'publications.html', 'intro-to-llm-inference-engines.html', 'graduate-paper-writing-course.html'];
 const errors = [];
 const cache = new Map();
 async function html(file) {
@@ -16,7 +16,8 @@ for (const page of pages) {
   const text = await html(file);
   const ids = [...text.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   if (new Set(ids).size !== ids.length) errors.push(`${page}: duplicate IDs`);
-  if (!/<html lang="zh-CN">/.test(text)) errors.push(`${page}: missing document language`);
+  const language = page === 'en.html' ? 'en' : 'zh-CN';
+  if (!text.includes(`<html lang="${language}">`)) errors.push(`${page}: missing document language`);
   for (const [, raw] of text.matchAll(/\b(?:href|src)="([^"]+)"/g)) {
     if (/^(?:https?:|mailto:|data:)/.test(raw)) continue;
     const [relative, fragment] = raw.split('#');

@@ -1,0 +1,7 @@
+Shuhao Zhang is a professor in the School of Computer Science and Technology at Huazhong University of Science and Technology (HUST). He leads a task under a major national science and technology project of China’s Ministry of Science and Technology. He received the NSFC Excellent Young Scientists Fund (Overseas) and was awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II). Before joining HUST, he was an assistant professor at Nanyang Technological University and Singapore University of Technology and Design, and a postdoctoral researcher at Technische Universität Berlin.
+
+His research focuses on **data-intensive systems in dynamic environments**. His group studies how systems can remain efficient, controllable, and reliable as task dependencies, available information, and runtime resources change. The group works on **dependency-driven task execution, maintenance and reuse of evolving information, and online service control under resource constraints**. It also studies how to compose mechanisms through explicit contracts and make state a first-class concern in execution.
+
+Current work spans **LLM inference, dynamic retrieval, and stateful data processing**. Systems such as vLLM-HUST, ECPA, and StateAxis connect mechanism design, engineering, and evaluation on real workloads.
+
+[HUST faculty profile](http://faculty.hust.edu.cn/ZHANG_SHUHAO/zh_CN/index.htm) · [Full bio](contents/current_bio.md) · [ORCID](https://orcid.org/0000-0002-9927-6925)

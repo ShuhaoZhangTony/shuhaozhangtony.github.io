@@ -1,0 +1,3 @@
+- **Courses** · Database Systems and Implementation · [LLM Inference Systems and Practice](https://courses.sage.org.ai/) · [Graduate Research Paper Writing](graduate-paper-writing-course.html)
+- **Profile** · [CV](contents/cv_en.pdf) · [Bio in English and Chinese](contents/current_bio.md) · [Research funding, honors, and academic service (Chinese)](contents/awards.md)
+- **Surveys (preprints)** · [Inference engines for Chinese accelerators](contents/research_papers/preprint/2026_cccf_domestic_inference_engine_survey.pdf) · [Parallel and distributed state management](contents/research_papers/preprint/2026_parallel_distributed_state_management_survey.pdf)

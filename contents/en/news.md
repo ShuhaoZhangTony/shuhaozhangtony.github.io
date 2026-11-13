@@ -1,0 +1,22 @@
+- November 2026. **BidKV** is scheduled for November 18 in the Resource-Aware LLM Serving Pipelines session at SC26. [Conference program](https://sc26.conference-program.com/presentation/?id=pap1108&sess=sess210)
+- September 2026. **BriskSeed** was accepted in the first research round of ICDE 2027. [Official acceptance list](https://icde2027.github.io/accepted-papers.html) · [Paper overview](contents/research_papers/2027/2027_briskseed_icde_2027.md)
+- September 2026. Awarded support through the NSFC Research Fund for International Excellent Young Scientists (RFIS-II).
+- August 2026. Our article on **BidKV** appeared in the ZTE Technology Journal special issue on compute and storage for LLM inference. [Journal article (Chinese)](https://www.zte.com.cn/china/about/magazine/zte-communications/2026/cn202604/specialtopic/cn202604002.html)
+- July 2026 one paper accepted to SC 2026: BidKV
+- July 2026 two system demonstrations accepted to ICPP 2026: BriskSnapshot and SAGE
+- May 2026 two papers accepted to ICML 2026, including Neuromem and SAGE
+- Apr 2026 two collaborative papers accepted to ACL 2026, including one Main Conference paper and one Findings paper
+- Mar 2026 recruiting students interested in LLM inference engines and serving systems; prospective students are welcome to contact me by email with a CV and relevant project or code links
+- Jan 2026 two papers accepted to WWW 2026
+- Nov 2025 launch of our LLM inference system: https://ws.sage.org.ai/
+- Nov 2025 One paper accepted to SIGMOD 2026
+- Nov 2025 One paper accepted to TKDE 2026
+- Nov 2025 One paper accepted to AAAI 2026
+- Oct 2025 One paper accepted to ICDE 2026
+- July 2025 One paper accepted to NDBC 2025
+- July 2025 One paper accepted to NDBC 2025
+- July 2025 One paper accepted to VLDB 2025
+- March 2025 One paper accepted to ICDCS 2025
+- March 2025 One paper accepted to TKDE 2025
+- March 2025 One paper accepted to ICDE 2025
+- March 2025 One paper accepted to CVPR 2025
