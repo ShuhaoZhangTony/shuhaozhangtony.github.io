@@ -112,8 +112,8 @@ function renderHomePage(config, sections, locale) {
     '04 / PEOPLE & COLLABORATION', '05 / NEWS', '06 / RESOURCES'];
   const navTargets = ['#research', 'systems.html', '#publications', '#applications', '#team', '#resources'];
   const alternate = english
-    ? { href: 'index.html', lang: 'zh-CN', label: '中文', title: '切换到中文' }
-    : { href: 'en.html', lang: 'en', label: 'English', title: 'Switch to English' };
+    ? { href: 'index.html', lang: 'zh-CN', label: '中', title: '切换到中文' }
+    : { href: 'en.html', lang: 'en', label: 'EN', title: 'Switch to English' };
   const chineseTitle = '张书豪 · 动态环境下的数据密集型系统';
   return `<!DOCTYPE html>
 <html lang="${locale}">
@@ -140,7 +140,7 @@ function renderHomePage(config, sections, locale) {
       <div class="nav-links">
         ${navTargets.map((target, index) => `<a href="${target}">${copy.nav[index]}</a>`).join('\n        ')}
       </div>
-      <a class="language-switch" href="${alternate.href}" lang="${alternate.lang}" hreflang="${alternate.lang}" aria-label="${alternate.title}">${alternate.label}</a>
+      <a class="language-switch" href="${alternate.href}" lang="${alternate.lang}" hreflang="${alternate.lang}" aria-label="${alternate.title}"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"></path></svg><span aria-hidden="true">${alternate.label}</span></a>
     </nav>
   </header>
   <main>
